@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Botón de Pánico</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>"
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background-color: #c0392b;
+            width: 220px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #a93226;
+        }
+        .btn-emergencia {
+            height: 150px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="d-flex">
+
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column p-3">
+        <h5 class="text-white text-center mb-4">🆘 Botón de Pánico</h5>
+        <a href="/home">🏠 Inicio</a>
+        <a href="/camara">📷 Cámara</a>
+        <a href="/notificaciones">🔔 Notificaciones</a>
+        <div class="mt-auto">
+            <a th:href="@{/logout}">🚪 Cerrar Sesión</a>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="flex-grow-1 p-4">
+        <h4 class="mb-1">Bienvenido,</h4>
+        <h2 class="text-danger mb-4" 
+            th:text="${nombre} + ' ' + ${apellido}">Nombre Apellido</h2>
+
+        <h5 class="mb-3">¿Qué tipo de emergencia tienes?</h5>
+
+        <div class="row g-3">
+            <div class="col-md-6">
+                <button class="btn btn-danger w-100 btn-emergencia">
+                    🚑 SAMU<br><small>Emergencia Médica — 106</small>
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-warning w-100 btn-emergencia">
+                    🔥 Bomberos<br><small>Incendio — 116</small>
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-dark w-100 btn-emergencia">
+                    🚔 Policía Nacional<br><small>Seguridad / Delito — 105</small>
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-secondary w-100 btn-emergencia">
+                    🏛️ Comisaría<br><small>Comisaría de tu distrito</small>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
