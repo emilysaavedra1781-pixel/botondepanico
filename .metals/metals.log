@@ -691,3 +691,139 @@ C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java:71: erro
 2026.05.12 03:53:41 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
 2026.05.12 03:53:42 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
 2026.05.12 04:06:32 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.05.12 05:16:00 INFO  Shutting down server
+2026.05.12 05:16:00 INFO  Memory monitor stopped
+2026.05.12 05:16:00 INFO  shutting down Metals
+2026.05.12 05:16:00 INFO  Exiting server
+2026.05.14 10:32:34 INFO  Started: Metals version 1.6.7 in folders 'C:\botondepanico' for client Visual Studio Code 1.119.0.
+2026.05.14 10:32:34 INFO  Memory monitor started
+2026.05.14 10:32:35 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.14 10:32:35 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:32:36 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:33:43 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:33:43 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:33:45 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:33:46 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:33:46 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:33:46 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:33:46 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:33:50 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.05.14 10:33:51 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.05.14 10:33:50 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.05.14 10:33:50 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.05.14 10:33:52 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.05.14 10:33:54 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.05.14 10:34:51 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\controller\AuthController.java. Using fallback presentation compiler.
+2026.05.14 10:34:51 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\controller\AuthController.java. Using fallback presentation compiler.
+2026.05.14 10:34:51 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\controller\AuthController.java. Using fallback presentation compiler.
+2026.05.14 10:34:51 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\controller\AuthController.java. Using fallback presentation compiler.
+may. 14, 2026 10:34:52 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 36
+2026.05.14 10:34:58 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:34:58 WARN  no build target for: C:\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.05.14 10:34:58 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:34:58 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:34:58 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:34:59 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:35:04 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:35:04 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:35:06 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:35:07 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.05.14 10:35:12 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:35:12 WARN  no build target for: C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java
+2026.05.14 10:35:12 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:35:12 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:35:12 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java. Using fallback presentation compiler.
+2026.05.14 10:35:13 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 10:35:13 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 10:35:13 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+may. 14, 2026 10:35:14 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 67
+2026.05.14 10:35:13 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 10:38:25 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 11:34:24 INFO  Shutting down server
+2026.05.14 11:34:24 INFO  Memory monitor stopped
+2026.05.14 11:34:24 INFO  shutting down Metals
+2026.05.14 11:34:24 INFO  Exiting server
+2026.05.14 20:13:30 INFO  Started: Metals version 1.6.7 in folders 'C:\botondepanico' for client Visual Studio Code 1.119.0.
+2026.05.14 20:13:30 INFO  Memory monitor started
+2026.05.14 20:13:33 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.14 20:13:33 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:13:48 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:13:53 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:13:53 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:13:53 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:13:53 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+may. 14, 2026 8:13:54 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+may. 14, 2026 8:13:54 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11
+may. 14, 2026 8:13:54 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12
+2026.05.14 20:13:54 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:14:11 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:14:28 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:14:29 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:14:50 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+may. 14, 2026 8:14:52 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+may. 14, 2026 8:14:52 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.05.14 20:14:52 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+may. 14, 2026 8:14:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25
+2026.05.14 20:14:52 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:14:52 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+may. 14, 2026 8:15:01 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 30
+2026.05.14 20:15:02 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:02 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:02 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:02 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 32
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 33
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 34
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 35
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+may. 14, 2026 8:15:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+2026.05.14 20:15:02 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:02 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:03 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:03 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:03 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:03 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+2026.05.14 20:15:03 INFO  no build target found for C:\botondepanico\src\main\java\botondepanico\service\UsuarioService.java. Using fallback presentation compiler.
+may. 14, 2026 8:15:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 36
+may. 14, 2026 8:15:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 37
+may. 14, 2026 8:15:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 39
+may. 14, 2026 8:15:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 42
+may. 14, 2026 8:15:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 44
+may. 14, 2026 8:15:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 45
+may. 14, 2026 8:15:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 46
+may. 14, 2026 8:17:48 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+may. 14, 2026 8:17:49 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.05.14 20:43:37 INFO  Shutting down server
+2026.05.14 20:43:37 INFO  Memory monitor stopped
+2026.05.14 20:43:37 INFO  shutting down Metals
+2026.05.14 20:43:37 INFO  Exiting server
