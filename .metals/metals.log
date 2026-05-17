@@ -827,6 +827,7 @@ INFO: Unsupported notification method: $/setTrace
 2026.05.14 20:43:37 INFO  Memory monitor stopped
 2026.05.14 20:43:37 INFO  shutting down Metals
 2026.05.14 20:43:37 INFO  Exiting server
+<<<<<<< HEAD
 2026.05.15 22:40:46 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.120.0.
 2026.05.15 22:40:46 INFO  Memory monitor started
 2026.05.15 22:40:49 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
@@ -2672,3 +2673,5 @@ WARNING: Unmatched cancel notification for request id 141
 2026.05.16 11:07:50 INFO  Shutting down server
 2026.05.16 11:07:50 INFO  Memory monitor stopped
 2026.05.16 11:07:50 INFO  shutting down Metals
+=======
+>>>>>>> 2cccd1249b6806c755f8b0eb8468c44c14dfafc3
