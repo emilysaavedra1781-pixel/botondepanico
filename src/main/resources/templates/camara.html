@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cámara - Botón de Pánico</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+    <style>
+        body {
+            background: #f4f6f9;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            width: 240px;
+            background: linear-gradient(180deg, #c0392b, #922b21);
+            box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 18px;
+            display: block;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(5px);
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        h3 {
+            font-weight: 700;
+        }
+
+        #video, #videoPreview, #foto {
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .btn {
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 12px;
+        }
+
+        .btn-danger {
+            background: #e74c3c;
+        }
+
+        .btn-dark {
+            background: #2c3e50;
+        }
+
+        .btn:hover {
+            transform: scale(1.03);
+            transition: 0.2s;
+        }
+
+        .alert {
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="d-flex">
+
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column p-3">
+        <h5 class="text-white text-center mb-4">🆘 Botón de Pánico</h5>
+
+        <a href="/home">🏠 Inicio</a>
+        <a href="/camara">📷 Cámara</a>
+        <a href="/notificaciones">🔔 Notificaciones</a>
+
+        <div class="mt-auto">
+            <form th:action="@{/logout}" method="post">
+                <button type="submit" class="btn text-white w-100 text-start ps-0">
+                    🚪 Cerrar Sesión
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="flex-grow-1 content">
+        <h3 class="text-danger mb-4">📷 Cámara de Evidencia</h3>
+
+        <div class="row">
+            <div class="col-md-8">
+                <video id="video" autoplay class="w-100"></video>
+                <canvas id="canvas" style="display:none;"></canvas>
+
+                <div class="d-flex gap-2 mt-3">
+                    <button class="btn btn-danger flex-grow-1" onclick="tomarFoto()">
+                        📸 Tomar Foto
+                    </button>
+                    <button class="btn btn-dark flex-grow-1" id="btnGrabar" onclick="toggleGrabacion()">
+                        🎥 Grabar Video
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="mb-3">Vista previa</h5>
+
+                <img id="foto" class="img-fluid rounded mb-3" style="display:none;">
+                <video id="videoPreview" class="img-fluid rounded" style="display:none;" controls></video>
+
+                <div id="mensaje" class="alert alert-success mt-3" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+<script>
+let stream, mediaRecorder, chunks = [], grabando = false;
+
+// Cámara
+navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+    .then(s => {
+        stream = s;
+        document.getElementById('video').srcObject = s;
+    })
+    .catch(() => alert('No se pudo acceder a la cámara'));
+
+// Foto
+function tomarFoto() {
+    const canvas = document.getElementById('canvas');
+    const video = document.getElementById('video');
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    canvas.getContext('2d').drawImage(video, 0, 0);
+
+    const foto = document.getElementById('foto');
+    foto.src = canvas.toDataURL('image/png');
+    foto.style.display = 'block';
+
+    document.getElementById('videoPreview').style.display = 'none';
+
+    mostrarMensaje('✅ Foto capturada correctamente');
+}
+
+// Video
+function toggleGrabacion() {
+    const btn = document.getElementById('btnGrabar');
+
+    if (!grabando) {
+        chunks = [];
+        mediaRecorder = new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = e => chunks.push(e.data);
+
+        mediaRecorder.onstop = () => {
+            const blob = new Blob(chunks, { type: 'video/mp4' });
+            const url = URL.createObjectURL(blob);
+
+            const preview = document.getElementById('videoPreview');
+            preview.src = url;
+            preview.style.display = 'block';
+
+            document.getElementById('foto').style.display = 'none';
+
+            mostrarMensaje('✅ Video grabado correctamente');
+        };
+
+        mediaRecorder.start();
+        grabando = true;
+
+        btn.textContent = '⏹ Detener';
+        btn.classList.replace('btn-dark', 'btn-danger');
+
+        setTimeout(() => {
+            if (grabando) toggleGrabacion();
+        }, 30000);
+
+    } else {
+        mediaRecorder.stop();
+        grabando = false;
+
+        btn.textContent = '🎥 Grabar Video';
+        btn.classList.replace('btn-danger', 'btn-dark');
+    }
+}
+
+// mensaje
+function mostrarMensaje(texto) {
+    const msg = document.getElementById('mensaje');
+    msg.textContent = texto;
+    msg.style.display = 'block';
+
+    setTimeout(() => msg.style.display = 'none', 3000);
+}
+</script>
+
+</body>
+</html>

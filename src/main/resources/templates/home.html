@@ -3,77 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <title>Home - Botón de Pánico</title>
+
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-<script th:src="@{/js/bootstrap.bundle.min.js}"></script>"
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
     <style>
+        body {
+            background: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* SIDEBAR */
         .sidebar {
             min-height: 100vh;
-            background-color: #c0392b;
-            width: 220px;
+            width: 240px;
+            background: linear-gradient(180deg, #c0392b, #7b1e1e);
+            box-shadow: 4px 0 15px rgba(0,0,0,0.15);
+            padding-top: 20px;
         }
+
+        .sidebar h5 {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         .sidebar a {
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
+            padding: 12px 18px;
             display: block;
+            margin: 6px 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
         }
+
         .sidebar a:hover {
-            background-color: #a93226;
+            background: rgba(255,255,255,0.15);
+            transform: translateX(5px);
         }
+
+        /* CONTENIDO */
+        .flex-grow-1 {
+            background: #f4f6f9;
+        }
+
+        h2.text-danger {
+            font-weight: 700;
+        }
+
+        /* BOTONES EMERGENCIA */
         .btn-emergencia {
-            height: 150px;
-            font-size: 1.2rem;
+            height: 160px;
+            font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 15px;
+            border-radius: 18px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .btn-emergencia:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #f1c40f, #f39c12);
+            color: #000;
+        }
+
+        .btn-dark {
+            background: linear-gradient(135deg, #2c3e50, #1c2833);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #7f8c8d, #566573);
+        }
+
+        /* ALERTAS */
+        .alert {
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
     </style>
 </head>
+
 <body>
 <div class="d-flex">
 
     <!-- Sidebar -->
     <div class="sidebar d-flex flex-column p-3">
-        <h5 class="text-white text-center mb-4">🆘 Botón de Pánico</h5>
+        <h5>🆘 Botón de Pánico</h5>
+
         <a href="/home">🏠 Inicio</a>
         <a href="/camara">📷 Cámara</a>
         <a href="/notificaciones">🔔 Notificaciones</a>
+
         <div class="mt-auto">
-            <a th:href="@{/logout}">🚪 Cerrar Sesión</a>
+            <form th:action="@{/logout}" method="post">
+                <button type="submit" class="btn text-white w-100 text-start ps-3">
+                    🚪 Cerrar Sesión
+                </button>
+            </form>
         </div>
     </div>
 
-    <!-- Contenido principal -->
+    <!-- CONTENIDO -->
     <div class="flex-grow-1 p-4">
+
         <h4 class="mb-1">Bienvenido,</h4>
-        <h2 class="text-danger mb-4" 
-            th:text="${nombre} + ' ' + ${apellido}">Nombre Apellido</h2>
+
+        <h2 class="text-danger mb-4"
+            th:text="${nombre} + ' ' + ${apellido}">
+            Nombre Apellido
+        </h2>
 
         <h5 class="mb-3">¿Qué tipo de emergencia tienes?</h5>
 
-        <div class="row g-3">
-            <div class="col-md-6">
-                <button class="btn btn-danger w-100 btn-emergencia">
-                    🚑 SAMU<br><small>Emergencia Médica — 106</small>
-                </button>
-            </div>
-            <div class="col-md-6">
-                <button class="btn btn-warning w-100 btn-emergencia">
-                    🔥 Bomberos<br><small>Incendio — 116</small>
-                </button>
-            </div>
-            <div class="col-md-6">
-                <button class="btn btn-dark w-100 btn-emergencia">
-                    🚔 Policía Nacional<br><small>Seguridad / Delito — 105</small>
-                </button>
-            </div>
-            <div class="col-md-6">
-                <button class="btn btn-secondary w-100 btn-emergencia">
-                    🏛️ Comisaría<br><small>Comisaría de tu distrito</small>
-                </button>
-            </div>
-        </div>
-    </div>
+        <!-- FORM -->
+        <form id="formEmergencia" th:action="@{/emergencia/activar}" method="post">
+            <input type="hidden" id="tipoEmergencia" name="tipoEmergencia"/>
+            <input type="hidden" id="latitud" name="latitud"/>
+            <input type="hidden" id="longitud" name="longitud"/>
+            <input type="hidden" id="ubicacion" name="ubicacion"/>
 
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <button type="button" onclick="activar('MEDICA')"
+                            class="btn btn-danger w-100 btn-emergencia">
+                        🚑 SAMU<br><small>Emergencia Médica — 106</small>
+                    </button>
+                </div>
+
+                <div class="col-md-6">
+                    <button type="button" onclick="activar('INCENDIO')"
+                            class="btn btn-warning w-100 btn-emergencia">
+                        🔥 Bomberos<br><small>Incendio — 116</small>
+                    </button>
+                </div>
+
+                <div class="col-md-6">
+                    <button type="button" onclick="activar('SEGURIDAD')"
+                            class="btn btn-dark w-100 btn-emergencia">
+                        🚔 Policía Nacional<br><small>Seguridad / Delito — 105</small>
+                    </button>
+                </div>
+
+                <div class="col-md-6">
+                    <button type="button" onclick="activar('COMISARIA')"
+                            class="btn btn-secondary w-100 btn-emergencia">
+                        🏛️ Comisaría<br><small>Comisaría de tu distrito</small>
+                    </button>
+                </div>
+
+            </div>
+        </form>
+
+        <!-- ALERTA -->
+        <div th:if="${alerta == 'enviada'}"
+             class="alert alert-success mt-4">
+            ✅ Alerta enviada correctamente. Las autoridades han sido notificadas.
+        </div>
+
+        <div id="alertaGPS" class="alert alert-warning mt-4 d-none">
+            ⚠️ No se pudo obtener tu ubicación.
+        </div>
+
+    </div>
 </div>
+
+<script>
+let enviando = false;
+
+function activar(tipo) {
+    if (enviando) return;
+    enviando = true;
+
+    const numeros = {
+        'MEDICA': '+51906404449',
+        'INCENDIO': '+51966949238',
+        'SEGURIDAD': '+51902581835',
+        'COMISARIA': '+51926245992'
+    };
+
+    navigator.geolocation.getCurrentPosition(
+        function(pos) {
+
+            document.getElementById('tipoEmergencia').value = tipo;
+            document.getElementById('latitud').value = pos.coords.latitude;
+            document.getElementById('longitud').value = pos.coords.longitude;
+            document.getElementById('ubicacion').value =
+                pos.coords.latitude + ", " + pos.coords.longitude;
+
+            document.getElementById('formEmergencia').submit();
+
+            setTimeout(() => {
+                window.location.href = 'tel:' + numeros[tipo];
+            }, 800);
+
+        },
+        function(error) {
+            enviando = false;
+            alert("❌ Error GPS: " + error.message);
+        },
+        { timeout: 10000 }
+    );
+}
+</script>
+
 </body>
 </html>
