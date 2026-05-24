@@ -1,0 +1,552 @@
+/* =======================================================
+   NOTIFICACIONES PREMIUM UI
+======================================================= */
+
+/* ===== IMPORT ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===== ROOT ===== */
+
+:root {
+
+    --primary: #6C63FF;
+    --primary-dark: #5146e1;
+
+    --secondary: #00C9A7;
+
+    --danger: #ff4d6d;
+
+    --dark: #1f2937;
+
+    --gray: #6b7280;
+
+    --light: #f4f7ff;
+
+    --white: #ffffff;
+
+    --shadow:
+        0 10px 35px rgba(0,0,0,0.08);
+
+    --glass:
+        rgba(255,255,255,0.12);
+}
+
+/* ===== BODY ===== */
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        linear-gradient(135deg, #eef2ff, #f8fbff);
+
+    overflow-x: hidden;
+}
+
+/* ===== LAYOUT ===== */
+
+.layout {
+
+    display: flex;
+
+    min-height: 100vh;
+}
+
+/* =======================================================
+   SIDEBAR
+======================================================= */
+
+.sidebar {
+
+    width: 270px;
+
+    background:
+        linear-gradient(180deg,
+        #111827,
+        #1f2937,
+        #111827);
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow:
+        8px 0 30px rgba(0,0,0,0.12);
+
+    position: relative;
+}
+
+/* EFECTO */
+
+.sidebar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    right: -120px;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(108,99,255,0.15);
+
+    filter: blur(40px);
+}
+
+/* ===== LOGO ===== */
+
+.logo {
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    margin-bottom: 45px;
+
+    letter-spacing: 0.5px;
+}
+
+/* ===== MENU ===== */
+
+.menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.menu a {
+
+    text-decoration: none;
+
+    color: rgba(255,255,255,0.82);
+
+    padding: 15px 18px;
+
+    border-radius: 16px;
+
+    transition: all 0.3s ease;
+
+    font-weight: 500;
+
+    backdrop-filter: blur(8px);
+}
+
+.menu a:hover {
+
+    background:
+        rgba(255,255,255,0.10);
+
+    transform: translateX(6px);
+
+    color: white;
+}
+
+/* ACTIVE */
+
+.menu .active {
+
+    background:
+        linear-gradient(135deg,
+        var(--primary),
+        var(--primary-dark));
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px rgba(108,99,255,0.35);
+}
+
+/* ===== LOGOUT ===== */
+
+.logout-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+
+    background:
+        rgba(255,255,255,0.14);
+
+    transform: translateY(-2px);
+}
+
+/* =======================================================
+   CONTENT
+======================================================= */
+
+.content {
+
+    flex: 1;
+
+    padding: 35px;
+}
+
+/* ===== HEADER ===== */
+
+.page-header {
+
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    color: var(--dark);
+
+    margin-bottom: 8px;
+}
+
+.page-header p {
+
+    color: var(--gray);
+
+    font-size: 0.98rem;
+}
+
+/* =======================================================
+   FILTROS
+======================================================= */
+
+.filters {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-bottom: 35px;
+}
+
+/* ===== BOTONES ===== */
+
+.filter-btn {
+
+    border: none;
+
+    padding: 13px 22px;
+
+    border-radius: 16px;
+
+    font-weight: 600;
+
+    color: white;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.08);
+}
+
+.filter-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 22px rgba(0,0,0,0.12);
+}
+
+/* ===== COLORES ===== */
+
+.accident {
+
+    background:
+        linear-gradient(135deg,
+        #ff4d6d,
+        #ff758f);
+}
+
+.fire {
+
+    background:
+        linear-gradient(135deg,
+        #ff9f43,
+        #ff6b00);
+}
+
+.robbery {
+
+    background:
+        linear-gradient(135deg,
+        #374151,
+        #111827);
+}
+
+.general {
+
+    background:
+        linear-gradient(135deg,
+        #6C63FF,
+        #5146e1);
+}
+
+/* =======================================================
+   LOADING
+======================================================= */
+
+.loading-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 60px;
+
+    color: var(--gray);
+}
+
+/* =======================================================
+   NEWS GRID
+======================================================= */
+
+.news-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(340px, 1fr));
+
+    gap: 22px;
+}
+
+/* =======================================================
+   CARD
+======================================================= */
+
+.news-card {
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 24px;
+
+    box-shadow: var(--shadow);
+
+    transition: all 0.35s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* EFECTO SUPERIOR */
+
+.news-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background:
+        linear-gradient(90deg,
+        var(--primary),
+        var(--secondary));
+}
+
+/* HOVER */
+
+.news-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* ===== TOP ===== */
+
+.news-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+/* ===== BADGE ===== */
+
+.news-badge {
+
+    background:
+        linear-gradient(135deg,
+        var(--primary),
+        var(--primary-dark));
+
+    color: white;
+
+    padding: 7px 14px;
+
+    border-radius: 12px;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+/* ===== FECHA ===== */
+
+.news-top small {
+
+    color: var(--gray);
+
+    font-size: 0.8rem;
+}
+
+/* ===== TITULO ===== */
+
+.news-card h5 {
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    color: var(--dark);
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+}
+
+/* ===== TEXTO ===== */
+
+.news-card p {
+
+    color: var(--gray);
+
+    line-height: 1.7;
+
+    font-size: 0.94rem;
+}
+
+/* ===== BOTON ===== */
+
+.news-btn {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(135deg,
+        var(--primary),
+        var(--primary-dark));
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.news-btn:hover {
+
+    transform: scale(1.03);
+
+    color: white;
+
+    box-shadow:
+        0 12px 22px rgba(108,99,255,0.25);
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width: 900px) {
+
+    .layout {
+
+        flex-direction: column;
+    }
+
+    .sidebar {
+
+        width: 100%;
+    }
+
+    .content {
+
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .page-header h2 {
+
+        font-size: 1.6rem;
+    }
+
+    .filters {
+
+        gap: 10px;
+    }
+
+    .filter-btn {
+
+        width: 100%;
+    }
+
+}

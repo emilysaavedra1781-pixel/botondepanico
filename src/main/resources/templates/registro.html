@@ -1,126 +1,179 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Registro - Botón de Pánico</title>
-<<<<<<< HEAD
-=======
-  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-<script th:src="@{/js/bootstrap.bundle.min.js}"></script>git init
-</head>
-<body class="bg-danger bg-opacity-10 min-vh-100 d-flex align-items-center justify-content-center">
->>>>>>> 2cccd1249b6806c755f8b0eb8468c44c14dfafc3
 
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          th:href="@{/css/bootstrap.min.css}">
 
-    <style>
-        body {
-            background: linear-gradient(135deg, #f8d7da, #ffffff);
-        }
+    <!-- CSS -->
+    <link rel="stylesheet"
+          th:href="@{/css/registro.css}">
 
-        .card {
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        h3 {
-            font-weight: 800;
-        }
-
-        .form-control {
-            border-radius: 10px;
-            padding: 10px;
-        }
-
-        .form-control:focus {
-            box-shadow: 0 0 0 0.2rem rgba(220,53,69,0.25);
-            border-color: #dc3545;
-        }
-
-        .btn {
-            border-radius: 10px;
-            font-weight: 600;
-            padding: 10px;
-        }
-
-        .btn-danger {
-            background: linear-gradient(90deg, #dc3545, #c0392b);
-            border: none;
-        }
-
-        .btn-danger:hover {
-            transform: scale(1.02);
-            transition: 0.2s;
-        }
-
-        .btn-outline-secondary {
-            border-radius: 10px;
-        }
-
-        label {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-    </style>
+    <!-- Bootstrap JS -->
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </head>
 
-<body class="min-vh-100 d-flex align-items-center justify-content-center">
+<body class="register-body">
 
-<div class="card p-4" style="width: 520px;">
+<div class="register-container">
 
-    <h3 class="text-center text-danger mb-2">🆘 Botón de Pánico</h3>
-    <p class="text-center text-muted mb-4">Crear una cuenta nueva</p>
+    <div class="register-card">
 
-    <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+        <!-- TITULO -->
+        <div class="text-center mb-4">
 
-    <form th:action="@{/registro}" th:object="${usuario}" method="post">
+            <h2 class="register-title">
+                🆘 Botón de Pánico
+            </h2>
 
-        <div class="row">
-            <div class="col mb-3">
-                <label>Nombre</label>
-                <input type="text" th:field="*{nombre}" class="form-control" required>
+            <p class="register-subtitle">
+                Crear una cuenta nueva
+            </p>
+
+        </div>
+
+        <!-- ERROR -->
+        <div th:if="${error}"
+             class="alert alert-danger text-center"
+             th:text="${error}">
+        </div>
+
+        <!-- FORM -->
+        <form th:action="@{/registro}"
+              th:object="${usuario}"
+              method="post">
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        Nombre
+                    </label>
+
+                    <input type="text"
+                           th:field="*{nombre}"
+                           class="form-control custom-input"
+                           placeholder="Ingresa tu nombre"
+                           required>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        Apellido
+                    </label>
+
+                    <input type="text"
+                           th:field="*{apellido}"
+                           class="form-control custom-input"
+                           placeholder="Ingresa tu apellido"
+                           required>
+
+                </div>
+
             </div>
-            <div class="col mb-3">
-                <label>Apellido</label>
-                <input type="text" th:field="*{apellido}" class="form-control" required>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    DNI
+                </label>
+
+                <input type="text"
+                       th:field="*{dni}"
+                       class="form-control custom-input"
+                       maxlength="8"
+                       placeholder="12345678"
+                       required>
+
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label>DNI</label>
-            <input type="text" th:field="*{dni}" class="form-control" maxlength="8" required>
-        </div>
+            <div class="mb-3">
 
-        <div class="mb-3">
-            <label>Celular</label>
-            <input type="text" th:field="*{celular}" class="form-control" maxlength="9" required>
-        </div>
+                <label class="form-label">
+                    Celular
+                </label>
 
-        <div class="mb-3">
-            <label>Correo Electrónico</label>
-            <input type="email" th:field="*{correo}" class="form-control" required>
-        </div>
+                <input type="text"
+                       th:field="*{celular}"
+                       class="form-control custom-input"
+                       maxlength="9"
+                       placeholder="999123456"
+                       required>
 
-        <div class="mb-3">
-            <label>Distrito</label>
-            <input type="text" th:field="*{distrito}" class="form-control" required>
-        </div>
+            </div>
 
-        <div class="mb-3">
-            <label>Contraseña</label>
-            <input type="password" th:field="*{password}" class="form-control" required>
-        </div>
+            <div class="mb-3">
 
-        <button type="submit" class="btn btn-danger w-100">
-            Registrarse
-        </button>
+                <label class="form-label">
+                    Correo Electrónico
+                </label>
 
-        <a href="/login" class="btn btn-outline-secondary w-100 mt-2">
-            ¿Ya tienes cuenta? Inicia sesión
-        </a>
+                <input type="email"
+                       th:field="*{correo}"
+                       class="form-control custom-input"
+                       placeholder="correo@gmail.com"
+                       required>
 
-    </form>
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Distrito
+                </label>
+
+                <input type="text"
+                       th:field="*{distrito}"
+                       class="form-control custom-input"
+                       placeholder="Tu distrito"
+                       required>
+
+            </div>
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Contraseña
+                </label>
+
+                <input type="password"
+                       th:field="*{password}"
+                       class="form-control custom-input"
+                       placeholder="Tu contraseña"
+                       required>
+
+            </div>
+
+            <!-- BOTON -->
+            <button type="submit"
+                    class="btn register-btn">
+
+                Registrarse
+
+            </button>
+
+            <!-- LOGIN -->
+            <a href="/login"
+               class="btn login-link-btn">
+
+                ¿Ya tienes cuenta? Inicia sesión
+
+            </a>
+
+        </form>
+
+    </div>
 
 </div>
 

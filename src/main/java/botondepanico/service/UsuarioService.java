@@ -31,7 +31,7 @@ public class UsuarioService {
         return usuarioRepository.findByCelular(celular);
     }
 
-    // ✅ NUEVO — usado por AuthController para el login
+    
     public Usuario login(String celular, String contrasena) {
         Optional<Usuario> optional = usuarioRepository.findByCelular(celular);
 
