@@ -1,484 +1,261 @@
-/* =======================================================
-   HOME PREMIUM UI
-======================================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* ===== ROOT ===== */
-
 :root {
-
-    --primary: #6C63FF;
-    --primary-dark: #5146e1;
-
-    --medical: #ff4d6d;
-
-    --fire: #ff9f43;
-
-    --police: #2f3542;
-
-    --station: #00C9A7;
-
+    --primary: #C0392B;
+    --primary-dark: #922B21;
     --white: #ffffff;
-
     --gray: #6b7280;
-
     --dark: #1f2937;
-
-    --bg: #f4f7ff;
-
-    --shadow:
-        0 10px 30px rgba(0,0,0,0.08);
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-
-/* ===== BODY ===== */
 
 body {
-
     margin: 0;
-
     padding: 0;
-
     font-family: 'Poppins', sans-serif;
-
-    background:
-        linear-gradient(135deg, #eef2ff, #f8fbff);
+    background: linear-gradient(135deg, #fff5f5, #f8fbff);
 }
 
-/* ===== LAYOUT ===== */
-
 .layout {
-
     display: flex;
-
     min-height: 100vh;
 }
 
-/* =======================================================
-   SIDEBAR
-======================================================= */
-
+/* ===== SIDEBAR ===== */
 .sidebar {
-
     width: 270px;
-
-    background:
-        linear-gradient(180deg,
-        #111827,
-        #1f2937,
-        #111827);
-
+    background: linear-gradient(180deg, #111827, #1f2937, #111827);
     padding: 28px 20px;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
-
-    box-shadow:
-        8px 0 30px rgba(0,0,0,0.12);
+    box-shadow: 8px 0 30px rgba(0,0,0,0.12);
 }
-
-/* ===== LOGO ===== */
 
 .logo {
-
     color: white;
-
     text-align: center;
-
     font-weight: 800;
-
     margin-bottom: 45px;
+    font-size: 1.1rem;
 }
 
-/* ===== MENU ===== */
-
 .menu {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 12px;
 }
 
 .menu a {
-
     text-decoration: none;
-
     color: rgba(255,255,255,0.82);
-
     padding: 15px 18px;
-
     border-radius: 16px;
-
     transition: all 0.3s ease;
-
     font-weight: 500;
 }
 
 .menu a:hover {
-
-    background:
-        rgba(255,255,255,0.10);
-
+    background: rgba(255,255,255,0.10);
     transform: translateX(6px);
-
     color: white;
 }
 
 .menu .active {
-
-    background:
-        linear-gradient(135deg,
-        var(--primary),
-        var(--primary-dark));
-
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
-
-    box-shadow:
-        0 10px 25px rgba(108,99,255,0.35);
+    box-shadow: 0 10px 25px rgba(192,57,43,0.35);
 }
 
-/* ===== LOGOUT ===== */
-
 .logout-btn {
-
-    width: 100%;
-
-    border: none;
-
+    display: block;
+    text-align: center;
+    text-decoration: none;
     border-radius: 16px;
-
     padding: 14px;
-
-    background:
-        rgba(255,255,255,0.08);
-
+    background: rgba(255,255,255,0.08);
     color: white;
-
     font-weight: 600;
-
     transition: all 0.3s ease;
 }
 
 .logout-btn:hover {
-
-    background:
-        rgba(255,255,255,0.15);
-
+    background: rgba(255,255,255,0.15);
+    color: white;
     transform: translateY(-2px);
 }
 
-/* =======================================================
-   CONTENT
-======================================================= */
-
+/* ===== CONTENT ===== */
 .content {
-
     flex: 1;
-
     padding: 35px;
 }
 
-/* ===== HEADER ===== */
-
+/* ===== WELCOME ===== */
 .welcome-box {
-
     background: white;
-
     border-radius: 24px;
-
     padding: 28px;
-
     box-shadow: var(--shadow);
-
     margin-bottom: 30px;
-
     position: relative;
-
     overflow: hidden;
 }
 
 .welcome-box::before {
-
     content: "";
-
     position: absolute;
-
     top: -80px;
     right: -80px;
-
     width: 220px;
     height: 220px;
-
     border-radius: 50%;
-
-    background:
-        rgba(108,99,255,0.08);
+    background: rgba(192,57,43,0.06);
 }
 
-/* ===== TEXT ===== */
-
 .welcome-text {
-
     color: var(--gray);
-
     margin-bottom: 5px;
 }
 
 .user-name {
-
     font-size: 2rem;
-
     font-weight: 800;
-
     color: var(--dark);
-
     margin-bottom: 12px;
 }
 
-/* ===== BADGE ===== */
-
 .status-badge {
-
     display: inline-block;
-
     padding: 10px 16px;
-
     border-radius: 14px;
-
-    background:
-        linear-gradient(135deg,
-        var(--primary),
-        var(--primary-dark));
-
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
-
     font-weight: 600;
-
     font-size: 0.9rem;
 }
 
-/* ===== SECTION ===== */
-
-.section-header {
-
-    margin-bottom: 25px;
-}
-
-.section-header h3 {
-
-    font-weight: 700;
-
-    color: var(--dark);
-}
-
-.section-header p {
-
-    color: var(--gray);
-}
-
-/* =======================================================
-   GRID
-======================================================= */
-
-.cards-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
-
-    gap: 22px;
-}
-
-/* =======================================================
-   CARD
-======================================================= */
-
-.emergency-card {
-
-    border: none;
-
+/* ===== FORM BOX ===== */
+.form-box {
+    background: white;
     border-radius: 24px;
-
-    padding: 30px 24px;
-
-    text-align: left;
-
-    color: white;
-
-    transition: all 0.35s ease;
-
-    position: relative;
-
-    overflow: hidden;
-
-    min-height: 220px;
-
+    padding: 35px;
     box-shadow: var(--shadow);
 }
 
-.emergency-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: -40px;
-    right: -40px;
-
-    width: 120px;
-    height: 120px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255,255,255,0.12);
+.form-header {
+    margin-bottom: 25px;
 }
 
-/* HOVER */
-
-.emergency-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    box-shadow:
-        0 18px 35px rgba(0,0,0,0.15);
-}
-
-/* ===== ICON ===== */
-
-.card-icon {
-
-    font-size: 3rem;
-
-    margin-bottom: 18px;
-}
-
-/* ===== TITULO ===== */
-
-.emergency-card h4 {
-
-    font-size: 1.3rem;
-
+.form-header h3 {
     font-weight: 700;
-
-    margin-bottom: 10px;
+    color: var(--dark);
+    margin-bottom: 6px;
 }
 
-/* ===== TEXTO ===== */
-
-.emergency-card p {
-
-    opacity: 0.92;
-
+.form-header p {
+    color: var(--gray);
     margin-bottom: 16px;
 }
 
-/* ===== BADGE ===== */
-
-.emergency-card span {
-
-    display: inline-block;
-
-    padding: 8px 14px;
-
-    border-radius: 12px;
-
-    background:
-        rgba(255,255,255,0.16);
-
-    font-size: 0.85rem;
-
-    font-weight: 600;
-}
-
-/* ===== COLORES ===== */
-
-.medical {
-
-    background:
-        linear-gradient(135deg,
-        #ff4d6d,
-        #ff758f);
-}
-
-.fire {
-
-    background:
-        linear-gradient(135deg,
-        #ff9f43,
-        #ff6b00);
-}
-
-.police {
-
-    background:
-        linear-gradient(135deg,
-        #374151,
-        #111827);
-}
-
-.station {
-
-    background:
-        linear-gradient(135deg,
-        #00C9A7,
-        #00b894);
-}
-
-/* ===== ALERT ===== */
-
-.custom-alert {
-
-    border-radius: 18px;
-
+/* ===== MICRÓFONO ===== */
+.btn-mic {
     border: none;
-
-    padding: 18px;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.06);
+    border-radius: 14px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #6C63FF, #5146e1);
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(108,99,255,0.3);
 }
 
-/* =======================================================
-   RESPONSIVE
-======================================================= */
+.btn-mic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(108,99,255,0.4);
+}
 
+.btn-mic.activo {
+    background: linear-gradient(135deg, #ff4d4d, #C0392B);
+    box-shadow: 0 6px 20px rgba(192,57,43,0.4);
+    animation: pulseBtn 1.5s infinite;
+}
+
+@keyframes pulseBtn {
+    0% { box-shadow: 0 0 0 0 rgba(192,57,43,0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(192,57,43,0); }
+    100% { box-shadow: 0 0 0 0 rgba(192,57,43,0); }
+}
+
+.mic-status {
+    background: rgba(192,57,43,0.08);
+    border-radius: 12px;
+    padding: 10px 16px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* ===== INPUTS ===== */
+.custom-input {
+    border-radius: 14px;
+    border: 2px solid #f0f0f0;
+    padding: 12px 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.custom-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(192,57,43,0.1);
+    outline: none;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+/* ===== BOTÓN REGISTRAR ===== */
+.btn-registrar {
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 8px 20px rgba(192,57,43,0.35);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.btn-registrar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(192,57,43,0.45);
+}
+
+/* ===== ALERTS ===== */
+.custom-alert {
+    border-radius: 14px;
+    border: none;
+    padding: 16px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-
-    .layout {
-
-        flex-direction: column;
-    }
-
-    .sidebar {
-
-        width: 100%;
-    }
-
-    .content {
-
-        padding: 25px;
-    }
-
+    .layout { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .content { padding: 20px; }
 }
 
 @media (max-width: 500px) {
-
-    .user-name {
-
-        font-size: 1.5rem;
-    }
-
-    .cards-grid {
-
-        grid-template-columns: 1fr;
-    }
-
+    .user-name { font-size: 1.5rem; }
 }

@@ -2,25 +2,12 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Operador - Botón de Pánico</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Home - Botón de Pánico</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet"
-          th:href="@{/css/bootstrap.min.css}">
-
-    <!-- CSS -->
-    <link rel="stylesheet"
-          th:href="@{/css/home.css}">
-
-    <!-- Bootstrap JS -->
-    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 
 <body>
@@ -31,220 +18,244 @@
     <aside class="sidebar">
 
         <div>
-
-            <h3 class="logo">
-                🆘 Botón de Pánico
-            </h3>
+            <h3 class="logo">🆘 Botón de Pánico</h3>
 
             <nav class="menu">
-
-                <a href="/home"
-                   class="active">
-
-                    🏠 Inicio
-
+                <a href="/panel-operador" class="active">
+                    🏠 Panel Operador
                 </a>
 
-                <a href="/camara">
-
-                    📷 Cámara
-
+                <a href="/historial-operador">
+                    📋 Historial
                 </a>
-
-                <a href="/notificaciones">
-
-                    🔔 Notificaciones
-
-                </a>
-
             </nav>
-
         </div>
 
-        <!-- LOGOUT -->
-        <form th:action="@{/logout}"
-              method="post">
-
-            <button type="submit"
-                    class="logout-btn">
-
-                🚪 Cerrar Sesión
-
-            </button>
-
-        </form>
+        <a href="/logout" class="logout-btn">
+            🚪 Cerrar Sesión
+        </a>
 
     </aside>
 
-    <!-- CONTENT -->
+    <!-- CONTENIDO -->
     <main class="content">
 
-        <!-- HEADER -->
+        <!-- CABECERA -->
         <div class="welcome-box">
 
             <p class="welcome-text">
-                Bienvenido
+                Bienvenido, Operador
             </p>
 
-            <h1 class="user-name"
-                th:text="${nombre} + ' ' + ${apellido}">
-
-                Nombre Usuario
-
+            <h1 class="user-name" th:text="${nombre + ' ' + apellido}">
+                Nombre Operador
             </h1>
 
+            <p class="login-time">
+                🕒 Sesión iniciada:
+                <span id="fechaSesion"></span>
+            </p>
+
             <span class="status-badge">
-                Sistema Activo
+                🟢 Sistema Activo
             </span>
 
         </div>
 
-        <!-- TITULO -->
-        <div class="section-header">
+        <!-- FORMULARIO -->
+        <div class="form-box">
 
-            <h3>
-                ¿Qué tipo de emergencia tienes?
-            </h3>
+            <div class="form-header">
 
-            <p>
-                Selecciona rápidamente el tipo de ayuda que necesitas
-            </p>
+                <h3>📋 Registrar Incidente</h3>
 
-        </div>
+                <p>
+                    Complete los datos del ciudadano durante la llamada
+                </p>
 
-        <!-- FORM -->
-        <form id="formEmergencia"
-              th:action="@{/emergencia/activar}"
-              method="post">
+                <button
+                        type="button"
+                        id="btnMic"
+                        onclick="toggleMic()"
+                        class="btn-mic">
 
-            <input type="hidden"
-                   id="tipoEmergencia"
-                   name="tipoEmergencia"/>
-
-            <input type="hidden"
-                   id="latitud"
-                   name="latitud"/>
-
-            <input type="hidden"
-                   id="longitud"
-                   name="longitud"/>
-
-            <input type="hidden"
-                   id="ubicacion"
-                   name="ubicacion"/>
-
-            <!-- GRID -->
-            <div class="cards-grid">
-
-                <!-- MEDICA -->
-                <button type="button"
-                        onclick="activar('MEDICA')"
-                        class="emergency-card medical">
-
-                    <div class="card-icon">
-                        🚑
-                    </div>
-
-                    <h4>
-                        SAMU
-                    </h4>
-
-                    <p>
-                        Emergencia Médica
-                    </p>
-
-                    <span>
-                        Línea 106
-                    </span>
-
-                </button>
-
-                <!-- BOMBEROS -->
-                <button type="button"
-                        onclick="activar('INCENDIO')"
-                        class="emergency-card fire">
-
-                    <div class="card-icon">
-                        🔥
-                    </div>
-
-                    <h4>
-                        Bomberos
-                    </h4>
-
-                    <p>
-                        Emergencias e incendios
-                    </p>
-
-                    <span>
-                        Línea 116
-                    </span>
-
-                </button>
-
-                <!-- POLICIA -->
-                <button type="button"
-                        onclick="activar('SEGURIDAD')"
-                        class="emergency-card police">
-
-                    <div class="card-icon">
-                        🚔
-                    </div>
-
-                    <h4>
-                        Policía Nacional
-                    </h4>
-
-                    <p>
-                        Delitos y seguridad
-                    </p>
-
-                    <span>
-                        Línea 105
-                    </span>
-
-                </button>
-
-                <!-- COMISARIA -->
-                <button type="button"
-                        onclick="activar('COMISARIA')"
-                        class="emergency-card station">
-
-                    <div class="card-icon">
-                        🏛️
-                    </div>
-
-                    <h4>
-                        Comisaría
-                    </h4>
-
-                    <p>
-                        Contacto distrital
-                    </p>
-
-                    <span>
-                        Atención local
-                    </span>
+                    🎤 Activar Micrófono
 
                 </button>
 
             </div>
 
-        </form>
+            <div id="mic-status" class="mic-status d-none">
+                🔴 Escuchando... habla claramente
+            </div>
 
-        <!-- ALERTAS -->
-        <div th:if="${alerta == 'enviada'}"
-             class="alert alert-success custom-alert mt-4">
+            <form
+                    th:action="@{/emergencia/registrar}"
+                    method="post"
+                    id="formIncidente">
 
-            ✅ Alerta enviada correctamente.
-            Las autoridades han sido notificadas.
+                <!-- NOMBRE Y APELLIDO -->
+                <div class="row">
 
-        </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Nombre del ciudadano
+                        </label>
 
-        <div id="alertaGPS"
-             class="alert alert-warning custom-alert mt-4 d-none">
+                        <input
+                                type="text"
+                                id="nombre_ciudadano"
+                                name="nombre"
+                                class="form-control custom-input"
+                                placeholder="Nombre"
+                                required>
+                    </div>
 
-            ⚠️ No se pudo obtener tu ubicación.
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Apellido
+                        </label>
+
+                        <input
+                                type="text"
+                                id="apellido_ciudadano"
+                                name="apellido"
+                                class="form-control custom-input"
+                                placeholder="Apellido"
+                                required>
+                    </div>
+
+                </div>
+
+                <!-- CELULAR Y DISTRITO -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Celular
+                        </label>
+
+                        <input
+                                type="text"
+                                id="celular_ciudadano"
+                                name="celular"
+                                class="form-control custom-input"
+                                placeholder="999123456"
+                                maxlength="9"
+                                required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            Distrito
+                        </label>
+
+                        <input
+                                type="text"
+                                id="distrito_ciudadano"
+                                name="distrito"
+                                class="form-control custom-input"
+                                placeholder="Ej: Miraflores"
+                                required>
+                    </div>
+
+                </div>
+
+                <!-- TIPO DE EMERGENCIA -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Tipo de Emergencia
+                    </label>
+
+                    <select
+                            id="tipo_emergencia"
+                            name="tipoEmergencia"
+                            class="form-control custom-input"
+                            required>
+
+                        <option value="">
+                            -- Seleccionar --
+                        </option>
+
+                        <option value="MEDICA">
+                            🚑 Emergencia Médica (SAMU 106)
+                        </option>
+
+                        <option value="INCENDIO">
+                            🔥 Incendio (Bomberos 116)
+                        </option>
+
+                        <option value="SEGURIDAD">
+                            🚔 Seguridad / Robo (Policía 105)
+                        </option>
+
+                        <option value="COMISARIA">
+                            🏛️ Comisaría Distrital
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- UBICACIÓN -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Ubicación
+                    </label>
+
+                    <input
+                            type="text"
+                            id="ubicacion"
+                            name="ubicacion"
+                            class="form-control custom-input"
+                            placeholder="Av. Arequipa 123, Miraflores">
+
+                </div>
+
+                <!-- DESCRIPCIÓN -->
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Descripción del incidente
+                    </label>
+
+                    <textarea
+                            id="descripcion"
+                            name="descripcion"
+                            class="form-control custom-input"
+                            rows="4"
+                            placeholder="Describe lo que está ocurriendo..."
+                            required></textarea>
+
+                </div>
+
+                <!-- MENSAJES -->
+                <div
+                        th:if="${exito}"
+                        class="alert alert-success custom-alert mb-3">
+
+                    ✅ Incidente registrado y autoridad notificada correctamente.
+
+                </div>
+
+                <div
+                        th:if="${error}"
+                        class="alert alert-danger custom-alert mb-3"
+                        th:text="${error}">
+                </div>
+
+                <!-- BOTÓN -->
+                <button
+                        type="submit"
+                        class="btn-registrar">
+
+                    🚨 Registrar Emergencia y Notificar
+
+                </button>
+
+            </form>
 
         </div>
 
@@ -252,71 +263,8 @@
 
 </div>
 
-<!-- JS -->
-<script>
-
-let enviando = false;
-
-function activar(tipo) {
-
-    if (enviando) return;
-
-    enviando = true;
-
-    const numeros = {
-
-        'MEDICA': '+51906404449',
-
-        'INCENDIO': '+51966949238',
-
-        'SEGURIDAD': '+51902581835',
-
-        'COMISARIA': '+51926245992'
-    };
-
-    navigator.geolocation.getCurrentPosition(
-
-        function(pos) {
-
-            document.getElementById('tipoEmergencia').value = tipo;
-
-            document.getElementById('latitud').value =
-                pos.coords.latitude;
-
-            document.getElementById('longitud').value =
-                pos.coords.longitude;
-
-            document.getElementById('ubicacion').value =
-                pos.coords.latitude + ", " +
-                pos.coords.longitude;
-
-            document.getElementById('formEmergencia').submit();
-
-            setTimeout(() => {
-
-                window.location.href =
-                    'tel:' + numeros[tipo];
-
-            }, 800);
-
-        },
-
-        function(error) {
-
-            enviando = false;
-
-            alert(
-                "❌ Error GPS: " + error.message
-            );
-        },
-
-        {
-            timeout: 10000
-        }
-    );
-}
-
-</script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/home.js}"></script>
 
 </body>
 </html>

@@ -23,4 +23,5 @@ public class Usuario {
     private String dni;
     private String password;
     private String distrito;
+    private String rol;
 }

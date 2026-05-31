@@ -1,84 +1,74 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Botón de Pánico</title>
-
-    <!-- Bootstrap -->
+    <title>Login Operador - Botón de Pánico</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-
-    <!-- CSS Personalizado -->
     <link rel="stylesheet" th:href="@{/css/login.css}">
-
-    <!-- Bootstrap JS -->
-    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </head>
 
 <body class="login-body">
 
-    <div class="login-container">
+    <!-- PARTICLES -->
+    <div id="particles-js"></div>
 
+    <div class="login-container">
         <div class="login-card">
 
             <div class="text-center mb-4">
                 <h2 class="login-title">🆘 Botón de Pánico</h2>
-                <p class="login-subtitle">
-                    Inicia sesión para continuar
-                </p>
+                <p class="login-subtitle">Panel de Operador — Inicia sesión</p>
+            </div>
+
+            <div th:if="${error}"
+                 class="alert alert-danger text-center"
+                 th:text="${error}">
             </div>
 
             <form th:action="@{/login}" method="post">
 
                 <div class="mb-3">
-                    <label class="form-label">
-                        Número de Celular
-                    </label>
-
+                    <label class="form-label">Número de Celular</label>
                     <input
-                            type="text"
-                            name="celular"
-                            class="form-control custom-input"
-                            placeholder="Ej: 999123456"
-                            required>
+                        type="text"
+                        name="celular"
+                        class="form-control custom-input"
+                        placeholder="Ej: 999123456"
+                        required>
                 </div>
 
                 <div class="mb-4">
-                    <label class="form-label">
-                        Contraseña
-                    </label>
-
+                    <label class="form-label">Contraseña</label>
                     <input
-                            type="password"
-                            name="contrasena"
-                            class="form-control custom-input"
-                            placeholder="Tu contraseña"
-                            required>
+                        type="password"
+                        name="contrasena"
+                        class="form-control custom-input"
+                        placeholder="Tu contraseña"
+                        required>
                 </div>
 
-                <!-- Error -->
-                <div
-                        th:if="${error}"
-                        class="alert alert-danger text-center"
-                        th:text="${error}">
-                </div>
+                <button type="submit" class="btn login-btn">
+                🚨 Ingresar al Panel
+            </button>
 
-                <!-- Botón -->
-                <button type="submit" class="btn btn-danger login-btn">
-                    🚨 Ingresar
-                </button>
+        </form>
 
-                <!-- Registro -->
-                <a href="/registro" class="btn btn-outline-secondary register-btn">
-                    ¿No tienes cuenta? Regístrate
-                </a>
+        <a href="/" class="login-link-btn mt-3">
+            ← Volver a la página principal
+        </a>
 
-            </form>
-
-        </div>
+        <a href="/registro" class="login-link-btn mt-2">
+            ¿No tienes cuenta? Regístrate
+        </a>
 
     </div>
+</div>
 
+        
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/login.js}"></script>
 </body>
 </html>
