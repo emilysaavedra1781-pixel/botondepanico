@@ -1,6 +1,8 @@
 package botondepanico.service;
 
 import botondepanico.model.Emergencia;
+import botondepanico.model.EstadoEmergencia;
+import botondepanico.model.PrioridadEmergencia;
 import botondepanico.model.Usuario;
 import botondepanico.repository.EmergenciaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,24 +21,18 @@ public class EmergenciaService {
                                      String latitud, String longitud,
                                      String ubicacion, String fotoVideo) {
 
-        // 🔍 DEBUG 1: qué tipo llega del frontend
-        System.out.println("TIPO RECIBIDO: " + tipoEmergencia);
-
-        // 1. Guardar en BD
         Emergencia emergencia = new Emergencia();
         emergencia.setUsuario(usuario);
         emergencia.setTipoEmergencia(tipoEmergencia);
         emergencia.setLatitud(latitud);
         emergencia.setLongitud(longitud);
         emergencia.setUbicacion(ubicacion);
+        emergencia.setEstado(EstadoEmergencia.PENDIENTE);
+        emergencia.setPrioridad(PrioridadEmergencia.ALTA);
         emergencia.setFotoVideo(fotoVideo);
         emergenciaRepository.save(emergencia);
 
-        // 2. Obtener correo según tipo
         String correoAutoridad = obtenerCorreo(tipoEmergencia);
-
-        // 🔍 DEBUG 2: ver correo seleccionado
-        System.out.println("CORREO AUTORIDAD: " + correoAutoridad);
 
         try {
             emailService.enviarAlerta(
@@ -48,10 +44,7 @@ public class EmergenciaService {
                 longitud
             );
 
-            System.out.println("✅ Correo enviado a: " + correoAutoridad);
-
         } catch (Exception e) {
-            System.out.println("❌ Error enviando correo: " + e.getMessage());
         }
     }
 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil Operador</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+</head>
+
+<body class="op-body">
+
+    <div class="op-layout">
+
+        <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+
+            <header class="op-topbar">
+                <div>
+                    <h1>Perfil operador</h1>
+
+                    <p>
+                        Datos de la cuenta autorizada para atencion de emergencias.
+                    </p>
+                </div>
+
+                <span class="status-pill green">
+                    Aprobado
+                </span>
+            </header>
+
+            <div class="op-grid">
+
+                <section class="panel-card">
+
+                    <div class="profile-head">
+
+                        <div class="profile-photo">
+                            <i class="bi bi-person-headset"></i>
+                        </div>
+
+                        <div>
+                            <h2 th:text="${operador.nombre + ' ' + operador.apellido}"></h2>
+
+                            <span
+                                class="status-pill green"
+                                th:text="${operador.estadoCuenta ?: 'ACTIVO'}"
+                            ></span>
+                        </div>
+
+                    </div>
+
+                    <div class="info-grid mt-4">
+
+                        <span>DNI</span>
+                        <strong th:text="${operador.dni}"></strong>
+
+                        <span>Correo</span>
+                        <strong th:text="${operador.correo}"></strong>
+
+                        <span>Celular</span>
+                        <strong th:text="${operador.celular}"></strong>
+
+                        <span>Fecha de registro</span>
+                        <strong
+                            th:text="${operador.fechaRegistro != null ? #temporals.format(operador.fechaRegistro,'dd/MM/yyyy') : 'No registrada'}"
+                        ></strong>
+
+                        <span>Emergencias atendidas</span>
+                        <strong th:text="${atendidas}"></strong>
+
+                    </div>
+
+                </section>
+
+                <aside class="panel-card">
+
+                    <h2>Cuenta</h2>
+
+                    <div class="d-grid gap-3">
+
+                        <button
+                            class="btn btn-outline-secondary"
+                            type="button"
+                        >
+                            Cambiar contrasena
+                        </button>
+
+                        <a
+                            class="btn btn-red"
+                            href="/logout"
+                        >
+                            Cerrar sesion
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+
+</html>

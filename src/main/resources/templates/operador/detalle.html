@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Emergencia</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+</head>
+
+<body class="op-body">
+    <div class="op-layout">
+
+        <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+
+            <header class="op-topbar">
+                <div>
+                    <h1 th:text="${emergencia.estado.name() == 'RESUELTA' ? 'Emergencia resuelta' : 'Emergencia #' + emergencia.id}">
+                        Emergencia
+                    </h1>
+
+                    <p>Informacion completa del caso reportado.</p>
+                </div>
+
+                <span
+                    class="status-pill"
+                    th:classappend="${emergencia.estado.name() == 'RESUELTA'} ? ' green' : ' blue'"
+                    th:text="${emergencia.estado}"
+                ></span>
+            </header>
+
+            <div class="op-grid">
+
+                <section class="panel-card">
+                    <h2>Usuario</h2>
+
+                    <div class="info-grid">
+                        <span>Nombre</span>
+                        <strong th:text="${emergencia.usuario.nombre + ' ' + emergencia.usuario.apellido}"></strong>
+
+                        <span>DNI</span>
+                        <strong th:text="${emergencia.usuario.dni}"></strong>
+
+                        <span>Celular</span>
+                        <strong th:text="${emergencia.usuario.celular}"></strong>
+
+                        <span>Correo</span>
+                        <strong th:text="${emergencia.usuario.correo}"></strong>
+                    </div>
+
+                    <a
+                        class="btn btn-red w-100 mt-3"
+                        th:href="${'tel:' + emergencia.usuario.celular}"
+                    >
+                        <i class="bi bi-telephone"></i>
+                        Llamar al usuario
+                    </a>
+                </section>
+
+                <section class="panel-card">
+                    <h2>Emergencia</h2>
+
+                    <div class="info-grid">
+                        <span>ID</span>
+                        <strong th:text="${emergencia.id}"></strong>
+
+                        <span>Tipo actual</span>
+                        <strong th:text="${emergencia.tipoEmergencia}"></strong>
+
+                        <span>Fecha y hora</span>
+                        <strong th:text="${#temporals.format(emergencia.fecha,'dd/MM/yyyy HH:mm')}"></strong>
+
+                        <span>Distrito</span>
+                        <strong th:text="${emergencia.distrito ?: 'No registrado'}"></strong>
+
+                        <span>Direccion</span>
+                        <strong th:text="${emergencia.direccion ?: emergencia.ubicacion ?: 'No registrada'}"></strong>
+
+                        <span>Referencia</span>
+                        <strong th:text="${emergencia.descripcion ?: 'Sin referencia'}"></strong>
+
+                        <span>Prioridad</span>
+                        <strong th:text="${emergencia.prioridad}"></strong>
+                    </div>
+                </section>
+
+            </div>
+
+            <section class="panel-card mt-3">
+                <div class="section-head">
+                    <h2>Ubicacion GPS</h2>
+
+                    <a
+                        class="btn btn-sm btn-outline-dark"
+                        target="_blank"
+                        th:href="${'https://www.google.com/maps?q=' + emergencia.latitud + ',' + emergencia.longitud}"
+                    >
+                        <i class="bi bi-map"></i>
+                        Ver en Google Maps
+                    </a>
+                </div>
+
+                <div
+                    id="operatorMap"
+                    class="map-box single"
+                    th:data-lat="${emergencia.latitud}"
+                    th:data-lng="${emergencia.longitud}"
+                    th:data-title="${emergencia.tipoEmergencia}"
+                ></div>
+            </section>
+
+            <section class="panel-card mt-3">
+                <h2>Evidencias enviadas</h2>
+
+                <div class="evidence-grid">
+
+                    <article
+                        th:each="ev:${evidencias}"
+                        class="evidence-card"
+                    >
+                        <strong th:text="${ev.nombreArchivo}"></strong>
+
+                        <small th:text="${ev.tipo + ' - ' + #temporals.format(ev.fechaEnvio,'dd/MM/yyyy HH:mm')}"></small>
+
+                        <img
+                            th:if="${#strings.startsWith(ev.contentType ?: '', 'image/')}"
+                            th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"
+                            alt="Evidencia"
+                        >
+
+                        <video
+                            th:if="${#strings.startsWith(ev.contentType ?: '', 'video/')}"
+                            controls
+                            th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"
+                        ></video>
+
+                        <audio
+                            th:if="${#strings.startsWith(ev.contentType ?: '', 'audio/')}"
+                            controls
+                            th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"
+                        ></audio>
+                    </article>
+
+                    <p
+                        th:if="${#lists.isEmpty(evidencias)}"
+                        class="muted"
+                    >
+                        No hay evidencias registradas.
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="action-bar">
+
+                <form
+                    th:if="${emergencia.estado.name() == 'PENDIENTE'}"
+                    th:action="@{/operador/emergencia/{id}/aceptar(id=${emergencia.id})}"
+                    method="post"
+                >
+                    <button class="btn btn-red" type="submit">
+                        <i class="bi bi-check2-circle"></i>
+                        Aceptar emergencia
+                    </button>
+                </form>
+
+                <form
+                    th:if="${emergencia.estado.name() == 'PENDIENTE'}"
+                    th:action="@{/operador/emergencia/{id}/rechazar(id=${emergencia.id})}"
+                    method="post"
+                >
+                    <button class="btn btn-outline-danger" type="submit">
+                        <i class="bi bi-x-circle"></i>
+                        Rechazar emergencia
+                    </button>
+                </form>
+
+                <a
+                    th:if="${emergencia.estado.name() != 'PENDIENTE' and emergencia.estado.name() != 'RESUELTA'}"
+                    class="btn btn-red"
+                    th:href="@{/operador/emergencia/{id}/seguimiento(id=${emergencia.id})}"
+                >
+                    <i class="bi bi-activity"></i>
+                    Ir a seguimiento
+                </a>
+
+                <form
+                    th:if="${emergencia.estado.name() != 'RESUELTA' and emergencia.estado.name() != 'RECHAZADA'}"
+                    th:action="@{/operador/emergencia/{id}/finalizar(id=${emergencia.id})}"
+                    method="post"
+                >
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi bi-flag"></i>
+                        Marcar emergencia resuelta
+                    </button>
+                </form>
+
+                <span
+                    th:if="${emergencia.estado.name() == 'RESUELTA'}"
+                    class="status-pill green"
+                >
+                    <i class="bi bi-check2-circle"></i>
+                    Emergencia resuelta
+                </span>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/operador.js(v=1)}"></script>
+</body>
+</html>

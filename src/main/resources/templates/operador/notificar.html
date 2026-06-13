@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notificar Autoridad</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+</head>
+
+<body class="op-body">
+
+    <div class="op-layout">
+
+        <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+
+            <header class="op-topbar">
+                <div>
+                    <h1 th:text="${'Notificar Emergencia #' + emergencia.id}">
+                        Notificar
+                    </h1>
+
+                    <p>
+                        Envia el reporte formal a la entidad competente.
+                    </p>
+                </div>
+
+                <span class="status-pill amber">
+                    Pendiente de envio
+                </span>
+            </header>
+
+            <div class="op-grid">
+
+                <section class="panel-card">
+
+                    <h2>Resumen de la emergencia</h2>
+
+                    <div class="info-grid">
+
+                        <span>ID</span>
+                        <strong th:text="${emergencia.id}"></strong>
+
+                        <span>Tipo</span>
+                        <strong th:text="${emergencia.tipoEmergencia}"></strong>
+
+                        <span>Usuario</span>
+                        <strong th:text="${emergencia.usuario.nombre + ' ' + emergencia.usuario.apellido}"></strong>
+
+                        <span>Ubicacion</span>
+                        <strong th:text="${emergencia.direccion ?: emergencia.ubicacion ?: 'GPS registrado'}"></strong>
+
+                        <span>Fecha y hora</span>
+                        <strong th:text="${#temporals.format(emergencia.fecha,'dd/MM/yyyy HH:mm')}"></strong>
+
+                        <span>Descripcion operador</span>
+                        <strong th:text="${emergencia.descripcionOperador ?: 'Sin descripcion'}"></strong>
+
+                    </div>
+
+                </section>
+
+                <form
+                    class="panel-card"
+                    th:action="@{/operador/emergencia/{id}/notificar(id=${emergencia.id})}"
+                    method="post"
+                >
+
+                    <h2>Entidad a notificar</h2>
+
+                    <div class="entity-list">
+
+                        <label
+                            th:each="entidad:${entidades}"
+                            class="entity-card"
+                            th:classappend="${entidad == entidadRecomendada} ? ' recommended'"
+                        >
+
+                            <input
+                                type="radio"
+                                name="entidad"
+                                th:value="${entidad}"
+                                th:checked="${entidad == entidadRecomendada}"
+                            >
+
+                            <span>
+                                <strong th:text="${entidad}"></strong>
+
+                                <small th:if="${entidad == entidadRecomendada}">
+                                    Recomendada automaticamente
+                                </small>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <label class="form-label mt-3">
+                        Correo de destino
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="email"
+                        name="correoDestino"
+                        th:value="${correoSugerido}"
+                        required
+                    >
+
+                    <div class="action-bar compact">
+
+                        <button class="btn btn-red" type="submit">
+                            <i class="bi bi-send"></i>
+                            Enviar notificacion
+                        </button>
+
+                        <a
+                            class="btn btn-outline-secondary"
+                            th:href="@{/operador/emergencia/{id}/seguimiento(id=${emergencia.id})}"
+                        >
+                            Cancelar
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+
+</html>

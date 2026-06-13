@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Atendido</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+</head>
+
+<body class="op-body">
+    <div class="op-layout">
+
+        <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+
+            <header class="op-topbar">
+                <div>
+                    <h1>Historial atendido</h1>
+                    <p>Casos gestionados por tu cuenta de operador.</p>
+                </div>
+
+                <span class="status-pill green">
+                    Aprobado
+                </span>
+            </header>
+
+            <div
+                th:if="${exito}"
+                class="alert alert-success"
+                th:text="${exito}"
+            ></div>
+
+            <section class="panel-card mb-3">
+
+                <form class="filter-grid" method="get">
+
+                    <input
+                        class="form-control"
+                        type="date"
+                        name="fecha"
+                    >
+
+                    <select class="form-select" name="tipo">
+                        <option value="">Tipo</option>
+
+                        <option
+                            th:each="t:${tipos}"
+                            th:value="${t.name()}"
+                            th:text="${t.etiqueta}"
+                        ></option>
+                    </select>
+
+                    <input
+                        class="form-control"
+                        name="distrito"
+                        placeholder="Distrito"
+                    >
+
+                    <select class="form-select" name="estado">
+                        <option value="">Estado</option>
+
+                        <option
+                            th:each="e:${estados}"
+                            th:value="${e}"
+                            th:text="${e}"
+                        ></option>
+                    </select>
+
+                    <button class="btn btn-red" type="submit">
+                        Filtrar
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section class="panel-card table-card">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Usuario</th>
+                                <th>Distrito</th>
+                                <th>Fecha y hora</th>
+                                <th>Estado final</th>
+                                <th>Entidad notificada</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr th:each="em:${emergencias}">
+
+                                <td th:text="${em.id}"></td>
+
+                                <td th:text="${em.tipoEmergencia}"></td>
+
+                                <td th:text="${em.usuario.nombre + ' ' + em.usuario.apellido}"></td>
+
+                                <td th:text="${em.distrito ?: 'No registrado'}"></td>
+
+                                <td th:text="${#temporals.format(em.fecha,'dd/MM/yyyy HH:mm')}"></td>
+
+                                <td>
+                                    <span
+                                        class="status-pill blue"
+                                        th:text="${em.estado}"
+                                    ></span>
+                                </td>
+
+                                <td th:text="${em.entidadNotificada ?: 'No enviada'}"></td>
+
+                                <td>
+                                    <a
+                                        class="btn btn-sm btn-outline-dark"
+                                        th:href="@{/operador/emergencia/{id}(id=${em.id})}"
+                                    >
+                                        Ver detalle
+                                    </a>
+                                </td>
+
+                            </tr>
+
+                            <tr th:if="${#lists.isEmpty(emergencias)}">
+                                <td
+                                    colspan="8"
+                                    class="text-center muted py-4"
+                                >
+                                    Aun no hay casos atendidos.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial General</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body class="admin-body">
+    <div class="admin-layout">
+
+        <aside th:replace="~{admin/fragments :: sidebar(${active})}"></aside>
+
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+                <div>
+                    <h1>Historial de Emergencias</h1>
+                    <p>Registro general de casos del sistema.</p>
+                </div>
+            </header>
+
+            <section class="panel-card mb-3">
+
+                <div class="filter-grid">
+
+                    <input
+                        class="form-control"
+                        placeholder="Buscar en historial..."
+                    >
+
+                    <input
+                        class="form-control"
+                        type="date"
+                    >
+
+                    <input
+                        class="form-control"
+                        placeholder="Tipo"
+                    >
+
+                    <input
+                        class="form-control"
+                        placeholder="Distrito"
+                    >
+
+                    <input
+                        class="form-control"
+                        placeholder="Estado final"
+                    >
+
+                    <input
+                        class="form-control"
+                        placeholder="Operador"
+                    >
+
+                </div>
+
+            </section>
+
+            <section class="panel-card table-card">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Usuario</th>
+                                <th>Distrito</th>
+                                <th>Fecha y hora</th>
+                                <th>Estado final</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr th:each="em:${emergencias}">
+
+                                <td th:text="${em.id}"></td>
+
+                                <td th:text="${em.tipoEmergencia}"></td>
+
+                                <td th:text="${em.usuario.nombre + ' ' + em.usuario.apellido}"></td>
+
+                                <td th:text="${em.distrito ?: 'No registrado'}"></td>
+
+                                <td th:text="${#temporals.format(em.fecha,'dd/MM/yyyy HH:mm')}"></td>
+
+                                <td>
+                                    <span
+                                        class="status-pill blue"
+                                        th:text="${em.estado}"
+                                    ></span>
+                                </td>
+
+                                <td>
+                                    <a
+                                        class="btn btn-sm btn-outline-dark"
+                                        th:href="@{/admin/emergencias/{id}(id=${em.id})}"
+                                    >
+                                        Ver
+                                    </a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

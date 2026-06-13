@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Cámara - Botón de Pánico</title>
+    <title>CÃ¡mara - BotÃ³n de PÃ¡nico</title>
 
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 
@@ -75,26 +75,24 @@
 
 <div class="d-flex">
 
-    <!-- Sidebar -->
     <div class="sidebar d-flex flex-column p-3">
-        <h5 class="text-white text-center mb-4">🆘 Botón de Pánico</h5>
+        <h5 class="text-white text-center mb-4">ðŸ†˜ BotÃ³n de PÃ¡nico</h5>
 
-        <a href="/home">🏠 Inicio</a>
-        <a href="/camara">📷 Cámara</a>
-        <a href="/notificaciones">🔔 Notificaciones</a>
+        <a href="/home">ðŸ  Inicio</a>
+        <a href="/camara">ðŸ“· CÃ¡mara</a>
+        <a href="/notificaciones">ðŸ”” Notificaciones</a>
 
         <div class="mt-auto">
             <form th:action="@{/logout}" method="post">
                 <button type="submit" class="btn text-white w-100 text-start ps-0">
-                    🚪 Cerrar Sesión
+                    ðŸšª Cerrar SesiÃ³n
                 </button>
             </form>
         </div>
     </div>
 
-    <!-- Contenido -->
     <div class="flex-grow-1 content">
-        <h3 class="text-danger mb-4">📷 Cámara de Evidencia</h3>
+        <h3 class="text-danger mb-4">ðŸ“· CÃ¡mara de Evidencia</h3>
 
         <div class="row">
             <div class="col-md-8">
@@ -103,10 +101,10 @@
 
                 <div class="d-flex gap-2 mt-3">
                     <button class="btn btn-danger flex-grow-1" onclick="tomarFoto()">
-                        📸 Tomar Foto
+                        ðŸ“¸ Tomar Foto
                     </button>
                     <button class="btn btn-dark flex-grow-1" id="btnGrabar" onclick="toggleGrabacion()">
-                        🎥 Grabar Video
+                        ðŸŽ¥ Grabar Video
                     </button>
                 </div>
             </div>
@@ -128,15 +126,13 @@
 <script>
 let stream, mediaRecorder, chunks = [], grabando = false;
 
-// Cámara
 navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     .then(s => {
         stream = s;
         document.getElementById('video').srcObject = s;
     })
-    .catch(() => alert('No se pudo acceder a la cámara'));
+    .catch(() => alert('No se pudo acceder a la cÃ¡mara'));
 
-// Foto
 function tomarFoto() {
     const canvas = document.getElementById('canvas');
     const video = document.getElementById('video');
@@ -152,10 +148,9 @@ function tomarFoto() {
 
     document.getElementById('videoPreview').style.display = 'none';
 
-    mostrarMensaje('✅ Foto capturada correctamente');
+    mostrarMensaje('âœ… Foto capturada correctamente');
 }
 
-// Video
 function toggleGrabacion() {
     const btn = document.getElementById('btnGrabar');
 
@@ -175,13 +170,13 @@ function toggleGrabacion() {
 
             document.getElementById('foto').style.display = 'none';
 
-            mostrarMensaje('✅ Video grabado correctamente');
+            mostrarMensaje('âœ… Video grabado correctamente');
         };
 
         mediaRecorder.start();
         grabando = true;
 
-        btn.textContent = '⏹ Detener';
+        btn.textContent = 'â¹ Detener';
         btn.classList.replace('btn-dark', 'btn-danger');
 
         setTimeout(() => {
@@ -192,12 +187,11 @@ function toggleGrabacion() {
         mediaRecorder.stop();
         grabando = false;
 
-        btn.textContent = '🎥 Grabar Video';
+        btn.textContent = 'ðŸŽ¥ Grabar Video';
         btn.classList.replace('btn-danger', 'btn-dark');
     }
 }
 
-// mensaje
 function mostrarMensaje(texto) {
     const msg = document.getElementById('mensaje');
     msg.textContent = texto;

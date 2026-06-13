@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Admin Emergencia</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body class="admin-body">
+    <div class="admin-layout">
+
+        <aside th:replace="~{admin/fragments :: sidebar(${active})}"></aside>
+
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+                <div>
+                    <h1 th:text="${'Emergencia #' + emergencia.id}">
+                        Detalle
+                    </h1>
+
+                    <p>Detalle completo del caso.</p>
+                </div>
+
+                <span
+                    class="status-pill blue"
+                    th:text="${emergencia.estado}"
+                ></span>
+            </header>
+
+            <div class="admin-grid">
+
+                <section class="panel-card">
+                    <h2>Datos del usuario</h2>
+
+                    <div class="info-grid">
+                        <span>Nombre</span>
+                        <strong th:text="${emergencia.usuario.nombre + ' ' + emergencia.usuario.apellido}"></strong>
+
+                        <span>DNI</span>
+                        <strong th:text="${emergencia.usuario.dni}"></strong>
+
+                        <span>Celular</span>
+                        <strong th:text="${emergencia.usuario.celular}"></strong>
+
+                        <span>Correo</span>
+                        <strong th:text="${emergencia.usuario.correo}"></strong>
+                    </div>
+                </section>
+
+                <section class="panel-card">
+                    <h2>Datos del operador</h2>
+
+                    <div class="info-grid">
+                        <span>Operador</span>
+                        <strong th:text="${emergencia.operadorAsignado != null ? emergencia.operadorAsignado.nombre + ' ' + emergencia.operadorAsignado.apellido : 'No asignado'}"></strong>
+
+                        <span>Entidad notificada</span>
+                        <strong th:text="${emergencia.entidadNotificada ?: 'No notificada'}"></strong>
+
+                        <span>Correo entidad</span>
+                        <strong th:text="${emergencia.correoEntidadNotificada ?: 'No registrado'}"></strong>
+
+                        <span>Tiempo de atencion</span>
+                        <strong>Calculado por historial</strong>
+                    </div>
+                </section>
+
+            </div>
+
+            <section class="panel-card mt-3">
+                <h2>Ubicacion</h2>
+
+                <div
+                    id="adminMap"
+                    class="map-box single"
+                    th:data-lat="${emergencia.latitud}"
+                    th:data-lng="${emergencia.longitud}"
+                    th:data-title="${emergencia.tipoEmergencia}"
+                ></div>
+            </section>
+
+            <section class="panel-card mt-3">
+                <h2>Informacion y evidencias</h2>
+
+                <div class="info-grid wide mb-3">
+                    <span>Tipo</span>
+                    <strong th:text="${emergencia.tipoEmergencia}"></strong>
+
+                    <span>Descripcion usuario</span>
+                    <strong th:text="${emergencia.descripcion ?: 'Sin descripcion'}"></strong>
+
+                    <span>Descripcion operador</span>
+                    <strong th:text="${emergencia.descripcionOperador ?: 'Sin descripcion'}"></strong>
+
+                    <span>Estado final</span>
+                    <strong th:text="${emergencia.estado}"></strong>
+                </div>
+
+                <div class="evidence-grid">
+
+                    <article
+                        th:each="ev:${evidencias}"
+                        class="evidence-card"
+                    >
+                        <strong th:text="${ev.nombreArchivo}"></strong>
+
+                        <small th:text="${ev.tipo}"></small>
+
+                        <img
+                            th:if="${#strings.startsWith(ev.contentType ?: '', 'image/')}"
+                            th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"
+                            alt="Evidencia"
+                        >
+
+                        <video
+                            th:if="${#strings.startsWith(ev.contentType ?: '', 'video/')}"
+                            controls
+                            th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"
+                        ></video>
+
+                        <audio
+                            th:if="${#strings.startsWith(ev.contentType ?: '', 'audio/')}"
+                            controls
+                            th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"
+                        ></audio>
+                    </article>
+
+                    <p
+                        th:if="${#lists.isEmpty(evidencias)}"
+                        class="muted"
+                    >
+                        No hay evidencias.
+                    </p>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/admin.js(v=1)}"></script>
+</body>
+</html>

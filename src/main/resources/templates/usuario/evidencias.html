@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis evidencias</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/usuario.css}">
+</head>
+<body class="user-body">
+<div class="user-layout">
+    <aside class="user-sidebar">
+        <div class="user-brand"><div class="user-brand-icon">SOS</div><div><strong>Boton de Panico</strong><span>Emergencias Lima</span></div></div>
+        <nav class="user-nav">
+            <a href="/usuario/dashboard"><i class="bi bi-house"></i>Inicio</a>
+            <a href="/usuario/emergencia-activa"><i class="bi bi-exclamation-triangle"></i>Emergencia Activa</a>
+            <a class="active" href="/usuario/evidencias"><i class="bi bi-folder2-open"></i>Mis evidencias</a>
+            <a href="/usuario/historial"><i class="bi bi-clock-history"></i>Historial</a>
+            <a href="/usuario/perfil"><i class="bi bi-person"></i>Mi Perfil</a>
+            <a href="/logout"><i class="bi bi-box-arrow-right"></i>Cerrar Sesion</a>
+        </nav>
+    </aside>
+
+    <main class="user-main">
+        <header class="user-topbar">
+            <div><h1>Mis evidencias</h1><p>Consulta el detalle de las evidencias enviadas y el estado de atencion.</p></div>
+            <div class="user-avatar" th:text="${#strings.substring(usuario.nombre,0,1)}">U</div>
+        </header>
+
+        <div th:if="${exito}" class="alert alert-success rounded-4" th:text="${exito}"></div>
+        <div th:if="${error}" class="alert alert-danger rounded-4" th:text="${error}"></div>
+
+        <section th:if="${#lists.isEmpty(emergencias)}" class="panel-card">
+            <h2 class="card-title">Casos registrados</h2>
+            <p class="muted mb-0">Aun no has enviado evidencias. Cuando mantengas presionado el boton SOS, se creara un caso nuevo aqui.</p>
+        </section>
+
+        <section class="case-list-user">
+            <article th:each="caso : ${emergencias}" class="panel-card evidence-case-card">
+                <div class="case-card-header">
+                    <div>
+                        <h2 class="card-title mb-1" th:text="${'Caso #' + caso.id}">Caso</h2>
+                        <p class="muted mb-0" th:text="${#temporals.format(caso.fecha,'dd/MM/yyyy HH:mm')}">Fecha</p>
+                    </div>
+                    <span class="status-pill" th:classappend="${caso.estado.name() == 'RESUELTA'} ? ' green' : (${caso.estado.name() == 'AUTORIDAD_NOTIFICADA'} ? ' blue' : ' red')" th:text="${caso.estado}">Estado</span>
+                </div>
+
+                <div class="case-summary-grid">
+                    <div><span>Tipo</span><strong th:text="${caso.tipoEmergencia}">Tipo</strong></div>
+                    <div><span>Operador</span><strong th:text="${caso.operadorAsignado != null ? caso.operadorAsignado.nombre + ' ' + caso.operadorAsignado.apellido : 'Pendiente de asignacion'}">Operador</strong></div>
+                    <div><span>Autoridad</span><strong th:text="${caso.entidadNotificada ?: 'No notificada'}">Autoridad</strong></div>
+                    <div><span>Distrito</span><strong th:text="${caso.distrito ?: 'No registrado'}">Distrito</strong></div>
+                    <div class="wide"><span>Ubicacion</span><strong th:text="${caso.direccion ?: caso.ubicacion ?: 'GPS registrado'}">Ubicacion</strong></div>
+                    <div class="wide" th:if="${caso.descripcion != null and !#strings.isEmpty(caso.descripcion)}"><span>Descripcion enviada</span><strong th:text="${caso.descripcion}">Descripcion</strong></div>
+                </div>
+
+                <ul class="timeline mt-4">
+                    <li class="done">
+                        <span class="timeline-dot"><i class="bi bi-check"></i></span>
+                        <div><strong>Emergencia registrada</strong><br><small class="muted" th:text="${#temporals.format(caso.fecha,'dd/MM/yyyy HH:mm')}">Fecha</small></div>
+                    </li>
+                    <li th:classappend="${caso.operadorAsignado != null or caso.estado.name() == 'EN_ATENCION' or caso.estado.name() == 'AUTORIDAD_NOTIFICADA' or caso.estado.name() == 'RESUELTA'} ? 'done' : ''">
+                        <span class="timeline-dot"><i class="bi bi-headset"></i></span>
+                        <div><strong>En atencion</strong><br><small class="muted" th:text="${caso.operadorAsignado != null ? 'Operador: ' + caso.operadorAsignado.nombre + ' ' + caso.operadorAsignado.apellido : 'Esperando operador'}">Operador</small></div>
+                    </li>
+                    <li th:classappend="${caso.estado.name() == 'AUTORIDAD_NOTIFICADA' or caso.estado.name() == 'RESUELTA'} ? 'done' : ''">
+                        <span class="timeline-dot"><i class="bi bi-send"></i></span>
+                        <div><strong>Autoridad notificada</strong><br><small class="muted" th:text="${caso.entidadNotificada ?: 'Pendiente de notificacion'}">Entidad</small></div>
+                    </li>
+                    <li th:classappend="${caso.estado.name() == 'RESUELTA'} ? 'done' : ''">
+                        <span class="timeline-dot"><i class="bi bi-flag"></i></span>
+                        <div><strong>Emergencia resuelta</strong><br><small class="muted" th:text="${caso.estado.name() == 'RESUELTA' ? 'La atencion fue finalizada por el operador' : 'Pendiente de cierre'}">Cierre</small></div>
+                    </li>
+                </ul>
+
+                <div class="case-evidence-section">
+                    <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
+                        <h3 class="case-subtitle mb-0">Evidencias del caso</h3>
+                        <span class="evidence-count" th:text="${#lists.size(caso.evidencias) + ' archivo(s)'}">0 archivos</span>
+                    </div>
+                    <div class="evidence-grid-user" th:if="${!#lists.isEmpty(caso.evidencias)}">
+                        <article th:each="ev : ${caso.evidencias}" class="evidence-card-user">
+                            <div class="evidence-card-head">
+                                <span class="quick-icon"><i th:class="${ev.tipo == 'AUDIO' ? 'bi bi-mic' : (ev.tipo == 'VIDEO' ? 'bi bi-camera-video' : 'bi bi-image')}"></i></span>
+                                <div>
+                                    <strong th:text="${ev.nombreArchivo}">Archivo</strong>
+                                    <small class="muted" th:text="${ev.tipo + ' - ' + #temporals.format(ev.fechaEnvio,'dd/MM/yyyy HH:mm')}">Fecha</small>
+                                </div>
+                            </div>
+                            <img th:if="${#strings.startsWith(ev.contentType ?: '', 'image/')}" th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}" alt="Evidencia">
+                            <video th:if="${#strings.startsWith(ev.contentType ?: '', 'video/')}" controls th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"></video>
+                            <audio th:if="${#strings.startsWith(ev.contentType ?: '', 'audio/')}" controls th:src="@{/usuario/evidencia/{id}/archivo(id=${ev.id})}"></audio>
+                            <p th:if="${ev.descripcion != null and !#strings.isEmpty(ev.descripcion)}" class="evidence-description" th:text="${ev.descripcion}">Descripcion</p>
+                            <div class="evidence-meta">
+                                <span th:text="${'Caso #' + caso.id}">Caso</span>
+                                <span th:text="${caso.estado}">Estado</span>
+                            </div>
+                        </article>
+                    </div>
+                    <p th:if="${#lists.isEmpty(caso.evidencias)}" class="muted mb-0">Este caso aun no tiene archivos asociados.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/usuario.js(v=10)}"></script>
+</body>
+</html>

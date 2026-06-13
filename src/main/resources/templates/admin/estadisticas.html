@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadisticas y Reportes</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body class="admin-body">
+    <div class="admin-layout">
+
+        <aside th:replace="~{admin/fragments :: sidebar(${active})}"></aside>
+
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+                <div>
+                    <h1>Estadisticas y Reportes</h1>
+                    <p>Analisis operacional del sistema.</p>
+                </div>
+
+                <form
+                    th:action="@{/admin/estadisticas/reporte}"
+                    method="post"
+                >
+                    <button class="btn btn-red" type="submit">
+                        <i class="bi bi-file-earmark-bar-graph"></i>
+                        Generar reporte
+                    </button>
+                </form>
+            </header>
+
+            <div
+                th:if="${exito}"
+                class="alert alert-success"
+                th:text="${exito}"
+            ></div>
+
+            <section class="panel-card mb-3">
+
+                <div class="filter-grid">
+
+                    <select class="form-select" name="periodo">
+                        <option>Este mes</option>
+                    </select>
+
+                    <select class="form-select" name="distrito">
+                        <option>Todos los distritos</option>
+                    </select>
+
+                    <select class="form-select" name="tipo">
+                        <option>Todos los tipos</option>
+                    </select>
+
+                    <button class="btn btn-outline-dark" type="button">
+                        Exportar PDF
+                    </button>
+
+                    <button class="btn btn-outline-dark" type="button">
+                        Exportar Excel
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <span>Total emergencias</span>
+                    <strong th:text="${emergenciasMes}">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Resueltas</span>
+                    <strong th:text="${resueltas}">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Tiempo promedio</span>
+                    <strong th:text="${promedioAtencion}">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Operador con mas casos</span>
+                    <strong>Disponible</strong>
+                </article>
+
+            </section>
+
+            <section class="admin-grid charts-compact">
+
+                <article class="panel-card">
+                    <h2>Emergencias por tipo</h2>
+
+                    <canvas
+                        data-chart="pie"
+                        th:attr="data-values=${porTipo}"
+                    ></canvas>
+                </article>
+
+                <article class="panel-card">
+                    <h2>Emergencias por distrito</h2>
+
+                    <canvas
+                        data-chart="bar"
+                        th:attr="data-values=${porDistrito}"
+                    ></canvas>
+                </article>
+
+                <article class="panel-card">
+                    <h2>Emergencias por hora</h2>
+
+                    <canvas
+                        data-chart="line"
+                        th:attr="data-values=${porHora}"
+                    ></canvas>
+                </article>
+
+                <article class="panel-card">
+                    <h2>Casos por operador</h2>
+
+                    <canvas
+                        data-chart="bar"
+                        th:attr="data-values=${porOperador}"
+                    ></canvas>
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/admin.js(v=1)}"></script>
+</body>
+</html>

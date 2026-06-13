@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuracion Sistema</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body class="admin-body">
+
+    <div class="admin-layout">
+
+        <aside th:replace="~{admin/fragments :: sidebar(${active})}"></aside>
+
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+                <div>
+                    <h1>Configuracion del Sistema</h1>
+                    <p>Parametros generales, entidades y seguridad.</p>
+                </div>
+            </header>
+
+            <div
+                th:if="${exito}"
+                class="alert alert-success"
+                th:text="${exito}"
+            ></div>
+
+            <form
+                th:action="@{/admin/configuracion}"
+                method="post"
+                th:object="${config}"
+                class="panel-card"
+            >
+
+                <ul class="nav nav-tabs">
+
+                    <li class="nav-item">
+                        <button
+                            class="nav-link active"
+                            data-bs-toggle="tab"
+                            data-bs-target="#generales"
+                            type="button"
+                        >
+                            Generales
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#entidades"
+                            type="button"
+                        >
+                            Entidades
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#notificaciones"
+                            type="button"
+                        >
+                            Notificaciones
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#seguridad"
+                            type="button"
+                        >
+                            Seguridad
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#backup"
+                            type="button"
+                        >
+                            Copia de seguridad
+                        </button>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content pt-3">
+
+                    <!-- Generales -->
+                    <div class="tab-pane fade show active" id="generales">
+
+                        <div class="form-grid">
+
+                            <input
+                                class="form-control"
+                                th:field="*{nombreSistema}"
+                                placeholder="Nombre del sistema"
+                            >
+
+                            <input
+                                class="form-control"
+                                th:field="*{correoSoporte}"
+                                placeholder="Correo de soporte"
+                            >
+
+                            <input
+                                class="form-control"
+                                th:field="*{telefonoContacto}"
+                                placeholder="Telefono de contacto"
+                            >
+
+                            <input
+                                class="form-control"
+                                th:field="*{direccion}"
+                                placeholder="Direccion"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- Entidades -->
+                    <div class="tab-pane fade" id="entidades">
+
+                        <div class="form-grid">
+
+                            <input
+                                class="form-control"
+                                value="Comisaria Distrital"
+                                readonly
+                            >
+
+                            <input
+                                class="form-control"
+                                th:field="*{correoComisaria}"
+                                placeholder="Correo electronico"
+                            >
+
+                            <input
+                                class="form-control"
+                                value="SAMU"
+                                readonly
+                            >
+
+                            <input
+                                class="form-control"
+                                th:field="*{correoSamu}"
+                                placeholder="Correo electronico"
+                            >
+
+                            <input
+                                class="form-control"
+                                value="Bomberos"
+                                readonly
+                            >
+
+                            <input
+                                class="form-control"
+                                th:field="*{correoBomberos}"
+                                placeholder="Correo electronico"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- Notificaciones -->
+                    <div class="tab-pane fade" id="notificaciones">
+
+                        <div class="check-grid">
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    th:field="*{correoAutomatico}"
+                                >
+                                Activar correo automatico
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    th:field="*{notificarUsuario}"
+                                >
+                                Activar notificacion al usuario
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    th:field="*{notificarOperador}"
+                                >
+                                Activar notificacion al operador
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    th:field="*{notificarAdmin}"
+                                >
+                                Activar notificacion al administrador
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Seguridad -->
+                    <div class="tab-pane fade" id="seguridad">
+
+                        <div class="form-grid">
+
+                            <input
+                                class="form-control"
+                                type="number"
+                                th:field="*{tiempoMaximoAtencion}"
+                                placeholder="Tiempo maximo de atencion"
+                            >
+
+                            <input
+                                class="form-control"
+                                type="number"
+                                th:field="*{radioBusquedaKm}"
+                                placeholder="Radio de busqueda en km"
+                            >
+
+                            <input
+                                class="form-control"
+                                type="number"
+                                th:field="*{duracionSesion}"
+                                placeholder="Duracion de sesion"
+                            >
+
+                            <label class="form-check-label">
+
+                                <input
+                                    type="checkbox"
+                                    th:field="*{registroActividad}"
+                                >
+
+                                Activar registro de actividad
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Backup -->
+                    <div class="tab-pane fade" id="backup">
+
+                        <p class="muted">
+                            Copia de seguridad disponible para integracion con
+                            tareas programadas o Supabase backups.
+                        </p>
+
+                        <button
+                            class="btn btn-outline-dark"
+                            type="button"
+                        >
+                            Preparar copia de seguridad
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="btn btn-red mt-4"
+                    type="submit"
+                >
+                    Guardar cambios
+                </button>
+
+            </form>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+
+</html>

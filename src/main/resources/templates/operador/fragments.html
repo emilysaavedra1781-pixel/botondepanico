@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+    <aside th:fragment="sidebar(active)" class="op-sidebar">
+
+        <div class="op-brand">
+            <div class="op-brand-icon">
+                SOS
+            </div>
+
+            <div>
+                <strong>Boton de Panico</strong>
+                <span>Sistema de Emergencias Lima</span>
+            </div>
+        </div>
+
+        <nav class="op-nav">
+
+            <a
+                th:classappend="${active == 'dashboard'} ? ' active'"
+                href="/operador/dashboard"
+            >
+                <i class="bi bi-grid-1x2"></i>
+                Dashboard
+            </a>
+
+            <a
+                th:classappend="${active == 'emergencias'} ? ' active'"
+                href="/operador/emergencias"
+            >
+                <i class="bi bi-exclamation-octagon"></i>
+                Emergencias
+            </a>
+
+            <a
+                th:classappend="${active == 'notificaciones'} ? ' active'"
+                href="/operador/emergencias"
+            >
+                <i class="bi bi-bell"></i>
+                Notificaciones
+            </a>
+
+            <a
+                th:classappend="${active == 'historial'} ? ' active'"
+                href="/operador/historial"
+            >
+                <i class="bi bi-clock-history"></i>
+                Historial atendido
+            </a>
+
+            <a
+                th:classappend="${active == 'perfil'} ? ' active'"
+                href="/operador/perfil"
+            >
+                <i class="bi bi-person-badge"></i>
+                Perfil
+            </a>
+
+            <a href="/logout">
+                <i class="bi bi-box-arrow-right"></i>
+                Cerrar sesion
+            </a>
+
+        </nav>
+
+    </aside>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Operadores</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body class="admin-body">
+    <div class="admin-layout">
+
+        <aside th:replace="~{admin/fragments :: sidebar(${active})}"></aside>
+
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+                <div>
+                    <h1>Gestion de Operadores</h1>
+                    <p>Aprueba, rechaza y supervisa cuentas operativas.</p>
+                </div>
+            </header>
+
+            <div
+                th:if="${exito}"
+                class="alert alert-success"
+                th:text="${exito}"
+            ></div>
+
+            <section class="panel-card mb-3">
+
+                <div class="tabs-inline">
+                    <span>Todos</span>
+                    <span>Pendientes</span>
+                    <span>Aprobados</span>
+                    <span>Rechazados</span>
+                </div>
+
+                <input
+                    class="form-control mt-3"
+                    placeholder="Buscar operador..."
+                    data-table-search
+                >
+
+            </section>
+
+            <section class="panel-card table-card">
+
+                <div class="table-responsive">
+
+                    <table
+                        class="table table-hover align-middle"
+                        data-search-table
+                    >
+
+                        <thead>
+                            <tr>
+                                <th>Operador</th>
+                                <th>DNI</th>
+                                <th>Correo</th>
+                                <th>Fecha de solicitud</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr th:each="op:${operadores}">
+
+                                <td th:text="${op.nombre + ' ' + op.apellido}"></td>
+
+                                <td th:text="${op.dni}"></td>
+
+                                <td th:text="${op.correo}"></td>
+
+                                <td th:text="${op.fechaRegistro != null ? #temporals.format(op.fechaRegistro,'dd/MM/yyyy') : 'No registrada'}"></td>
+
+                                <td>
+                                    <span
+                                        class="status-pill"
+                                        th:classappend="${op.estadoCuenta == 'ACTIVO'} ? ' green' : (${op.estadoCuenta == 'RECHAZADO'} ? ' red' : ' amber')"
+                                        th:text="${op.estadoCuenta == 'ACTIVO' ? 'APROBADO' : op.estadoCuenta}"
+                                    ></span>
+                                </td>
+
+                                <td class="action-cell">
+
+                                    <form
+                                        th:action="@{/admin/operadores/{id}/aprobar(id=${op.id})}"
+                                        method="post"
+                                    >
+                                        <button
+                                            class="btn btn-sm btn-red"
+                                            type="submit"
+                                        >
+                                            Aprobar
+                                        </button>
+                                    </form>
+
+                                    <form
+                                        th:action="@{/admin/operadores/{id}/rechazar(id=${op.id})}"
+                                        method="post"
+                                    >
+                                        <button
+                                            class="btn btn-sm btn-outline-danger"
+                                            type="submit"
+                                        >
+                                            Rechazar
+                                        </button>
+                                    </form>
+
+                                    <button
+                                        class="btn btn-sm btn-outline-dark"
+                                        type="button"
+                                    >
+                                        Editar
+                                    </button>
+
+                                    <button
+                                        class="btn btn-sm btn-outline-secondary"
+                                        type="button"
+                                    >
+                                        Desactivar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/admin.js(v=1)}"></script>
+</body>
+</html>

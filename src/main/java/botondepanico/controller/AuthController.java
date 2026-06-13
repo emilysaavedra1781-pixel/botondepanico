@@ -1,12 +1,18 @@
 package botondepanico.controller;
 
+import botondepanico.model.EstadoOperador;
+import botondepanico.model.EstadoUsuario;
+import botondepanico.model.Operador;
+import botondepanico.model.SuperAdmin;
 import botondepanico.model.Usuario;
 import botondepanico.service.UsuarioService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AuthController {
@@ -19,22 +25,48 @@ public class AuthController {
         return "login";
     }
 
-    // ✅ AGREGADO — procesa login con HttpSession
     @PostMapping("/login")
-    public String procesarLogin(@RequestParam String celular,
+    public String procesarLogin(@RequestParam String correo,
                                 @RequestParam String contrasena,
                                 HttpSession session,
                                 Model model) {
-        Usuario usuario = usuarioService.login(celular, contrasena);
-        if (usuario != null) {
+        Usuario usuario = usuarioService.loginPorCorreo(correo, contrasena);
+        if (usuario != null && "USUARIO".equalsIgnoreCase(usuario.getRol())) {
+            if ("BLOQUEADO".equalsIgnoreCase(usuario.getEstadoCuenta())) {
+                model.addAttribute("error", "Tu cuenta no se encuentra habilitada para acceder");
+                return "login";
+            }
             session.setAttribute("usuario", usuario);
-            return "redirect:/home";
+            return "redirect:/usuario/dashboard";
         }
-        model.addAttribute("error", "Celular o contraseña incorrectos");
+
+        Operador operador = usuarioService.loginOperadorPorCorreo(correo, contrasena);
+        if (operador != null) {
+            if (operador.getEstado() == EstadoOperador.PENDIENTE) {
+                return "redirect:/operador-pendiente";
+            }
+            if (operador.getEstado() == EstadoOperador.RECHAZADO || operador.getEstado() == EstadoOperador.BLOQUEADO) {
+                model.addAttribute("error", "Tu cuenta no se encuentra habilitada para acceder");
+                return "login";
+            }
+            session.setAttribute("operador", operador);
+            return "redirect:/operador/dashboard";
+        }
+
+        SuperAdmin admin = usuarioService.loginSuperAdminPorCorreo(correo, contrasena);
+        if (admin != null) {
+            if (admin.getEstado() == EstadoUsuario.BLOQUEADO || admin.getEstado() == EstadoUsuario.INACTIVO) {
+                model.addAttribute("error", "Tu cuenta no se encuentra habilitada para acceder");
+                return "login";
+            }
+            session.setAttribute("admin", admin);
+            return "redirect:/admin/dashboard";
+        }
+
+        model.addAttribute("error", "Correo o contrasena incorrectos");
         return "login";
     }
 
-    // ✅ AGREGADO — cierra sesión
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
@@ -42,19 +74,102 @@ public class AuthController {
     }
 
     @GetMapping("/registro")
-    public String registro(Model model) {
-        model.addAttribute("usuario", new Usuario());
+    public String seleccionRegistro() {
         return "registro";
     }
 
-    @PostMapping("/registro")
-    public String registrar(@ModelAttribute Usuario usuario, Model model) {
-        boolean exito = usuarioService.registrar(usuario);
-        if (exito) {
-            return "redirect:/login";
-        } else {
-            model.addAttribute("error", "El celular, DNI o correo ya está registrado");
-            return "registro";
+    @GetMapping("/registro-usuario")
+    public String registroUsuario() {
+        return "registro-usuario";
+    }
+
+    @PostMapping("/registro-usuario")
+    public String registrarUsuario(@RequestParam String nombreCompleto,
+                                   @RequestParam String dni,
+                                   @RequestParam String celular,
+                                   @RequestParam String distrito,
+                                   @RequestParam String correo,
+                                   @RequestParam String password,
+                                   @RequestParam String confirmarPassword,
+                                   HttpSession session,
+                                   Model model) {
+        if (!password.equals(confirmarPassword)) {
+            model.addAttribute("error", "Las contrasenas no coinciden");
+            return "registro-usuario";
         }
+
+        Usuario usuario = crearUsuarioBase(nombreCompleto, dni, celular, correo, password);
+        usuario.setDistrito(distrito);
+
+        Usuario guardado = usuarioService.registrarUsuario(usuario);
+        if (guardado == null) {
+            model.addAttribute("error", "El celular, DNI o correo ya esta registrado");
+            return "registro-usuario";
+        }
+
+        session.setAttribute("usuario", guardado);
+        return "redirect:/usuario/dashboard";
+    }
+
+    @GetMapping("/registro-operador")
+    public String registroOperador() {
+        return "registro-operador";
+    }
+
+    @PostMapping("/registro-operador")
+    public String registrarOperador(@RequestParam String nombreCompleto,
+                                    @RequestParam String dni,
+                                    @RequestParam String celular,
+                                    @RequestParam String correo,
+                                    @RequestParam String password,
+                                    @RequestParam String confirmarPassword,
+                                    Model model) {
+        if (!password.equals(confirmarPassword)) {
+            model.addAttribute("error", "Las contrasenas no coinciden");
+            return "registro-operador";
+        }
+
+        Operador operador = crearOperadorBase(nombreCompleto, dni, celular, correo, password);
+
+        Operador guardado = usuarioService.registrarOperadorPendiente(operador);
+        if (guardado == null) {
+            model.addAttribute("error", "El celular, DNI o correo ya esta registrado");
+            return "registro-operador";
+        }
+
+        return "redirect:/operador-pendiente";
+    }
+
+    @GetMapping("/operador-pendiente")
+    public String operadorPendiente() {
+        return "operador-pendiente";
+    }
+
+    private Usuario crearUsuarioBase(String nombreCompleto, String dni, String celular, String correo, String password) {
+        String limpio = nombreCompleto == null ? "" : nombreCompleto.trim().replaceAll("\\s+", " ");
+        String[] partes = limpio.split(" ", 2);
+
+        Usuario usuario = new Usuario();
+        usuario.setNombre(partes.length > 0 ? partes[0] : "");
+        usuario.setApellido(partes.length > 1 ? partes[1] : "");
+        usuario.setDni(dni);
+        usuario.setCelular(celular);
+        usuario.setCorreo(correo);
+        usuario.setPassword(password);
+        return usuario;
+    }
+
+    private Operador crearOperadorBase(String nombreCompleto, String dni, String celular, String correo, String password) {
+        String limpio = nombreCompleto == null ? "" : nombreCompleto.trim().replaceAll("\\s+", " ");
+        String[] partes = limpio.split(" ", 2);
+
+        Operador operador = new Operador();
+        operador.setNombre(partes.length > 0 ? partes[0] : "");
+        operador.setApellido(partes.length > 1 ? partes[1] : "");
+        operador.setDni(dni);
+        operador.setCelular(celular);
+        operador.setCorreo(correo);
+        operador.setPassword(password);
+        return operador;
     }
 }

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergencias Operador</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+</head>
+
+<body class="op-body">
+
+    <div class="op-layout">
+
+        <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+
+            <header class="op-topbar">
+                <div>
+                    <h1>Emergencias</h1>
+                    <p>Filtra, acepta o rechaza casos reportados.</p>
+                </div>
+
+                <span class="status-pill green">
+                    En linea
+                </span>
+            </header>
+
+            <div
+                th:if="${exito}"
+                class="alert alert-success"
+                th:text="${exito}"
+            ></div>
+
+            <section class="panel-card mb-3">
+
+                <form class="filter-grid" method="get">
+
+                    <input
+                        class="form-control"
+                        name="q"
+                        placeholder="Buscar emergencia"
+                    >
+
+                    <select class="form-select" name="estado">
+                        <option value="">Estado</option>
+
+                        <option
+                            th:each="e:${estados}"
+                            th:value="${e}"
+                            th:text="${e}"
+                        ></option>
+                    </select>
+
+                    <select class="form-select" name="prioridad">
+                        <option value="">Prioridad</option>
+
+                        <option
+                            th:each="p:${prioridades}"
+                            th:value="${p}"
+                            th:text="${p}"
+                        ></option>
+                    </select>
+
+                    <select class="form-select" name="tipo">
+                        <option value="">Tipo</option>
+
+                        <option
+                            th:each="t:${tipos}"
+                            th:value="${t.name()}"
+                            th:text="${t.etiqueta}"
+                        ></option>
+                    </select>
+
+                    <input
+                        class="form-control"
+                        name="distrito"
+                        placeholder="Distrito"
+                    >
+
+                    <button class="btn btn-red" type="submit">
+                        <i class="bi bi-search"></i>
+                        Filtrar
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section class="panel-card table-card">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Ubicacion</th>
+                                <th>Usuario</th>
+                                <th>Prioridad</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr th:each="em:${emergencias}">
+
+                                <td th:text="${em.id}"></td>
+
+                                <td th:text="${em.tipoEmergencia}"></td>
+
+                                <td>
+                                    <strong th:text="${em.distrito ?: 'No registrado'}"></strong>
+                                    <br>
+                                    <small th:text="${em.direccion ?: em.ubicacion ?: 'GPS registrado'}"></small>
+                                </td>
+
+                                <td th:text="${em.usuario.nombre + ' ' + em.usuario.apellido}"></td>
+
+                                <td>
+                                    <span
+                                        class="status-pill red"
+                                        th:classappend="${em.prioridad.name() == 'MEDIA'} ? ' amber' : (${em.prioridad.name() == 'BAJA'} ? ' green' : ' red')"
+                                        th:text="${em.prioridad}"
+                                    ></span>
+                                </td>
+
+                                <td>
+                                    <span
+                                        class="status-pill blue"
+                                        th:text="${em.estado}"
+                                    ></span>
+                                </td>
+
+                                <td class="action-cell">
+
+                                    <a
+                                        class="btn btn-sm btn-outline-dark"
+                                        th:href="@{/operador/emergencia/{id}(id=${em.id})}"
+                                    >
+                                        Ver detalle
+                                    </a>
+
+                                    <form
+                                        th:action="@{/operador/emergencia/{id}/aceptar(id=${em.id})}"
+                                        method="post"
+                                    >
+                                        <button
+                                            class="btn btn-sm btn-red"
+                                            type="submit"
+                                        >
+                                            Aceptar
+                                        </button>
+                                    </form>
+
+                                    <form
+                                        th:action="@{/operador/emergencia/{id}/rechazar(id=${em.id})}"
+                                        method="post"
+                                    >
+                                        <button
+                                            class="btn btn-sm btn-outline-danger"
+                                            type="submit"
+                                        >
+                                            Rechazar
+                                        </button>
+                                    </form>
+
+                                </td>
+
+                            </tr>
+
+                            <tr th:if="${#lists.isEmpty(emergencias)}">
+                                <td
+                                    colspan="7"
+                                    class="text-center muted py-4"
+                                >
+                                    No hay emergencias para mostrar.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/operador.js(v=1)}"></script>
+
+</body>
+
+</html>

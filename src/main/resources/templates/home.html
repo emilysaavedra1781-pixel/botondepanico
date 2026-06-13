@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Operador - Botón de Pánico</title>
+    <title>Panel Operador - BotÃ³n de PÃ¡nico</title>
 
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/css/home.css}">
@@ -14,33 +14,30 @@
 
 <div class="layout">
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
 
         <div>
-            <h3 class="logo">🆘 Botón de Pánico</h3>
+            <h3 class="logo">ðŸ†˜ BotÃ³n de PÃ¡nico</h3>
 
             <nav class="menu">
                 <a href="/panel-operador" class="active">
-                    🏠 Panel Operador
+                    ðŸ  Panel Operador
                 </a>
 
                 <a href="/historial-operador">
-                    📋 Historial
+                    ðŸ“‹ Historial
                 </a>
             </nav>
         </div>
 
         <a href="/logout" class="logout-btn">
-            🚪 Cerrar Sesión
+            ðŸšª Cerrar SesiÃ³n
         </a>
 
     </aside>
 
-    <!-- CONTENIDO -->
     <main class="content">
 
-        <!-- CABECERA -->
         <div class="welcome-box">
 
             <p class="welcome-text">
@@ -52,22 +49,21 @@
             </h1>
 
             <p class="login-time">
-                🕒 Sesión iniciada:
+                ðŸ•’ SesiÃ³n iniciada:
                 <span id="fechaSesion"></span>
             </p>
 
             <span class="status-badge">
-                🟢 Sistema Activo
+                ðŸŸ¢ Sistema Activo
             </span>
 
         </div>
 
-        <!-- FORMULARIO -->
         <div class="form-box">
 
             <div class="form-header">
 
-                <h3>📋 Registrar Incidente</h3>
+                <h3>ðŸ“‹ Registrar Incidente</h3>
 
                 <p>
                     Complete los datos del ciudadano durante la llamada
@@ -79,14 +75,14 @@
                         onclick="toggleMic()"
                         class="btn-mic">
 
-                    🎤 Activar Micrófono
+                    ðŸŽ¤ Activar MicrÃ³fono
 
                 </button>
 
             </div>
 
             <div id="mic-status" class="mic-status d-none">
-                🔴 Escuchando... habla claramente
+                ðŸ”´ Escuchando... habla claramente
             </div>
 
             <form
@@ -94,7 +90,6 @@
                     method="post"
                     id="formIncidente">
 
-                <!-- NOMBRE Y APELLIDO -->
                 <div class="row">
 
                     <div class="col-md-6 mb-3">
@@ -127,7 +122,6 @@
 
                 </div>
 
-                <!-- CELULAR Y DISTRITO -->
                 <div class="row">
 
                     <div class="col-md-6 mb-3">
@@ -161,7 +155,6 @@
 
                 </div>
 
-                <!-- TIPO DE EMERGENCIA -->
                 <div class="mb-3">
 
                     <label class="form-label">
@@ -179,30 +172,29 @@
                         </option>
 
                         <option value="MEDICA">
-                            🚑 Emergencia Médica (SAMU 106)
+                            ðŸš‘ Emergencia MÃ©dica (SAMU 106)
                         </option>
 
                         <option value="INCENDIO">
-                            🔥 Incendio (Bomberos 116)
+                            ðŸ”¥ Incendio (Bomberos 116)
                         </option>
 
                         <option value="SEGURIDAD">
-                            🚔 Seguridad / Robo (Policía 105)
+                            ðŸš” Seguridad / Robo (PolicÃ­a 105)
                         </option>
 
                         <option value="COMISARIA">
-                            🏛️ Comisaría Distrital
+                            ðŸ›ï¸ ComisarÃ­a Distrital
                         </option>
 
                     </select>
 
                 </div>
 
-                <!-- UBICACIÓN -->
                 <div class="mb-3">
 
                     <label class="form-label">
-                        Ubicación
+                        UbicaciÃ³n
                     </label>
 
                     <input
@@ -214,11 +206,10 @@
 
                 </div>
 
-                <!-- DESCRIPCIÓN -->
                 <div class="mb-4">
 
                     <label class="form-label">
-                        Descripción del incidente
+                        DescripciÃ³n del incidente
                     </label>
 
                     <textarea
@@ -226,17 +217,16 @@
                             name="descripcion"
                             class="form-control custom-input"
                             rows="4"
-                            placeholder="Describe lo que está ocurriendo..."
+                            placeholder="Describe lo que estÃ¡ ocurriendo..."
                             required></textarea>
 
                 </div>
 
-                <!-- MENSAJES -->
                 <div
                         th:if="${exito}"
                         class="alert alert-success custom-alert mb-3">
 
-                    ✅ Incidente registrado y autoridad notificada correctamente.
+                    âœ… Incidente registrado y autoridad notificada correctamente.
 
                 </div>
 
@@ -246,12 +236,11 @@
                         th:text="${error}">
                 </div>
 
-                <!-- BOTÓN -->
                 <button
                         type="submit"
                         class="btn-registrar">
 
-                    🚨 Registrar Emergencia y Notificar
+                    ðŸš¨ Registrar Emergencia y Notificar
 
                 </button>
 

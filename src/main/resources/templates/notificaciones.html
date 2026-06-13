@@ -7,13 +7,11 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Notificaciones - Botón de Pánico</title>
+    <title>Notificaciones - BotÃ³n de PÃ¡nico</title>
 
-    <!-- Bootstrap -->
     <link rel="stylesheet"
           th:href="@{/css/bootstrap.min.css}">
 
-    <!-- CSS -->
     <link rel="stylesheet"
           th:href="@{/css/notificaciones.css}">
 
@@ -23,42 +21,40 @@
 
 <div class="layout">
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
 
         <div>
 
             <h4 class="logo">
-                🆘 Botón de Pánico
+                ðŸ†˜ BotÃ³n de PÃ¡nico
             </h4>
 
             <nav class="menu">
 
                 <a href="/home">
-                    🏠 Inicio
+                    ðŸ  Inicio
                 </a>
 
                 <a href="/camara">
-                    📷 Cámara
+                    ðŸ“· CÃ¡mara
                 </a>
 
                 <a href="/notificaciones"
                    class="active">
-                    🔔 Notificaciones
+                    ðŸ”” Notificaciones
                 </a>
 
             </nav>
 
         </div>
 
-        <!-- LOGOUT -->
         <form th:action="@{/logout}"
               method="post">
 
             <button type="submit"
                     class="logout-btn">
 
-                🚪 Cerrar Sesión
+                ðŸšª Cerrar SesiÃ³n
 
             </button>
 
@@ -66,16 +62,14 @@
 
     </aside>
 
-    <!-- CONTENIDO -->
     <main class="content">
 
-        <!-- HEADER -->
         <div class="page-header">
 
             <div>
 
                 <h2>
-                    🔔 Notificaciones
+                    ðŸ”” Notificaciones
                 </h2>
 
                 <p>
@@ -86,40 +80,38 @@
 
         </div>
 
-        <!-- FILTROS -->
         <div class="filters">
 
             <button class="filter-btn accident"
                     onclick="buscarNoticias('accidente Lima')">
 
-                🚑 Accidentes
+                ðŸš‘ Accidentes
 
             </button>
 
             <button class="filter-btn fire"
                     onclick="buscarNoticias('incendio Lima')">
 
-                🔥 Incendios
+                ðŸ”¥ Incendios
 
             </button>
 
             <button class="filter-btn robbery"
                     onclick="buscarNoticias('robo Lima')">
 
-                🔫 Robos
+                ðŸ”« Robos
 
             </button>
 
             <button class="filter-btn general"
                     onclick="buscarNoticias('emergencia Lima')">
 
-                🆘 General
+                ðŸ†˜ General
 
             </button>
 
         </div>
 
-        <!-- LOADING -->
         <div id="cargando"
              class="loading-box"
              style="display:none;">
@@ -132,7 +124,6 @@
 
         </div>
 
-        <!-- LISTA -->
         <div id="lista-noticias"
              class="news-list">
 
@@ -142,10 +133,8 @@
 
 </div>
 
-<!-- Bootstrap -->
 <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 
-<!-- JS -->
 <script>
 
 const API_KEY = 'TU_API_KEY';
@@ -241,7 +230,6 @@ async function buscarNoticias(query) {
     }
 }
 
-// CARGA INICIAL
 buscarNoticias('emergencia Lima');
 
 </script>

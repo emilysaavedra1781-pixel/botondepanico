@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<aside th:fragment="sidebar(active)" class="admin-sidebar">
+    <div class="admin-brand">
+        <div class="admin-brand-icon">SOS</div>
+        <div><strong>Boton de Panico</strong><span>Administrador Lima</span></div>
+    </div>
+    <nav class="admin-nav">
+        <a th:classappend="${active == 'dashboard'} ? ' active'" href="/admin/dashboard"><i class="bi bi-speedometer2"></i>Dashboard</a>
+        <a th:classappend="${active == 'monitoreo'} ? ' active'" href="/admin/monitoreo"><i class="bi bi-radar"></i>Centro de Monitoreo</a>
+        <a th:classappend="${active == 'emergencias'} ? ' active'" href="/admin/emergencias"><i class="bi bi-exclamation-triangle"></i>Emergencias</a>
+        <a th:classappend="${active == 'operadores'} ? ' active'" href="/admin/operadores"><i class="bi bi-headset"></i>Operadores</a>
+        <a th:classappend="${active == 'usuarios'} ? ' active'" href="/admin/usuarios"><i class="bi bi-people"></i>Usuarios</a>
+        <a th:classappend="${active == 'historial'} ? ' active'" href="/admin/historial"><i class="bi bi-clock-history"></i>Historial</a>
+        <a th:classappend="${active == 'estadisticas'} ? ' active'" href="/admin/estadisticas"><i class="bi bi-graph-up"></i>Estadisticas</a>
+        <a th:classappend="${active == 'configuracion'} ? ' active'" href="/admin/configuracion"><i class="bi bi-gear"></i>Configuracion</a>
+        <a href="/logout"><i class="bi bi-box-arrow-right"></i>Cerrar sesion</a>
+    </nav>
+</aside>
+</body>
+</html>

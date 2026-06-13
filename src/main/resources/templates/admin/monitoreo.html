@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Monitoreo</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body class="admin-body">
+    <div class="admin-layout">
+
+        <aside th:replace="~{admin/fragments :: sidebar(${active})}"></aside>
+
+        <main class="admin-main">
+
+            <header class="admin-topbar">
+                <div>
+                    <h1>Centro de Monitoreo</h1>
+                    <p>Eventos, operadores y seguimiento en mapa.</p>
+                </div>
+
+                <span class="status-pill red" data-ws-alert>
+                    En tiempo real
+                </span>
+            </header>
+
+            <section class="panel-card mb-3">
+
+                <div class="filter-grid">
+
+                    <select class="form-select">
+                        <option>Todos los distritos</option>
+                        <option>Comas</option>
+                        <option>San Martin de Porres</option>
+                        <option>Los Olivos</option>
+                        <option>Ate</option>
+                        <option>Villa El Salvador</option>
+                    </select>
+
+                    <select class="form-select">
+                        <option>Todas las emergencias</option>
+                    </select>
+
+                    <select class="form-select">
+                        <option>Estado</option>
+                    </select>
+
+                    <select class="form-select">
+                        <option>Prioridad</option>
+                    </select>
+
+                </div>
+
+            </section>
+
+            <section class="monitor-grid">
+
+                <div class="panel-card">
+
+                    <div id="adminMap" class="map-box large"></div>
+
+                    <div class="map-points d-none">
+
+                        <span
+                            th:each="em:${emergencias}"
+                            th:data-id="${em.id}"
+                            th:data-lat="${em.latitud}"
+                            th:data-lng="${em.longitud}"
+                            th:data-title="${em.tipoEmergencia}"
+                            th:data-status="${em.estado}"
+                            th:data-priority="${em.prioridad}"
+                        ></span>
+
+                    </div>
+
+                    <div class="legend">
+                        <span>
+                            <b class="red"></b>
+                            Emergencia activa
+                        </span>
+
+                        <span>
+                            <b class="orange"></b>
+                            Pendiente
+                        </span>
+
+                        <span>
+                            <b class="blue"></b>
+                            Operador en linea
+                        </span>
+
+                        <span>
+                            <b class="green"></b>
+                            Operador ocupado
+                        </span>
+
+                        <span>
+                            <b class="purple"></b>
+                            Camara activa
+                        </span>
+                    </div>
+
+                </div>
+
+                <aside class="panel-card side-list">
+                    <h2>Emergencias activas</h2>
+
+                    <article
+                        th:each="em:${emergencias}"
+                        class="case-card"
+                    >
+                        <strong th:text="${em.tipoEmergencia}"></strong>
+
+                        <p th:text="${em.direccion ?: em.ubicacion ?: 'GPS registrado'}"></p>
+
+                        <small th:text="${em.distrito ?: 'Distrito no registrado'}"></small>
+
+                        <div>
+                            <span
+                                class="status-pill blue"
+                                th:text="${em.estado}"
+                            ></span>
+
+                            <span
+                                class="status-pill red"
+                                th:text="${em.prioridad}"
+                            ></span>
+                        </div>
+
+                        <small th:text="${em.operadorAsignado != null ? 'Operador: ' + em.operadorAsignado.nombre : 'Operador no asignado'}"></small>
+                    </article>
+
+                </aside>
+
+            </section>
+
+            <section class="stats-grid lower">
+
+                <article class="stat-card">
+                    <span>Emergencias activas</span>
+                    <strong th:text="${activas}">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Operadores en linea</span>
+                    <strong th:text="${#lists.size(operadores)}">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Usuarios en seguimiento</span>
+                    <strong th:text="${usuariosSeguimiento}">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Camaras activas</span>
+                    <strong th:text="${camarasActivas}">0</strong>
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/admin.js(v=1)}"></script>
+</body>
+</html>
