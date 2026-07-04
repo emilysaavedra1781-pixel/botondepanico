@@ -3,13 +3,22 @@ package botondepanico.controller;
 import botondepanico.model.*;
 import botondepanico.service.*;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.validation.annotation.Validated;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import java.util.List;
+import java.util.Map;
 
 @Controller
+@Validated
 public class AdminController {
 
     private final AdminService adminService;
@@ -20,6 +29,7 @@ public class AdminController {
     private final EstadisticaService estadisticaService;
     private final ReporteService reporteService;
     private final ConfiguracionService configuracionService;
+    private final CamaraService camaraService;
 
     public AdminController(AdminService adminService,
                            MonitoreoService monitoreoService,
@@ -28,7 +38,8 @@ public class AdminController {
                            EvidenciaService evidenciaService,
                            EstadisticaService estadisticaService,
                            ReporteService reporteService,
-                           ConfiguracionService configuracionService) {
+                           ConfiguracionService configuracionService,
+                           CamaraService camaraService) {
         this.adminService = adminService;
         this.monitoreoService = monitoreoService;
         this.operadorService = operadorService;
@@ -37,6 +48,7 @@ public class AdminController {
         this.estadisticaService = estadisticaService;
         this.reporteService = reporteService;
         this.configuracionService = configuracionService;
+        this.camaraService = camaraService;
     }
 
     @GetMapping("/admin/dashboard")
@@ -63,6 +75,108 @@ public class AdminController {
         return "admin/monitoreo";
     }
 
+@GetMapping("/admin/camaras")
+public String monitoreoCamaras(HttpSession session, Model model) {
+    SuperAdmin admin = adminAutenticado(session);
+    if (admin == null) return "redirect:/login";
+    base(model, admin, "camaras");
+    model.addAttribute("camaras", camaraService.listarActivas());
+    model.addAttribute("todasLasCamaras", camaraService.listarTodas());
+    model.addAttribute("camarasPostPath", "/admin/camaras");
+    model.addAttribute("camarasQuickAddPath", "/admin/camaras/quick-add");
+    model.addAttribute("camarasBasePath", "/admin/camaras");
+    return "admin/monitoreo-camaras";
+}
+
+    @PostMapping("/admin/camaras")
+    public String crearCamara(@RequestParam @NotBlank(message = "El nombre de la cámara es obligatorio") String nombre,
+                              @RequestParam(required = false) String ubicacion,
+                              @RequestParam @NotBlank(message = "La URL del stream es obligatoria") String urlStream,
+                              @RequestParam(defaultValue = "true") boolean activa,
+                              HttpSession session,
+                              RedirectAttributes redirectAttributes) {
+        if (adminAutenticado(session) == null) return "redirect:/login";
+        Camara camara = new Camara();
+        camara.setNombre(nombre);
+        camara.setUbicacion(ubicacion);
+        camara.setUrlStream(urlStream);
+        camara.setActiva(activa);
+        camaraService.guardar(camara);
+        redirectAttributes.addFlashAttribute("exito", "Cámara registrada correctamente.");
+        return "redirect:/admin/camaras";
+    }
+
+    @PostMapping(value = "/admin/camaras/quick-add", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<Map<String, Object>> quickAddCamara(@RequestParam @NotBlank(message = "El nombre de la cámara es obligatorio") String nombre,
+                                                              @RequestParam(required = false) String ubicacion,
+                                                              @RequestParam @NotBlank(message = "La URL del stream es obligatoria") String urlStream,
+                                                              @RequestParam(defaultValue = "true") boolean activa,
+                                                              HttpSession session) {
+        SuperAdmin admin = adminAutenticado(session);
+        if (admin == null) {
+            return ResponseEntity.status(401).body(Map.of("error", "Sesión expirada"));
+        }
+
+        Camara camara = new Camara();
+        camara.setNombre(nombre);
+        camara.setUbicacion(ubicacion);
+        camara.setUrlStream(urlStream);
+        camara.setActiva(activa);
+        Camara guardada = camaraService.guardar(camara);
+
+        return ResponseEntity.ok(Map.of(
+            "id", guardada.getId(),
+            "nombre", guardada.getNombre(),
+            "ubicacion", guardada.getUbicacion(),
+            "urlStream", guardada.getUrlStream(),
+            "activa", guardada.isActiva()
+        ));
+    }
+
+    @PostMapping("/admin/camaras/{id}/editar")
+    public String editarCamara(@PathVariable Long id,
+                               @RequestParam @NotBlank(message = "El nombre de la cámara es obligatorio") String nombre,
+                               @RequestParam(required = false) String ubicacion,
+                               @RequestParam @NotBlank(message = "La URL del stream es obligatoria") String urlStream,
+                               @RequestParam(defaultValue = "true") boolean activa,
+                               HttpSession session,
+                               RedirectAttributes redirectAttributes) {
+        if (adminAutenticado(session) == null) return "redirect:/login";
+        Camara camara = camaraService.obtener(id).orElse(null);
+        if (camara == null) {
+            redirectAttributes.addFlashAttribute("error", "La cámara no existe.");
+            return "redirect:/admin/camaras";
+        }
+        camara.setNombre(nombre);
+        camara.setUbicacion(ubicacion);
+        camara.setUrlStream(urlStream);
+        camara.setActiva(activa);
+        camaraService.guardar(camara);
+        redirectAttributes.addFlashAttribute("exito", "Cámara actualizada correctamente.");
+        return "redirect:/admin/camaras";
+    }
+
+    @PostMapping("/admin/camaras/{id}/desactivar")
+    public String desactivarCamara(@PathVariable Long id,
+                                   HttpSession session,
+                                   RedirectAttributes redirectAttributes) {
+        if (adminAutenticado(session) == null) return "redirect:/login";
+        camaraService.desactivar(id);
+        redirectAttributes.addFlashAttribute("exito", "Cámara desactivada.");
+        return "redirect:/admin/camaras";
+    }
+
+    @PostMapping("/admin/camaras/{id}/eliminar")
+    public String eliminarCamara(@PathVariable Long id,
+                                 HttpSession session,
+                                 RedirectAttributes redirectAttributes) {
+        if (adminAutenticado(session) == null) return "redirect:/login";
+        camaraService.eliminar(id);
+        redirectAttributes.addFlashAttribute("exito", "Cámara eliminada.");
+        return "redirect:/admin/camaras";
+    }
+
     @GetMapping("/admin/operadores")
     public String operadores(HttpSession session, Model model) {
         SuperAdmin admin = adminAutenticado(session);
@@ -70,6 +184,33 @@ public class AdminController {
         base(model, admin, "operadores");
         model.addAttribute("operadores", usuarioService.listarOperadores());
         return "admin/operadores";
+    }
+
+    @PostMapping("/admin/operadores/crear")
+    public String crearOperador(@RequestParam @NotBlank(message = "El nombre completo es obligatorio") String nombreCompleto,
+                                @RequestParam @NotBlank(message = "El DNI es obligatorio") @Pattern(regexp = "\\d{8}", message = "El DNI debe tener 8 dígitos") String dni,
+                                @RequestParam @NotBlank(message = "El celular es obligatorio") @Pattern(regexp = "\\d{9}", message = "El celular debe tener 9 dígitos") String celular,
+                                @RequestParam @NotBlank(message = "El correo es obligatorio") @Email(message = "Debe ser un correo electrónico válido") String correo,
+                                @RequestParam @NotBlank(message = "La contraseña es obligatoria") @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres") String password,
+                                @RequestParam String confirmarPassword,
+                                @RequestParam(required = false) String distrito,
+                                RedirectAttributes redirectAttributes,
+                                HttpSession session) {
+        if (adminAutenticado(session) == null) return "redirect:/login";
+
+        if (password == null || password.isBlank() || !password.equals(confirmarPassword)) {
+            redirectAttributes.addFlashAttribute("error", "Las contraseñas no coinciden o están vacías.");
+            return "redirect:/admin/operadores";
+        }
+
+        Operador operador = usuarioService.crearOperadorPorAdmin(nombreCompleto, dni, celular, correo, password, distrito);
+        if (operador == null) {
+            redirectAttributes.addFlashAttribute("error", "No se pudo crear el operador. Verifica que el correo, DNI o celular no estén registrados.");
+            return "redirect:/admin/operadores";
+        }
+
+        redirectAttributes.addFlashAttribute("exito", "Operador creado correctamente.");
+        return "redirect:/admin/operadores";
     }
 
     @PostMapping("/admin/operadores/{id}/aprobar")

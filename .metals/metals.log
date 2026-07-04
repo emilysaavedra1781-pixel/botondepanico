@@ -10389,3 +10389,1873 @@ may. 30, 2026 11:15:45 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCanc
 WARNING: Unmatched cancel notification for request id 405
 may. 30, 2026 11:16:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 416
+2026.06.12 21:42:33 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.124.2.
+2026.06.12 21:42:34 INFO  time: initialize in 0.17s
+2026.06.12 21:42:33 INFO  Memory monitor started
+2026.06.12 21:42:42 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.12 21:42:42 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+jun. 12, 2026 9:42:43 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.06.12 21:42:43 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.06.12 21:42:42 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java. Using fallback presentation compiler.
+2026.06.12 21:42:43 INFO  Attempting to connect to the build server...
+2026.06.12 21:42:43 INFO  Found a Bloop server running
+2026.06.12 21:42:46 WARN  no build target for: C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java
+jun. 12, 2026 9:42:46 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2026.06.12 21:42:46 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java. Using fallback presentation compiler.
+2026.06.12 21:42:46 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java. Using fallback presentation compiler.
+2026.06.12 21:42:46 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java. Using fallback presentation compiler.
+2026.06.12 21:42:48 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java. Using fallback presentation compiler.
+jun. 12, 2026 9:42:48 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 16
+jun. 12, 2026 9:42:48 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14
+jun. 12, 2026 9:42:48 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+jun. 12, 2026 9:42:48 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+2026.06.12 21:42:48 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\AdminDataInitializer.java. Using fallback presentation compiler.
+2026.06.12 21:42:49 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\AdminDataInitializer.java. Using fallback presentation compiler.
+jun. 12, 2026 9:42:49 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 20
+2026.06.12 21:42:49 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\AdminDataInitializer.java. Using fallback presentation compiler.
+2026.06.12 21:42:49 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\AdminDataInitializer.java. Using fallback presentation compiler.
+jun. 12, 2026 9:42:51 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 23
+jun. 12, 2026 9:42:51 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+jun. 12, 2026 9:42:51 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+jun. 12, 2026 9:42:51 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 27
+2026.06.12 21:42:51 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AdminController.java. Using fallback presentation compiler.
+2026.06.12 21:42:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.06.12 21:42:52 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AdminController.java. Using fallback presentation compiler.
+jun. 12, 2026 9:42:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 32
+2026.06.12 21:42:52 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AdminController.java. Using fallback presentation compiler.
+jun. 12, 2026 9:42:53 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 36
+2026.06.12 21:42:55 INFO  time: Connected to build server in 11s
+2026.06.12 21:42:55 INFO  Connected to Build server: Bloop v2.0.19
+2026.06.12 21:42:56 INFO  time: Imported build in 1.11s
+jun. 12, 2026 9:43:05 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 45
+2026.06.12 21:43:06 INFO  compiling botondepanico (53 java sources)
+2026.06.12 21:43:10 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+jun. 12, 2026 9:43:14 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 57
+jun. 12, 2026 9:43:25 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 64
+jun. 12, 2026 9:43:25 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 65
+2026.06.12 21:43:30 WARN  javac exited with exit code 1
+2026.06.12 21:43:30 INFO  time: compiled botondepanico in 25s
+2026.06.12 21:43:34 INFO  time: indexed workspace in 37s
+2026.06.12 21:43:34 INFO  compiling botondepanico (53 java sources)
+2026.06.12 21:43:42 WARN  javac exited with exit code 1
+2026.06.12 21:43:42 INFO  time: compiled botondepanico in 7.32s
+2026.06.12 21:43:42 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.12 21:43:42 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+jun. 12, 2026 9:44:08 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 99
+jun. 12, 2026 9:45:14 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 150
+2026.06.12 21:45:14 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.12 21:45:36 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.12 21:46:50 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.12 21:47:07 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+jun. 12, 2026 9:54:47 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 169
+jun. 12, 2026 9:54:56 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 183
+2026.06.12 21:54:56 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+jun. 12, 2026 9:55:04 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 202
+2026.06.12 21:55:04 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.12 21:55:17 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\HomeController.java
+jun. 12, 2026 9:56:15 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 235
+jun. 12, 2026 9:56:15 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 236
+2026.06.12 21:59:27 INFO  Shutting down server
+2026.06.12 21:59:27 INFO  Memory monitor stopped
+2026.06.12 21:59:27 INFO  shutting down Metals
+2026.06.12 21:59:28 INFO  Shut down connection with build server.
+2026.06.12 21:59:27 INFO  Exiting server
+2026.06.13 06:39:20 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.124.2.
+2026.06.13 06:39:20 INFO  Memory monitor started
+2026.06.13 06:39:25 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 06:39:25 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java. Using fallback presentation compiler.
+jun. 13, 2026 6:39:27 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+jun. 13, 2026 6:39:27 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5
+2026.06.13 06:39:27 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+jun. 13, 2026 6:39:27 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+2026.06.13 06:39:27 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.06.13 06:39:27 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.06.13 06:39:27 INFO  Attempting to connect to the build server...
+jun. 13, 2026 6:39:27 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+2026.06.13 06:39:27 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.06.13 06:39:27 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java. Using fallback presentation compiler.
+2026.06.13 06:39:27 INFO  Found a Bloop server running
+2026.06.13 06:39:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.06.13 06:39:30 INFO  time: Connected to build server in 2.56s
+2026.06.13 06:39:29 INFO  Connected to Build server: Bloop v2.0.19
+2026.06.13 06:39:33 INFO  time: Imported build in 2.23s
+jun. 13, 2026 6:39:41 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+jun. 13, 2026 6:39:42 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 30
+jun. 13, 2026 6:39:42 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+jun. 13, 2026 6:39:42 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 32
+jun. 13, 2026 6:39:42 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 33
+2026.06.13 06:39:43 INFO  compiling botondepanico (53 java sources)
+jun. 13, 2026 6:39:44 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+jun. 13, 2026 6:39:54 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 44
+jun. 13, 2026 6:39:55 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 46
+jun. 13, 2026 6:39:55 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 49
+jun. 13, 2026 6:39:55 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 51
+jun. 13, 2026 6:40:00 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 57
+2026.06.13 06:40:08 WARN  javac exited with exit code 1
+2026.06.13 06:40:08 INFO  time: compiled botondepanico in 24s
+2026.06.13 06:40:13 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 06:40:27 INFO  time: indexed workspace in 54s
+2026.06.13 06:40:27 INFO  compiling botondepanico (53 java sources)
+jun. 13, 2026 6:40:38 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 104
+2026.06.13 06:40:39 WARN  javac exited with exit code 1
+2026.06.13 06:40:39 INFO  time: compiled botondepanico in 12s
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\HomeController.java
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 06:40:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\HomeController.java
+jun. 13, 2026 6:40:44 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 115
+jun. 13, 2026 6:40:55 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 134
+jun. 13, 2026 6:45:07 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 137
+jun. 13, 2026 6:45:10 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 138
+2026.06.13 06:45:36 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Emergencia.java
+2026.06.13 06:45:39 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Emergencia.java
+2026.06.13 06:45:45 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Emergencia.java
+jun. 13, 2026 6:46:02 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 186
+2026.06.13 06:48:37 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 06:48:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 06:48:47 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 06:48:50 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 06:49:16 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+2026.06.13 06:49:16 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+2026.06.13 06:49:19 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+2026.06.13 06:49:28 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+2026.06.13 06:50:46 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java
+2026.06.13 06:50:47 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java
+2026.06.13 06:50:55 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java
+2026.06.13 06:50:56 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\UsuarioRepository.java
+2026.06.13 06:51:40 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.06.13 06:51:43 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.06.13 06:51:50 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.06.13 06:51:52 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmergenciaService.java
+2026.06.13 06:51:54 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmergenciaService.java
+jun. 13, 2026 6:51:55 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 707
+2026.06.13 06:52:02 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmergenciaService.java
+jun. 13, 2026 6:52:57 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 789
+jun. 13, 2026 6:53:10 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 809
+jun. 13, 2026 6:53:55 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 875
+2026.06.13 06:54:13 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\UsuarioService.java
+2026.06.13 06:54:13 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\UsuarioService.java
+2026.06.13 06:54:17 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\UsuarioService.java
+2026.06.13 06:54:27 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\UsuarioService.java
+2026.06.13 06:54:28 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\UsuarioService.java
+jun. 13, 2026 9:20:35 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 929
+jun. 13, 2026 9:20:35 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 932
+jun. 13, 2026 9:20:35 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 931
+jun. 13, 2026 9:20:38 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 942
+2026.06.13 09:20:39 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.13 09:35:31 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+jun. 13, 2026 10:15:28 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 956
+jun. 13, 2026 10:15:28 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 958
+jun. 13, 2026 10:15:28 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 957
+jun. 13, 2026 10:15:31 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 964
+jun. 13, 2026 10:15:31 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 966
+2026.06.13 10:15:46 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+jun. 13, 2026 10:15:48 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 983
+2026.06.13 10:15:48 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\AuthController.java
+2026.06.13 10:16:10 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\controller\HomeController.java
+jun. 13, 2026 10:16:11 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1046
+jun. 13, 2026 10:16:26 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1081
+jun. 13, 2026 10:16:27 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1083
+2026.06.13 10:16:52 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Emergencia.java
+jun. 13, 2026 10:17:14 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1211
+jun. 13, 2026 10:17:47 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1304
+jun. 13, 2026 10:17:47 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1305
+jun. 13, 2026 10:21:03 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1699
+2026.06.13 10:21:19 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 10:21:20 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 10:21:29 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+jun. 13, 2026 10:21:31 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1804
+2026.06.13 10:21:31 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+2026.06.13 10:22:08 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+jun. 13, 2026 10:22:12 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1812
+2026.06.13 10:22:20 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+2026.06.13 10:22:41 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\repository\EmergenciaRepository.java
+2026.06.13 10:23:13 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmergenciaService.java
+2026.06.13 10:23:15 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+jun. 13, 2026 10:23:27 A. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1928
+2026.06.13 10:23:29 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmergenciaService.java
+2026.06.13 10:23:50 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmergenciaService.java
+2026.06.13 10:28:53 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.124.2.
+2026.06.13 10:28:53 INFO  Memory monitor started
+2026.06.13 10:28:58 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 10:28:59 INFO  Attempting to connect to the build server...
+2026.06.13 10:28:59 INFO  No running Bloop server found, starting one.
+2026.06.13 10:29:04 INFO  Starting compilation server
+2026.06.13 10:29:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.06.13 10:29:13 INFO  time: Connected to build server in 13s
+2026.06.13 10:29:13 INFO  Connected to Build server: Bloop v2.0.19
+2026.06.13 10:29:14 INFO  time: Imported build in 1.46s
+2026.06.13 10:29:39 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 10:29:55 INFO  time: indexed workspace in 40s
+2026.06.13 10:30:01 INFO  compiling botondepanico (53 java sources)
+2026.06.13 10:30:12 WARN  javac exited with exit code 1
+2026.06.13 10:30:12 INFO  time: compiled botondepanico in 11s
+2026.06.13 10:40:06 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.124.2.
+2026.06.13 10:40:06 INFO  Memory monitor started
+2026.06.13 10:40:14 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 10:40:16 INFO  Attempting to connect to the build server...
+2026.06.13 10:40:16 INFO  No running Bloop server found, starting one.
+2026.06.13 10:40:23 INFO  Starting compilation server
+2026.06.13 10:40:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.06.13 10:40:31 INFO  time: Connected to build server in 14s
+2026.06.13 10:40:31 INFO  Connected to Build server: Bloop v2.0.19
+2026.06.13 10:40:33 INFO  time: Imported build in 1.56s
+2026.06.13 10:40:53 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 10:41:06 INFO  time: indexed workspace in 32s
+2026.06.13 10:41:10 INFO  compiling botondepanico (53 java sources)
+2026.06.13 10:41:18 WARN  javac exited with exit code 1
+2026.06.13 10:41:18 INFO  time: compiled botondepanico in 7.9s
+2026.06.13 10:42:55 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.124.2.
+2026.06.13 10:42:55 INFO  Memory monitor started
+2026.06.13 22:19:48 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.124.2.
+2026.06.13 22:19:48 INFO  Memory monitor started
+2026.06.13 22:19:52 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 22:19:52 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.06.13 22:19:53 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.06.13 22:19:53 INFO  Attempting to connect to the build server...
+2026.06.13 22:19:53 INFO  No running Bloop server found, starting one.
+2026.06.13 22:20:00 INFO  Starting compilation server
+2026.06.13 22:20:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.06.13 22:20:06 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java. Using fallback presentation compiler.
+2026.06.13 22:20:08 INFO  time: Connected to build server in 13s
+2026.06.13 22:20:08 INFO  Connected to Build server: Bloop v2.0.19
+2026.06.13 22:20:10 INFO  time: Imported build in 1.15s
+2026.06.13 22:20:28 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.13 22:20:41 INFO  time: indexed workspace in 30s
+2026.06.13 22:20:44 INFO  compiling botondepanico (53 java sources)
+2026.06.13 22:20:52 WARN  javac exited with exit code 1
+2026.06.13 22:20:52 INFO  time: compiled botondepanico in 8.33s
+2026.06.13 22:20:53 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 22:20:53 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 22:22:07 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+jun. 13, 2026 10:25:19 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 30
+jun. 13, 2026 10:25:20 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 35
+2026.06.13 22:25:21 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+jun. 13, 2026 10:25:23 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 42
+jun. 13, 2026 10:25:23 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 46
+jun. 13, 2026 10:26:09 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 61
+2026.06.13 22:26:09 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 22:26:10 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+jun. 13, 2026 10:26:14 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 71
+jun. 13, 2026 10:26:16 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 72
+jun. 13, 2026 10:26:16 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 74
+2026.06.13 22:26:18 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 22:27:00 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 22:27:10 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 22:27:20 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+jun. 13, 2026 10:27:23 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 106
+2026.06.13 22:27:25 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+jun. 13, 2026 10:27:25 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 108
+2026.06.13 22:27:26 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 22:27:26 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 22:27:29 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+2026.06.13 22:29:29 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\SecurityConfig.java
+jun. 13, 2026 10:29:30 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 111
+jun. 13, 2026 10:29:30 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 114
+jun. 13, 2026 10:29:37 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 129
+jun. 13, 2026 10:30:01 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 137
+jun. 13, 2026 10:31:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 144
+jun. 13, 2026 10:31:54 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 155
+jun. 13, 2026 10:32:06 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 221
+jun. 13, 2026 10:32:07 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 222
+jun. 13, 2026 10:32:08 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 230
+2026.06.13 22:32:08 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 22:32:12 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 22:32:24 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 22:32:33 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+2026.06.13 22:34:24 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\model\Usuario.java
+jun. 13, 2026 10:34:42 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 248
+jun. 13, 2026 10:34:44 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 261
+2026.06.13 22:35:51 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.06.13 22:35:53 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.06.13 22:36:02 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.06.13 22:36:09 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.06.13 22:37:49 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+jun. 13, 2026 10:37:54 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 298
+jun. 13, 2026 10:37:57 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 305
+jun. 13, 2026 10:37:57 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 307
+jun. 13, 2026 10:37:57 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 310
+jun. 13, 2026 10:37:57 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 312
+2026.06.13 22:46:59 INFO  Shutting down server
+2026.06.13 22:46:59 INFO  Memory monitor stopped
+2026.06.13 22:46:59 INFO  shutting down Metals
+2026.06.13 22:46:59 INFO  Shut down connection with build server.
+2026.06.13 22:46:59 INFO  Exiting server
+2026.07.03 17:43:21 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.127.0.
+2026.07.03 17:43:21 INFO  time: initialize in 0.15s
+2026.07.03 17:43:21 INFO  Memory monitor started
+2026.07.03 17:43:30 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 17:43:31 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EvidenciaService.java. Using fallback presentation compiler.
+2026.07.03 17:43:32 INFO  Attempting to connect to the build server...
+2026.07.03 17:43:32 INFO  No running Bloop server found, starting one.
+2026.07.03 17:43:38 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EvidenciaService.java. Using fallback presentation compiler.
+2026.07.03 17:43:43 INFO  Starting compilation server
+2026.07.03 17:43:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.03 17:43:52 INFO  time: Connected to build server in 20s
+2026.07.03 17:43:52 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.03 17:43:54 INFO  time: Imported build in 1.08s
+jul. 03, 2026 5:44:13 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12
+2026.07.03 17:44:15 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 17:44:28 INFO  time: indexed workspace in 34s
+2026.07.03 17:44:30 INFO  compiling botondepanico (53 java sources)
+2026.07.03 17:44:37 WARN  javac exited with exit code 1
+2026.07.03 17:44:37 INFO  time: compiled botondepanico in 6.88s
+jul. 03, 2026 5:49:24 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+jul. 03, 2026 5:50:16 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 34
+jul. 03, 2026 5:50:19 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+jul. 03, 2026 5:55:18 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+jul. 03, 2026 5:55:20 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.07.03 17:56:25 INFO  Shutting down server
+2026.07.03 17:56:25 INFO  Memory monitor stopped
+2026.07.03 17:56:25 INFO  shutting down Metals
+2026.07.03 17:56:26 INFO  Shut down connection with build server.
+2026.07.03 17:56:25 INFO  Exiting server
+2026.07.03 17:57:26 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.127.0.
+2026.07.03 17:57:26 INFO  time: initialize in 0.12s
+2026.07.03 17:57:26 INFO  Memory monitor started
+2026.07.03 17:57:30 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 17:57:31 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java. Using fallback presentation compiler.
+2026.07.03 17:57:32 INFO  Attempting to connect to the build server...
+2026.07.03 17:57:33 INFO  Found a Bloop server running
+2026.07.03 17:57:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.03 17:57:35 INFO  time: Connected to build server in 2.88s
+2026.07.03 17:57:34 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.03 17:57:36 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java. Using fallback presentation compiler.
+2026.07.03 17:57:36 INFO  time: Imported build in 0.76s
+2026.07.03 17:57:53 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 17:57:57 INFO  time: indexed workspace in 20s
+2026.07.03 17:57:57 INFO  compiling botondepanico (53 java sources)
+2026.07.03 17:58:03 WARN  javac exited with exit code 1
+2026.07.03 17:58:03 INFO  time: compiled botondepanico in 6.02s
+2026.07.03 17:58:03 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.07.03 17:58:03 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+2026.07.03 17:58:03 WARN  Could not load snapshot text for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\service\EmailService.java
+jul. 03, 2026 6:05:28 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 22
+jul. 03, 2026 6:06:21 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 42
+jul. 03, 2026 6:07:06 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+jul. 03, 2026 6:08:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 85
+jul. 03, 2026 6:08:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 86
+jul. 03, 2026 6:08:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 88
+jul. 03, 2026 6:08:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 90
+2026.07.03 19:00:21 INFO  compiling botondepanico (53 java sources)
+2026.07.03 19:00:34 WARN  javac exited with exit code 1
+2026.07.03 19:00:34 INFO  time: compiled botondepanico in 13s
+2026.07.03 19:00:34 INFO  compiling botondepanico (53 java sources)
+2026.07.03 19:00:40 WARN  javac exited with exit code 1
+2026.07.03 19:00:40 INFO  time: compiled botondepanico in 6.26s
+2026.07.03 19:13:50 INFO  compiling botondepanico (53 java sources)
+2026.07.03 19:14:02 WARN  javac exited with exit code 1
+2026.07.03 19:14:02 INFO  time: compiled botondepanico in 12s
+2026.07.03 19:17:16 INFO  running 'C:\Program Files\Java\jdk-17\bin\java.exe -Dfile.encoding=UTF-8 -Dmaven.multiModuleProjectDirectory=C:\Users\Emi\Pictures\Documents\botondepanico -Dmaven.home=C:\Users\Emi\AppData\Local\Temp\metals14293485397527130631 -cp C:\Users\Emi\AppData\Local\Temp\metals14293485397527130631\maven-wrapper.jar org.apache.maven.wrapper.MavenWrapperMain generate-sources ch.epfl.scala:bloop-maven-plugin:2.0.3:bloopInstall -DdownloadSources=true'
+2026.07.03 19:17:22 INFO  [INFO] Scanning for projects...
+2026.07.03 19:17:23 INFO  [INFO] 
+2026.07.03 19:17:23 INFO  [INFO] ------------------< com.botondepanico:botondepanico >-------------------
+2026.07.03 19:17:23 INFO  [INFO] Building  0.0.1-SNAPSHOT
+2026.07.03 19:17:23 INFO  [INFO]   from pom.xml
+2026.07.03 19:17:23 INFO  [INFO] --------------------------------[ jar ]---------------------------------
+2026.07.03 19:17:28 INFO  [INFO] 
+2026.07.03 19:17:28 INFO  [INFO] --- bloop:2.0.3:bloopInstall (default-cli) @ botondepanico ---
+2026.07.03 19:17:31 INFO  [ERROR] org.scala-lang:scala([0-9]?)-library is missing from project dependencies
+2026.07.03 19:17:31 INFO  [ERROR] org.scala-lang:scala([0-9]?)-library is missing from project dependencies
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.46:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.46:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.46:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.46:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-messaging:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-messaging:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-messaging:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-messaging:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.postgresql:postgresql:jar:42.7.10:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.postgresql:postgresql:jar:42.7.10:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.postgresql:postgresql:jar:42.7.10:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.postgresql:postgresql:jar:42.7.10:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-websocket:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-websocket:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-websocket:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-websocket:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-context-support:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-context-support:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-context-support:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-context-support:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.18:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.18:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.18:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.18:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Generated .bloop\botondepanico.json
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: io.github.cdimascio:dotenv-java:jar:3.0.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.checkerframework:checker-qual:jar:3.52.0:runtime (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:31 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:31 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.3.Final:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.46:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.46:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.46:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.46:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-test:jar:6.5.10:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-crypto:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-messaging:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-messaging:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-messaging:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-messaging:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.postgresql:postgresql:jar:42.7.10:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.postgresql:postgresql:jar:42.7.10:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.postgresql:postgresql:jar:42.7.10:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.postgresql:postgresql:jar:42.7.10:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-websocket:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-websocket:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-websocket:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-websocket:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-config:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-web:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-security:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-context-support:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-context-support:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-context-support:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-context-support:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-websocket:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.security:spring-security-core:jar:6.5.10:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.thymeleaf.extras:thymeleaf-extras-springsecurity6:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.eclipse.angus:jakarta.mail:jar:2.0.5:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: me.paulschwarz:spring-dotenv:jar:4.0.0:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-devtools:jar:3.5.14:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.attoparser:attoparser:jar:2.0.7.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.11:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.54:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.49.Final:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.unbescape:unbescape:jar:1.1.6.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.14:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.18:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.18:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.18:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.18:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-thymeleaf:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-mail:jar:3.5.14:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.18:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.18:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.21.2:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.07.03 19:17:32 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.07.03 19:17:32 INFO  [INFO] Generated .bloop\botondepanico-test.json
+2026.07.03 19:17:32 INFO  [INFO] ------------------------------------------------------------------------
+2026.07.03 19:17:32 INFO  [INFO] BUILD SUCCESS
+2026.07.03 19:17:32 INFO  [INFO] ------------------------------------------------------------------------
+2026.07.03 19:17:32 INFO  [INFO] Total time:  10.999 s
+2026.07.03 19:17:32 INFO  [INFO] Finished at: 2026-07-03T19:17:33-05:00
+2026.07.03 19:17:32 INFO  [INFO] ------------------------------------------------------------------------
+2026.07.03 19:17:33 INFO  time: ran 'mvn bloopInstall' in 16s
+2026.07.03 19:17:33 INFO  Disconnecting from Bloop session...
+2026.07.03 19:17:33 INFO  Shut down connection with build server.
+2026.07.03 19:17:33 INFO  Attempting to connect to the build server...
+2026.07.03 19:17:33 INFO  Found a Bloop server running
+2026.07.03 19:17:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.03 19:17:33 INFO  time: Connected to build server in 0.35s
+2026.07.03 19:17:33 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.03 19:17:34 INFO  time: Imported build in 0.29s
+2026.07.03 19:17:44 INFO  time: indexed workspace in 9.96s
+2026.07.03 19:17:44 INFO  compiling botondepanico (53 java sources)
+2026.07.03 19:17:44 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 19:17:44 WARN  javac exited with exit code 2
+2026.07.03 19:17:44 INFO  time: compiled botondepanico in 0.62s
+2026.07.03 19:29:08 INFO  Shutting down server
+2026.07.03 19:29:08 INFO  Memory monitor stopped
+2026.07.03 19:29:08 INFO  shutting down Metals
+2026.07.03 19:29:08 INFO  Shut down connection with build server.
+2026.07.03 19:29:08 INFO  Exiting server
+2026.07.03 19:31:13 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.127.0.
+2026.07.03 19:31:13 INFO  time: initialize in 0.28s
+2026.07.03 19:31:16 INFO  Memory monitor started
+2026.07.03 19:31:21 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 19:31:24 INFO  no build target found for C:\Users\Emi\Pictures\Documents\botondepanico\src\main\java\botondepanico\config\OperadorWebSocketConfig.java. Using fallback presentation compiler.
+2026.07.03 19:31:26 INFO  Attempting to connect to the build server...
+2026.07.03 19:31:27 INFO  Found a Bloop server running
+2026.07.03 19:31:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.03 19:31:35 INFO  time: Connected to build server in 9.27s
+2026.07.03 19:31:35 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.03 19:31:39 INFO  time: Imported build in 1.56s
+2026.07.03 19:32:00 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 19:33:19 INFO  time: indexed workspace in 1m40s
+2026.07.03 19:33:20 INFO  compiling botondepanico (53 java sources)
+2026.07.03 19:33:20 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 19:33:20 WARN  javac exited with exit code 2
+2026.07.03 19:33:20 INFO  time: compiled botondepanico in 0.6s
+2026.07.03 19:50:22 INFO  Created report: Optional[file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/model/Camara.java]
+2026.07.03 19:50:22 INFO  QDox parse error in file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/model/Camara.java (full report at: "C:\Users\Emi\Pictures\Documents\botondepanico\.metals\.reports\metals-full\2026-07-03\r_qdox-error_(botondepanico)_19-50-22-423.md")
+2026.07.03 19:50:25 INFO  Created report: Optional[file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/repository/CamaraRepository.java]
+2026.07.03 19:50:25 INFO  QDox parse error in file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/repository/CamaraRepository.java (full report at: "C:\Users\Emi\Pictures\Documents\botondepanico\.metals\.reports\metals-full\2026-07-03\r_qdox-error_(botondepanico)_19-50-25-179.md")
+2026.07.03 19:50:27 INFO  compiling botondepanico (54 java sources)
+2026.07.03 19:50:31 INFO  Created report: Optional[file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/service/CamaraService.java]
+2026.07.03 19:50:31 INFO  QDox parse error in file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/service/CamaraService.java (full report at: "C:\Users\Emi\Pictures\Documents\botondepanico\.metals\.reports\metals-full\2026-07-03\r_qdox-error_(botondepanico)_19-50-31-672.md")
+2026.07.03 19:50:32 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 19:50:32 WARN  javac exited with exit code 2
+2026.07.03 19:50:32 INFO  time: compiled botondepanico in 5.24s
+2026.07.03 19:50:33 INFO  compiling botondepanico (56 java sources)
+2026.07.03 19:50:34 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 19:50:34 WARN  javac exited with exit code 2
+2026.07.03 19:50:34 INFO  time: compiled botondepanico in 1.08s
+2026.07.03 19:51:06 INFO  compiling botondepanico (56 java sources)
+2026.07.03 19:51:08 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 19:51:08 WARN  javac exited with exit code 2
+2026.07.03 19:51:08 INFO  time: compiled botondepanico in 2.47s
+2026.07.03 19:51:08 INFO  compiling botondepanico (56 java sources)
+2026.07.03 19:51:10 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 19:51:10 WARN  javac exited with exit code 2
+2026.07.03 19:51:10 INFO  time: compiled botondepanico in 1.35s
+2026.07.03 20:00:08 INFO  compiling botondepanico (56 java sources)
+2026.07.03 20:00:11 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:00:11 WARN  javac exited with exit code 2
+2026.07.03 20:00:11 INFO  time: compiled botondepanico in 2.27s
+2026.07.03 20:17:27 INFO  skipping build import with status 'Installed'
+2026.07.03 20:19:22 INFO  compiling botondepanico (56 java sources)
+2026.07.03 20:19:22 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:19:22 WARN  javac exited with exit code 2
+2026.07.03 20:19:22 INFO  time: compiled botondepanico in 0.82s
+2026.07.03 20:20:42 INFO  compiling botondepanico (56 java sources)
+2026.07.03 20:20:42 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:20:42 WARN  javac exited with exit code 2
+2026.07.03 20:20:42 INFO  time: compiled botondepanico in 0.89s
+2026.07.03 20:21:46 INFO  compiling botondepanico (56 java sources)
+2026.07.03 20:21:48 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:21:48 WARN  javac exited with exit code 2
+2026.07.03 20:21:48 INFO  time: compiled botondepanico in 2.16s
+2026.07.03 20:21:48 INFO  compiling botondepanico (56 java sources)
+2026.07.03 20:21:49 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:21:49 WARN  javac exited with exit code 2
+2026.07.03 20:21:49 INFO  time: compiled botondepanico in 1.11s
+2026.07.03 20:21:49 INFO  compiling botondepanico (57 java sources)
+2026.07.03 20:21:51 INFO  Created report: Optional[file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/model/OrigenEmergencia.java]
+2026.07.03 20:21:51 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:21:51 WARN  javac exited with exit code 2
+2026.07.03 20:21:51 INFO  time: compiled botondepanico in 1.4s
+2026.07.03 20:21:51 INFO  QDox parse error in file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/model/OrigenEmergencia.java (full report at: "C:\Users\Emi\Pictures\Documents\botondepanico\.metals\.reports\metals-full\2026-07-03\r_qdox-error_(botondepanico)_20-21-50-568.md")
+2026.07.03 20:21:51 INFO  compiling botondepanico (57 java sources)
+2026.07.03 20:21:53 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:21:53 WARN  javac exited with exit code 2
+2026.07.03 20:21:53 INFO  time: compiled botondepanico in 1.65s
+2026.07.03 20:22:20 INFO  compiling botondepanico (57 java sources)
+2026.07.03 20:22:22 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:22:22 WARN  javac exited with exit code 2
+2026.07.03 20:22:22 INFO  time: compiled botondepanico in 2.46s
+2026.07.03 20:25:01 INFO  compiling botondepanico (57 java sources)
+2026.07.03 20:25:02 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:25:02 WARN  javac exited with exit code 2
+2026.07.03 20:25:02 INFO  time: compiled botondepanico in 0.98s
+jul. 03, 2026 8:31:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 113
+jul. 03, 2026 8:31:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 115
+jul. 03, 2026 8:31:59 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 122
+jul. 03, 2026 8:31:59 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 126
+jul. 03, 2026 8:32:09 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 133
+jul. 03, 2026 8:32:09 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 136
+jul. 03, 2026 8:32:14 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 141
+jul. 03, 2026 8:32:14 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 142
+jul. 03, 2026 8:32:14 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 145
+jul. 03, 2026 8:32:14 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 146
+2026.07.03 20:43:28 INFO  compiling botondepanico (57 java sources)
+2026.07.03 20:43:29 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:43:29 WARN  javac exited with exit code 2
+2026.07.03 20:43:29 INFO  time: compiled botondepanico in 1.79s
+2026.07.03 20:43:29 INFO  compiling botondepanico (57 java sources)
+2026.07.03 20:43:31 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:43:31 WARN  javac exited with exit code 2
+2026.07.03 20:43:31 INFO  time: compiled botondepanico in 1.25s
+jul. 03, 2026 8:48:21 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 156
+jul. 03, 2026 8:48:25 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 165
+jul. 03, 2026 8:50:01 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 169
+jul. 03, 2026 8:50:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 180
+jul. 03, 2026 8:50:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 183
+jul. 03, 2026 8:52:00 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 221
+jul. 03, 2026 8:52:06 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 234
+2026.07.03 20:52:10 INFO  compiling botondepanico (57 java sources)
+2026.07.03 20:52:10 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:52:10 WARN  javac exited with exit code 2
+2026.07.03 20:52:10 INFO  time: compiled botondepanico in 0.95s
+jul. 03, 2026 8:52:42 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 245
+jul. 03, 2026 8:58:28 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 249
+jul. 03, 2026 8:58:28 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 252
+jul. 03, 2026 8:58:35 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 267
+jul. 03, 2026 8:58:37 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 268
+jul. 03, 2026 8:58:37 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 269
+jul. 03, 2026 8:58:37 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 270
+jul. 03, 2026 8:58:38 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 271
+jul. 03, 2026 8:58:38 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 272
+jul. 03, 2026 8:58:38 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 273
+jul. 03, 2026 8:58:38 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 274
+jul. 03, 2026 8:58:40 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 275
+jul. 03, 2026 8:58:40 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 276
+jul. 03, 2026 8:58:40 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 278
+jul. 03, 2026 8:58:40 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 279
+jul. 03, 2026 8:58:40 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 277
+jul. 03, 2026 8:58:40 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 280
+jul. 03, 2026 8:58:47 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 289
+jul. 03, 2026 8:58:47 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 290
+jul. 03, 2026 8:58:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 296
+jul. 03, 2026 8:58:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 297
+jul. 03, 2026 8:58:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 298
+jul. 03, 2026 8:58:53 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 299
+jul. 03, 2026 8:58:53 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 300
+jul. 03, 2026 8:58:55 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 301
+jul. 03, 2026 8:58:55 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 302
+jul. 03, 2026 8:58:56 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 303
+jul. 03, 2026 8:58:56 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 304
+jul. 03, 2026 8:58:58 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 305
+jul. 03, 2026 8:58:58 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 306
+jul. 03, 2026 8:58:59 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 307
+jul. 03, 2026 8:58:59 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 308
+jul. 03, 2026 8:59:01 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 311
+jul. 03, 2026 8:59:01 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 312
+jul. 03, 2026 8:59:03 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 313
+jul. 03, 2026 8:59:03 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 314
+jul. 03, 2026 8:59:05 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 315
+jul. 03, 2026 8:59:05 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 316
+jul. 03, 2026 8:59:06 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 317
+jul. 03, 2026 8:59:06 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 318
+jul. 03, 2026 8:59:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 319
+jul. 03, 2026 8:59:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 320
+jul. 03, 2026 8:59:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 321
+jul. 03, 2026 8:59:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 323
+jul. 03, 2026 8:59:11 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 324
+jul. 03, 2026 8:59:11 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 322
+jul. 03, 2026 8:59:11 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 325
+jul. 03, 2026 8:59:13 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 326
+jul. 03, 2026 8:59:13 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 328
+jul. 03, 2026 8:59:13 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 329
+jul. 03, 2026 8:59:13 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 327
+jul. 03, 2026 8:59:14 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 332
+jul. 03, 2026 8:59:14 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 333
+jul. 03, 2026 8:59:16 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 330
+jul. 03, 2026 8:59:16 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 337
+jul. 03, 2026 8:59:18 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 338
+jul. 03, 2026 8:59:19 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 340
+jul. 03, 2026 8:59:19 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 341
+jul. 03, 2026 8:59:19 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 339
+jul. 03, 2026 8:59:19 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 331
+jul. 03, 2026 8:59:21 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 342
+jul. 03, 2026 8:59:21 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 345
+jul. 03, 2026 8:59:22 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 346
+jul. 03, 2026 8:59:22 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 343
+jul. 03, 2026 8:59:22 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 344
+jul. 03, 2026 8:59:22 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 347
+jul. 03, 2026 8:59:23 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 348
+jul. 03, 2026 8:59:23 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 351
+jul. 03, 2026 8:59:24 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 349
+jul. 03, 2026 8:59:24 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 350
+jul. 03, 2026 8:59:24 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 360
+jul. 03, 2026 8:59:24 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 357
+jul. 03, 2026 8:59:24 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 361
+jul. 03, 2026 8:59:24 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 359
+2026.07.03 20:59:33 INFO  compiling botondepanico (57 java sources)
+jul. 03, 2026 8:59:33 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 387
+jul. 03, 2026 8:59:35 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 388
+2026.07.03 20:59:36 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 20:59:36 WARN  javac exited with exit code 2
+2026.07.03 20:59:36 INFO  time: compiled botondepanico in 3.24s
+jul. 03, 2026 8:59:37 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 390
+jul. 03, 2026 8:59:37 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 391
+jul. 03, 2026 8:59:37 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 392
+jul. 03, 2026 8:59:45 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 398
+jul. 03, 2026 9:00:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 400
+jul. 03, 2026 9:08:47 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 406
+jul. 03, 2026 9:11:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 431
+jul. 03, 2026 9:11:18 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 440
+jul. 03, 2026 9:11:24 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 445
+jul. 03, 2026 9:11:27 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 450
+jul. 03, 2026 9:11:27 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 449
+jul. 03, 2026 9:11:27 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 453
+jul. 03, 2026 9:11:27 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 457
+2026.07.03 21:11:29 INFO  compiling botondepanico (57 java sources)
+2026.07.03 21:11:29 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 21:11:29 WARN  javac exited with exit code 2
+2026.07.03 21:11:29 INFO  time: compiled botondepanico in 0.94s
+jul. 03, 2026 9:11:47 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 473
+jul. 03, 2026 9:11:47 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 474
+jul. 03, 2026 9:11:49 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 475
+jul. 03, 2026 9:11:50 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 477
+jul. 03, 2026 9:11:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 478
+jul. 03, 2026 9:11:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 481
+jul. 03, 2026 9:11:52 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 479
+jul. 03, 2026 9:11:54 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 482
+jul. 03, 2026 9:11:54 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 484
+jul. 03, 2026 9:11:56 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 485
+jul. 03, 2026 9:11:56 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 483
+jul. 03, 2026 9:11:56 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 486
+jul. 03, 2026 9:11:56 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 487
+jul. 03, 2026 9:11:58 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 488
+jul. 03, 2026 9:11:58 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 489
+jul. 03, 2026 9:11:58 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 490
+jul. 03, 2026 9:12:00 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 491
+jul. 03, 2026 9:12:00 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 492
+jul. 03, 2026 9:12:01 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 493
+jul. 03, 2026 9:12:01 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 495
+jul. 03, 2026 9:12:03 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 496
+jul. 03, 2026 9:12:04 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 494
+jul. 03, 2026 9:12:04 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 497
+jul. 03, 2026 9:12:04 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 498
+jul. 03, 2026 9:12:42 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 513
+jul. 03, 2026 9:13:03 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 519
+jul. 03, 2026 9:13:05 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 520
+jul. 03, 2026 9:13:05 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 521
+jul. 03, 2026 9:13:05 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 522
+jul. 03, 2026 9:13:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 523
+jul. 03, 2026 9:13:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 524
+jul. 03, 2026 9:13:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 525
+jul. 03, 2026 9:13:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 526
+jul. 03, 2026 9:13:12 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 528
+jul. 03, 2026 9:13:16 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 540
+2026.07.03 21:13:24 INFO  compiling botondepanico (57 java sources)
+2026.07.03 21:13:26 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 21:13:26 WARN  javac exited with exit code 2
+2026.07.03 21:13:26 INFO  time: compiled botondepanico in 1.65s
+jul. 03, 2026 9:13:47 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 565
+2026.07.03 21:13:53 INFO  compiling botondepanico (57 java sources)
+2026.07.03 21:13:54 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 21:13:54 WARN  javac exited with exit code 2
+2026.07.03 21:13:54 INFO  time: compiled botondepanico in 1.1s
+2026.07.03 21:20:10 INFO  skipping build import with status 'Installed'
+jul. 03, 2026 9:33:49 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 618
+jul. 03, 2026 9:33:50 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 620
+jul. 03, 2026 10:04:07 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 703
+jul. 03, 2026 10:04:08 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 704
+jul. 03, 2026 10:04:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 705
+jul. 03, 2026 10:04:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 707
+jul. 03, 2026 10:04:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 712
+jul. 03, 2026 10:04:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 714
+jul. 03, 2026 10:04:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 713
+jul. 03, 2026 10:04:10 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 717
+2026.07.03 22:04:16 INFO  compiling botondepanico (57 java sources)
+2026.07.03 22:04:18 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 22:04:18 WARN  javac exited with exit code 2
+2026.07.03 22:04:18 INFO  time: compiled botondepanico in 1.28s
+jul. 03, 2026 10:04:32 P.Â M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 747
+2026.07.03 22:04:52 INFO  compiling botondepanico (57 java sources)
+2026.07.03 22:04:55 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 22:04:55 WARN  javac exited with exit code 2
+2026.07.03 22:04:55 INFO  time: compiled botondepanico in 2.42s
+jul. 03, 2026 10:16:27 P.Â M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÃ“N: Unsupported notification method: $/setTrace
+2026.07.03 22:26:22 INFO  Shutting down server
+2026.07.03 22:26:22 INFO  Memory monitor stopped
+2026.07.03 22:26:22 INFO  shutting down Metals
+2026.07.03 22:26:23 INFO  Shut down connection with build server.

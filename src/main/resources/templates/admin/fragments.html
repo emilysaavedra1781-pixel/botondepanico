@@ -9,6 +9,7 @@
     <nav class="admin-nav">
         <a th:classappend="${active == 'dashboard'} ? ' active'" href="/admin/dashboard"><i class="bi bi-speedometer2"></i>Dashboard</a>
         <a th:classappend="${active == 'monitoreo'} ? ' active'" href="/admin/monitoreo"><i class="bi bi-radar"></i>Centro de Monitoreo</a>
+        <a th:classappend="${active == 'camaras'} ? ' active'" href="/admin/camaras"><i class="bi bi-camera-video"></i>Monitoreo de cámaras</a>
         <a th:classappend="${active == 'emergencias'} ? ' active'" href="/admin/emergencias"><i class="bi bi-exclamation-triangle"></i>Emergencias</a>
         <a th:classappend="${active == 'operadores'} ? ' active'" href="/admin/operadores"><i class="bi bi-headset"></i>Operadores</a>
         <a th:classappend="${active == 'usuarios'} ? ' active'" href="/admin/usuarios"><i class="bi bi-people"></i>Usuarios</a>

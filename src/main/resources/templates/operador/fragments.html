@@ -42,6 +42,14 @@
             </a>
 
             <a
+                th:classappend="${active == 'camaras'} ? ' active'"
+                href="/operador/camaras"
+            >
+                <i class="bi bi-camera-video"></i>
+                Monitoreo de cámaras
+            </a>
+
+            <a
                 th:classappend="${active == 'historial'} ? ' active'"
                 href="/operador/historial"
             >

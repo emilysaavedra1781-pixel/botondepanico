@@ -3,6 +3,7 @@ package botondepanico.service;
 import botondepanico.model.*;
 import botondepanico.repository.EmergenciaRepository;
 import botondepanico.repository.HistorialEmergenciaRepository;
+import botondepanico.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,11 +15,14 @@ public class OperadorService {
 
     private final EmergenciaRepository emergenciaRepository;
     private final HistorialEmergenciaRepository historialRepository;
+    private final UsuarioRepository usuarioRepository;
 
     public OperadorService(EmergenciaRepository emergenciaRepository,
-                           HistorialEmergenciaRepository historialRepository) {
+                           HistorialEmergenciaRepository historialRepository,
+                           UsuarioRepository usuarioRepository) {
         this.emergenciaRepository = emergenciaRepository;
         this.historialRepository = historialRepository;
+        this.usuarioRepository = usuarioRepository;
     }
 
     public List<Emergencia> pendientes() {
@@ -83,6 +87,48 @@ public class OperadorService {
         return guardada;
     }
 
+    public Emergencia crearReporteTelefonico(Operador operador,
+                                             String nombre,
+                                             String apellido,
+                                             String celular,
+                                             String dni,
+                                             String distrito,
+                                             String direccion,
+                                             String tipoEmergencia,
+                                             String prioridad,
+                                             String descripcion) {
+        Usuario usuario = usuarioRepository.findByCelular(celular)
+            .orElseGet(() -> {
+                Usuario nuevo = new Usuario();
+                nuevo.setNombre(blankToNull(nombre));
+                nuevo.setApellido(blankToNull(apellido));
+                nuevo.setCelular(blankToNull(celular));
+                nuevo.setDni(blankToNull(dni));
+                nuevo.setDistrito(blankToNull(distrito));
+                nuevo.setRol("CIUDADANO");
+                nuevo.setTipoCuenta("TELEFONO");
+                nuevo.setEstadoCuenta("ACTIVO");
+                return usuarioRepository.save(nuevo);
+            });
+
+        Emergencia emergencia = new Emergencia();
+        emergencia.setUsuario(usuario);
+        emergencia.setTipoEmergencia(normalizarTipo(tipoEmergencia));
+        emergencia.setEstado(EstadoEmergencia.PENDIENTE);
+        emergencia.setOrigen(OrigenEmergencia.TELEFONICO);
+        emergencia.setPrioridad(resolverPrioridad(prioridad));
+        emergencia.setLatitud(null);
+        emergencia.setLongitud(null);
+        emergencia.setDistrito(blankToNull(distrito));
+        emergencia.setDireccion(blankToNull(direccion));
+        emergencia.setUbicacion(blankToNull(direccion));
+        emergencia.setDescripcion(blankToNull(descripcion));
+        emergencia.setDescripcionOperador(blankToNull(descripcion));
+        Emergencia guardada = emergenciaRepository.save(emergencia);
+        registrarHistorial(guardada, operador, "REPORTE_TELEFONICO", descripcion == null || descripcion.isBlank() ? "Reporte recibido por telefono" : descripcion.trim());
+        return guardada;
+    }
+
     public void registrarHistorial(Emergencia emergencia, Operador operador, String accion, String detalle) {
         HistorialEmergencia historial = new HistorialEmergencia();
         historial.setEmergencia(emergencia);
@@ -120,6 +166,24 @@ public class OperadorService {
 
     private String blankToNull(String valor) {
         return valor == null || valor.isBlank() ? null : valor.trim();
+    }
+
+    private String normalizarTipo(String tipoEmergencia) {
+        if (tipoEmergencia == null || tipoEmergencia.isBlank()) {
+            return "OTRO";
+        }
+        return tipoEmergencia.trim().toUpperCase();
+    }
+
+    private PrioridadEmergencia resolverPrioridad(String prioridad) {
+        if (prioridad == null || prioridad.isBlank()) {
+            return PrioridadEmergencia.MEDIA;
+        }
+        try {
+            return PrioridadEmergencia.valueOf(prioridad.trim().toUpperCase());
+        } catch (IllegalArgumentException ex) {
+            return PrioridadEmergencia.MEDIA;
+        }
     }
 
     private List<Emergencia> normalizar(List<Emergencia> emergencias) {

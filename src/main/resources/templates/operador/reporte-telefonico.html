@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Telefónico</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+</head>
+<body class="op-body">
+    <div class="op-layout">
+        <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+            <header class="op-topbar">
+                <div>
+                    <h1>Reporte telefónico</h1>
+                    <p>Registra un caso recibido por llamada y lo deriva al flujo de clasificación.</p>
+                </div>
+                <span class="status-pill blue">Nuevo caso</span>
+            </header>
+
+            <section class="panel-card">
+                <form method="post" th:action="@{/operador/reporte-telefonico}">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Nombre del ciudadano</label>
+                            <input class="form-control" name="nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellido</label>
+                            <input class="form-control" name="apellido">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Celular</label>
+                            <input class="form-control" name="celular" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">DNI</label>
+                            <input class="form-control" name="dni">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Distrito</label>
+                            <input class="form-control" name="distrito">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Dirección</label>
+                            <input class="form-control" name="direccion">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Tipo de emergencia</label>
+                            <select class="form-select" name="tipoEmergencia">
+                                <option th:each="tipo : ${tipos}" th:value="${tipo.name()}" th:text="${tipo.etiqueta}"></option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Prioridad</label>
+                            <select class="form-select" name="prioridad">
+                                <option th:each="prioridad : ${prioridades}" th:value="${prioridad.name()}" th:text="${prioridad}"></option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Resumen de la llamada</label>
+                            <textarea class="form-control" name="descripcion" rows="5" placeholder="Describe lo reportado por la persona que llamó"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="action-bar mt-4">
+                        <button class="btn btn-red" type="submit">
+                            <i class="bi bi-telephone-forward"></i>
+                            Registrar reporte
+                        </button>
+                        <a class="btn btn-outline-secondary" href="/operador/emergencias">Cancelar</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

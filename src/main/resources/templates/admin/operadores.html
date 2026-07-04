@@ -31,6 +31,46 @@
             ></div>
 
             <section class="panel-card mb-3">
+                <h5 class="mb-3">Crear operador desde administración</h5>
+
+                <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+                <form th:action="@{/admin/operadores/crear}" method="post" class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Nombre completo</label>
+                        <input name="nombreCompleto" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">DNI</label>
+                        <input name="dni" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Celular</label>
+                        <input name="celular" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Correo</label>
+                        <input name="correo" type="email" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Distrito</label>
+                        <input name="distrito" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Contraseña</label>
+                        <input name="password" type="password" class="form-control" required minlength="6">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Confirmar</label>
+                        <input name="confirmarPassword" type="password" class="form-control" required minlength="6">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-red">Crear operador</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel-card mb-3">
 
                 <div class="tabs-inline">
                     <span>Todos</span>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de operadores deshabilitado</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/public.css}">
+</head>
+<body class="public-body">
+<main class="public-page">
+    <section class="center-shell">
+        <div class="illustrated-card p-4 p-md-5">
+            <div class="text-center">
+                <span class="kicker"><i class="bi bi-person-badge"></i> Acceso de operadores</span>
+                <h1 class="page-title mt-3">Registro público de operadores no disponible</h1>
+                <p class="page-subtitle mt-3">
+                    El registro público de operadores ya no está disponible.
+                    Para obtener acceso al sistema como operador, debe contactar a un administrador.
+                </p>
+                <div class="mt-4">
+                    <a th:href="@{/login}" class="btn btn-emergency">Volver al login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

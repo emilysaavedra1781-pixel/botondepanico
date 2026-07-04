@@ -1,3 +1,14 @@
+error id: file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/AuthController.java
+file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/AuthController.java
+### com.thoughtworks.qdox.parser.ParseException: syntax error @[103,2]
+
+error in qdox parser
+file content:
+```java
+offset: 3765
+uri: file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/AuthController.java
+text:
+```scala
 package botondepanico.controller;
 
 import botondepanico.model.EstadoOperador;
@@ -13,14 +24,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.validation.annotation.Validated;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
 
 @Controller
-@Validated
 public class AuthController {
 
     @Autowired
@@ -32,10 +37,31 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String procesarLogin(@RequestParam @NotBlank(message = "El correo es obligatorio") @Email(message = "Debe ser un correo electrónico válido") String correo,
-                                @RequestParam @NotBlank(message = "La contraseña es obligatoria") String contrasena,
+    public String procesarLogin(@RequestParam String correo,
+                                @RequestParam String contrasena,
                                 HttpSession session,
                                 Model model) {
+<<<<<<< HEAD
+
+        Usuario usuario = usuarioService.login(celular, contrasena);
+
+        if (usuario != null) {
+
+            session.setAttribute("usuario", usuario);
+
+            String rol = usuario.getRol();
+
+            // 🧑‍💼 ADMIN / OPERADOR → panel principal
+            if ("ADMIN".equals(rol) || "OPERADOR".equals(rol)) {
+                return "redirect:/home";
+            }
+
+            // 👤 USUARIO NORMAL → dashboard
+            return "redirect:/";
+        }
+
+        model.addAttribute("error", "Celular o contraseña incorrectos");
+=======
         Usuario usuario = usuarioService.loginPorCorreo(correo, contrasena);
         if (usuario != null && "USUARIO".equalsIgnoreCase(usuario.getRol())) {
             if ("BLOQUEADO".equalsIgnoreCase(usuario.getEstadoCuenta())) {
@@ -70,6 +96,7 @@ public class AuthController {
         }
 
         model.addAttribute("error", "Correo o contrasena incorrectos");
+>>>>>>> 5ad7d50f5c5809f37a0fbf4b5d12f5963ef2b300
         return "login";
     }
 
@@ -84,18 +111,35 @@ public class AuthController {
         return "registro";
     }
 
+<<@@<<<<< HEAD
+    @PostMapping("/registro")
+    public String registrar(@ModelAttribute Usuario usuario,
+                            Model model) {
+
+        boolean exito = usuarioService.registrar(usuario);
+
+        if (exito) {
+            return "redirect:/login";
+        }
+
+        model.addAttribute("error",
+                "El celular, DNI o correo ya está registrado");
+
+        return "registro";
+=======
     @GetMapping("/registro-usuario")
     public String registroUsuario() {
         return "registro-usuario";
+>>>>>>> 5ad7d50f5c5809f37a0fbf4b5d12f5963ef2b300
     }
 
     @PostMapping("/registro-usuario")
-    public String registrarUsuario(@RequestParam @NotBlank(message = "El nombre completo es obligatorio") String nombreCompleto,
-                                   @RequestParam @NotBlank(message = "El DNI es obligatorio") @Pattern(regexp = "\\d{8}", message = "El DNI debe tener 8 dígitos") String dni,
-                                   @RequestParam @NotBlank(message = "El celular es obligatorio") @Pattern(regexp = "\\d{9}", message = "El celular debe tener 9 dígitos") String celular,
-                                   @RequestParam @NotBlank(message = "El distrito es obligatorio") String distrito,
-                                   @RequestParam @NotBlank(message = "El correo es obligatorio") @Email(message = "Debe ser un correo electrónico válido") String correo,
-                                   @RequestParam @NotBlank(message = "La contraseña es obligatoria") @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres") String password,
+    public String registrarUsuario(@RequestParam String nombreCompleto,
+                                   @RequestParam String dni,
+                                   @RequestParam String celular,
+                                   @RequestParam String distrito,
+                                   @RequestParam String correo,
+                                   @RequestParam String password,
                                    @RequestParam String confirmarPassword,
                                    HttpSession session,
                                    Model model) {
@@ -119,7 +163,7 @@ public class AuthController {
 
     @GetMapping("/registro-operador")
     public String registroOperador() {
-        return "registro-operador-deshabilitado";
+        return "registro-operador";
     }
 
     @PostMapping("/registro-operador")
@@ -130,8 +174,20 @@ public class AuthController {
                                     @RequestParam String password,
                                     @RequestParam String confirmarPassword,
                                     Model model) {
-        model.addAttribute("mensaje", "El registro público de operadores ya no está disponible. Contacte a un administrador para obtener acceso.");
-        return "registro-operador-deshabilitado";
+        if (!password.equals(confirmarPassword)) {
+            model.addAttribute("error", "Las contrasenas no coinciden");
+            return "registro-operador";
+        }
+
+        Operador operador = crearOperadorBase(nombreCompleto, dni, celular, correo, password);
+
+        Operador guardado = usuarioService.registrarOperadorPendiente(operador);
+        if (guardado == null) {
+            model.addAttribute("error", "El celular, DNI o correo ya esta registrado");
+            return "registro-operador";
+        }
+
+        return "redirect:/operador-pendiente";
     }
 
     @GetMapping("/operador-pendiente")
@@ -167,3 +223,42 @@ public class AuthController {
         return operador;
     }
 }
+
+```
+
+```
+
+
+
+#### Error stacktrace:
+
+```
+com.thoughtworks.qdox.parser.impl.Parser.yyerror(Parser.java:2025)
+	com.thoughtworks.qdox.parser.impl.Parser.yyparse(Parser.java:2147)
+	com.thoughtworks.qdox.parser.impl.Parser.parse(Parser.java:2006)
+	com.thoughtworks.qdox.library.SourceLibrary.parse(SourceLibrary.java:232)
+	com.thoughtworks.qdox.library.SourceLibrary.parse(SourceLibrary.java:190)
+	com.thoughtworks.qdox.library.SourceLibrary.addSource(SourceLibrary.java:94)
+	com.thoughtworks.qdox.library.SourceLibrary.addSource(SourceLibrary.java:89)
+	com.thoughtworks.qdox.library.SortedClassLibraryBuilder.addSource(SortedClassLibraryBuilder.java:162)
+	com.thoughtworks.qdox.JavaProjectBuilder.addSource(JavaProjectBuilder.java:174)
+	scala.meta.internal.mtags.JavaMtags.indexRoot(JavaMtags.scala:49)
+	scala.meta.internal.metals.SemanticdbDefinition$.foreachWithReturnMtags(SemanticdbDefinition.scala:99)
+	scala.meta.internal.metals.Indexer.indexSourceFile(Indexer.scala:560)
+	scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3(Indexer.scala:691)
+	scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3$adapted(Indexer.scala:688)
+	scala.collection.IterableOnceOps.foreach(IterableOnce.scala:630)
+	scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:628)
+	scala.collection.AbstractIterator.foreach(Iterator.scala:1313)
+	scala.meta.internal.metals.Indexer.reindexWorkspaceSources(Indexer.scala:688)
+	scala.meta.internal.metals.MetalsLspService.$anonfun$onChange$2(MetalsLspService.scala:940)
+	scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+	scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	java.base/java.lang.Thread.run(Thread.java:842)
+```
+#### Short summary: 
+
+QDox parse error in file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/AuthController.java

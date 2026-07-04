@@ -63,6 +63,9 @@
             "C:\\Users\\Emi\\.m2\\repository\\io\\micrometer\\micrometer-observation\\1.15.11\\micrometer-observation-1.15.11.jar",
             "C:\\Users\\Emi\\.m2\\repository\\io\\micrometer\\micrometer-commons\\1.15.11\\micrometer-commons-1.15.11.jar",
             "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\spring-webmvc\\6.2.18\\spring-webmvc-6.2.18.jar",
+            "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-websocket\\3.5.14\\spring-boot-starter-websocket-3.5.14.jar",
+            "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\spring-messaging\\6.2.18\\spring-messaging-6.2.18.jar",
+            "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\spring-websocket\\6.2.18\\spring-websocket-6.2.18.jar",
             "C:\\Users\\Emi\\.m2\\repository\\org\\thymeleaf\\extras\\thymeleaf-extras-springsecurity6\\3.1.5.RELEASE\\thymeleaf-extras-springsecurity6-3.1.5.RELEASE.jar",
             "C:\\Users\\Emi\\.m2\\repository\\org\\slf4j\\slf4j-api\\2.0.17\\slf4j-api-2.0.17.jar",
             "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\3.5.14\\spring-boot-3.5.14.jar",
@@ -88,7 +91,7 @@
             "options": [
                 "-g",
                 "--release",
-                "17",
+                "21",
                 "-encoding",
                 "UTF-8"
             ]
@@ -1561,6 +1564,22 @@
                 },
                 {
                     "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-websocket",
+                    "version": "3.5.14",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-websocket",
+                            "path": "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-websocket\\3.5.14\\spring-boot-starter-websocket-3.5.14.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-websocket",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-websocket\\3.5.14\\spring-boot-starter-websocket-3.5.14-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
                     "name": "spring-boot-starter-web",
                     "version": "3.5.14",
                     "artifacts": [
@@ -1796,6 +1815,38 @@
                             "name": "micrometer-commons",
                             "classifier": "sources",
                             "path": "C:\\Users\\Emi\\.m2\\repository\\io\\micrometer\\micrometer-commons\\1.15.11\\micrometer-commons-1.15.11-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-messaging",
+                    "version": "6.2.18",
+                    "artifacts": [
+                        {
+                            "name": "spring-messaging",
+                            "path": "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\spring-messaging\\6.2.18\\spring-messaging-6.2.18.jar"
+                        },
+                        {
+                            "name": "spring-messaging",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\spring-messaging\\6.2.18\\spring-messaging-6.2.18-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-websocket",
+                    "version": "6.2.18",
+                    "artifacts": [
+                        {
+                            "name": "spring-websocket",
+                            "path": "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\spring-websocket\\6.2.18\\spring-websocket-6.2.18.jar"
+                        },
+                        {
+                            "name": "spring-websocket",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Emi\\.m2\\repository\\org\\springframework\\spring-websocket\\6.2.18\\spring-websocket-6.2.18-sources.jar"
                         }
                     ]
                 },

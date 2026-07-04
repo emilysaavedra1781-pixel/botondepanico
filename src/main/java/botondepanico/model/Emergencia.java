@@ -32,6 +32,10 @@ public class Emergencia {
     @Column(nullable = false)
     private EstadoEmergencia estado;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "origen")
+    private OrigenEmergencia origen;
+
     private String latitud;
     private String longitud;
     private String ubicacion;
@@ -87,6 +91,9 @@ public class Emergencia {
         }
         if (this.estado == null) {
             this.estado = EstadoEmergencia.PENDIENTE;
+        }
+        if (this.origen == null) {
+            this.origen = OrigenEmergencia.SOS;
         }
         if (this.prioridad == null) {
             this.prioridad = PrioridadEmergencia.MEDIA;

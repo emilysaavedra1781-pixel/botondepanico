@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo de cámaras | Botón de Pánico</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body class="op-body">
+
+    <div class="op-layout">
+        <aside th:replace="~{admin/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+
+            <header class="op-topbar">
+                <div>
+                    <h1>Monitoreo de cámaras</h1>
+                    <p>Visualiza en vivo las cámaras activas del sistema.</p>
+                </div>
+                <span class="status-pill green">
+                    <i class="bi bi-camera-video"></i>
+                    Streaming activo
+                </span>
+            </header>
+
+            <section class="panel-card">
+                <div class="section-head">
+                    <h2>Agregar cámara</h2>
+                </div>
+                <form id="quickCamaraForm" th:action="${camarasPostPath}" method="post" class="camara-form" th:attr="data-quick-add-url=${camarasQuickAddPath}">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-5">
+                            <label class="form-label small">Nombre o ubicación</label>
+                            <input type="text" name="nombre" class="form-control" placeholder="Ej. Entrada principal" required>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="form-label small">URL del stream</label>
+                            <input type="text" name="urlStream" class="form-control" placeholder="http://IP:PUERTO/video" required>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-red w-100" type="submit">Agregar</button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="activa" value="true">
+                </form>
+                <div id="quickCamaraMessage" class="mt-2 small text-muted"></div>
+            </section>
+
+            <section class="panel-card mt-4">
+                <div class="section-head">
+                    <h2>Cámaras activas</h2>
+                </div>
+
+                <div th:if="${#lists.isEmpty(camaras)}" class="camara-empty">
+                    <p class="mb-0">No hay cámaras activas para mostrar en este momento.</p>
+                </div>
+
+                <div th:if="${!#lists.isEmpty(camaras)}" id="camarasGrid" class="camara-grid">
+                    <article th:each="camara : ${camaras}" class="camara-card">
+                        <div class="camara-card-header">
+                            <h3 th:text="${camara.nombre}">Cámara</h3>
+                            <span class="status-pill green">Activo</span>
+                        </div>
+
+                        <div th:if="${#strings.endsWith(camara.urlStream, '.mp4') or #strings.contains(camara.urlStream, 'm3u8')}">
+                            <video controls autoplay muted loop playsinline>
+                                <source th:src="${camara.urlStream}" type="video/mp4">
+                            </video>
+                        </div>
+                        <img th:unless="${#strings.endsWith(camara.urlStream, '.mp4') or #strings.contains(camara.urlStream, 'm3u8')}" th:src="${camara.urlStream}" th:alt="${camara.nombre}">
+
+                        <p class="muted mb-0" th:text="${camara.ubicacion != null and !#strings.isEmpty(camara.ubicacion) ? camara.ubicacion : 'Sin ubicación registrada'}"></p>
+
+                        <div class="camara-actions">
+                            <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" th:attr="data-bs-target=${'#editar-' + camara.id}">Editar</button>
+                            <form th:action="${camarasBasePath + '/' + camara.id + '/desactivar'}" method="post" style="display:inline;">
+                                <button class="btn btn-sm btn-outline-warning" type="submit">Desactivar</button>
+                            </form>
+                            <form th:action="${camarasBasePath + '/' + camara.id + '/eliminar'}" method="post" style="display:inline;">
+                                <button class="btn btn-sm btn-outline-danger" type="submit">Eliminar</button>
+                            </form>
+                        </div>
+
+                        <div th:id="${'editar-' + camara.id}" class="collapse">
+                            <form th:action="${camarasBasePath + '/' + camara.id + '/editar'}" method="post" class="camara-form">
+                                <input type="text" class="form-control" name="nombre" th:value="${camara.nombre}" required>
+                                <input type="text" class="form-control" name="ubicacion" th:value="${camara.ubicacion}" placeholder="Ubicación">
+                                <input type="text" class="form-control" name="urlStream" th:value="${camara.urlStream}" required>
+                                <div class="d-flex align-items-center gap-3">
+                                    <label class="form-check-label" th:for="${'activa-' + camara.id}">Activo</label>
+                                    <input class="form-check-input" type="checkbox" th:id="${'activa-' + camara.id}" name="activa" th:checked="${camara.activa}">
+                                    <button class="btn btn-red" type="submit">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel-card mt-4">
+                <div class="section-head">
+                    <h2>Gestión de cámaras</h2>
+                </div>
+                <div th:if="${#lists.isEmpty(todasLasCamaras)}" class="camara-empty">
+                    <p class="mb-0">Aún no hay cámaras registradas.</p>
+                </div>
+                <div th:if="${!#lists.isEmpty(todasLasCamaras)}" class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Ubicación</th>
+                            <th>URL</th>
+                            <th>Estado</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="camara : ${todasLasCamaras}">
+                            <td th:text="${camara.nombre}"></td>
+                            <td th:text="${camara.ubicacion ?: 'Sin ubicación'}"></td>
+                            <td style="max-width:280px;overflow-wrap:anywhere;" th:text="${camara.urlStream}"></td>
+                            <td>
+                                <span class="status-pill" th:classappend="${camara.activa} ? ' green' : ' amber'" th:text="${camara.activa ? 'Activa' : 'Inactiva'}"></span>
+                            </td>
+                            <td>
+                                <div class="camara-actions">
+                                    <form th:action="${camarasBasePath + '/' + camara.id + '/desactivar'}" method="post" style="display:inline;">
+                                        <button class="btn btn-sm btn-outline-warning" type="submit">Desactivar</button>
+                                    </form>
+                                    <form th:action="${camarasBasePath + '/' + camara.id + '/eliminar'}" method="post" style="display:inline;">
+                                        <button class="btn btn-sm btn-outline-danger" type="submit">Eliminar</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script>
+        const quickCamaraForm = document.getElementById('quickCamaraForm');
+        const quickCamaraMessage = document.getElementById('quickCamaraMessage');
+        const camarasGrid = document.getElementById('camarasGrid');
+
+        if (quickCamaraForm) {
+            quickCamaraForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const formData = new FormData(quickCamaraForm);
+                quickCamaraMessage.textContent = 'Agregando cámara...';
+
+                try {
+                    const quickAddUrl = quickCamaraForm.dataset.quickAddUrl || '/operador/camaras/quick-add';
+                    const response = await fetch(quickAddUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+                        body: new URLSearchParams(formData).toString()
+                    });
+
+                    const data = await response.json();
+                    if (!response.ok) {
+                        throw new Error(data.error || 'No se pudo agregar la cámara');
+                    }
+
+                    if (camarasGrid) {
+                        const basePath = quickAddUrl.replace(/\/quick-add$/, '');
+                        const card = document.createElement('article');
+                        card.className = 'camara-card';
+                        card.innerHTML = `
+                            <div class="camara-card-header">
+                                <h3>${data.nombre}</h3>
+                                <span class="status-pill green">Activo</span>
+                            </div>
+                            <img src="${data.urlStream}" alt="${data.nombre}">
+                            <p class="muted mb-0">${data.ubicacion ? data.ubicacion : 'Sin ubicación registrada'}</p>
+                            <div class="camara-actions">
+                                <form action="${basePath}/${data.id}/desactivar" method="post" style="display:inline;">
+                                    <button class="btn btn-sm btn-outline-warning" type="submit">Desactivar</button>
+                                </form>
+                                <form action="${basePath}/${data.id}/eliminar" method="post" style="display:inline;">
+                                    <button class="btn btn-sm btn-outline-danger" type="submit">Eliminar</button>
+                                </form>
+                            </div>
+                        `;
+                        camarasGrid.appendChild(card);
+                    }
+
+                    quickCamaraForm.reset();
+                    quickCamaraMessage.textContent = 'Cámara agregada correctamente.';
+                    quickCamaraMessage.className = 'mt-2 small text-success';
+                } catch (error) {
+                    quickCamaraMessage.textContent = error.message;
+                    quickCamaraMessage.className = 'mt-2 small text-danger';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
