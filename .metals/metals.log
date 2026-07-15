@@ -12259,3 +12259,127 @@ INFORMACIÓN: Unsupported notification method: $/setTrace
 2026.07.03 22:26:22 INFO  Memory monitor stopped
 2026.07.03 22:26:22 INFO  shutting down Metals
 2026.07.03 22:26:23 INFO  Shut down connection with build server.
+2026.07.03 22:58:48 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.127.0.
+2026.07.03 22:58:48 INFO  Memory monitor started
+2026.07.03 22:58:53 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 22:58:55 INFO  Attempting to connect to the build server...
+2026.07.03 22:58:55 INFO  Found a Bloop server running
+2026.07.03 22:58:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.03 22:58:57 INFO  time: Connected to build server in 2.47s
+2026.07.03 22:58:57 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.03 22:58:57 INFO  time: Imported build in 0.49s
+2026.07.03 22:59:21 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.03 22:59:30 INFO  time: indexed workspace in 31s
+2026.07.03 22:59:32 INFO  compiling botondepanico (59 java sources)
+2026.07.03 22:59:34 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.03 22:59:34 WARN  javac exited with exit code 2
+2026.07.03 22:59:34 INFO  time: compiled botondepanico in 1.74s
+jul. 03, 2026 11:00:57 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 1
+jul. 03, 2026 11:00:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 3
+jul. 03, 2026 11:00:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 5
+jul. 03, 2026 11:00:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 4
+jul. 03, 2026 11:00:58 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 9
+jul. 03, 2026 11:01:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 21
+jul. 03, 2026 11:01:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 24
+jul. 03, 2026 11:01:05 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 32
+2026.07.03 23:08:45 INFO  Shutting down server
+2026.07.03 23:08:45 INFO  Memory monitor stopped
+2026.07.03 23:08:45 INFO  shutting down Metals
+2026.07.03 23:08:45 INFO  Shut down connection with build server.
+2026.07.03 23:08:45 INFO  Exiting server
+2026.07.14 11:41:12 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.127.0.
+2026.07.14 11:41:12 INFO  time: initialize in 0.18s
+2026.07.14 11:41:14 INFO  Memory monitor started
+2026.07.14 11:41:26 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.14 11:41:55 INFO  Attempting to connect to the build server...
+2026.07.14 11:41:57 INFO  Found a Bloop server running
+2026.07.14 11:42:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.14 11:42:08 INFO  time: Connected to build server in 13s
+2026.07.14 11:42:08 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.14 11:42:12 INFO  time: Imported build in 1.59s
+2026.07.14 11:42:46 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.14 11:43:07 INFO  time: indexed workspace in 54s
+2026.07.14 11:43:10 INFO  compiling botondepanico (59 java sources)
+2026.07.14 11:43:13 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.14 11:43:13 WARN  javac exited with exit code 2
+2026.07.14 11:43:13 INFO  time: compiled botondepanico in 3.19s
+jul. 14, 2026 11:50:19 A. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+2026.07.14 11:57:28 INFO  Shutting down server
+2026.07.14 11:57:28 INFO  Memory monitor stopped
+2026.07.14 11:57:28 INFO  shutting down Metals
+2026.07.14 12:15:44 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.127.0.
+2026.07.14 12:15:44 INFO  time: initialize in 0.17s
+2026.07.14 12:15:44 INFO  Memory monitor started
+2026.07.14 12:15:55 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.14 12:15:57 INFO  Attempting to connect to the build server...
+2026.07.14 12:15:57 INFO  Found a Bloop server running
+2026.07.14 12:16:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.14 12:16:04 INFO  time: Connected to build server in 6.11s
+2026.07.14 12:16:04 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.14 12:16:06 INFO  time: Imported build in 1.33s
+2026.07.14 12:16:49 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.14 12:17:14 INFO  time: indexed workspace in 1m8s
+2026.07.14 12:17:15 INFO  compiling botondepanico (59 java sources)
+2026.07.14 12:17:15 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.14 12:17:15 WARN  javac exited with exit code 2
+2026.07.14 12:17:17 INFO  time: compiled botondepanico in 0.99s
+2026.07.14 12:37:24 INFO  Shutting down server
+2026.07.14 12:37:24 INFO  Memory monitor stopped
+2026.07.14 12:37:24 INFO  shutting down Metals
+2026.07.14 12:37:25 INFO  Shut down connection with build server.
+2026.07.14 22:05:05 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.127.0.
+2026.07.14 22:05:05 INFO  Memory monitor started
+2026.07.14 22:05:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.14 22:05:22 INFO  Attempting to connect to the build server...
+2026.07.14 22:05:22 INFO  Found a Bloop server running
+2026.07.14 22:05:24 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.14 22:05:25 INFO  time: Connected to build server in 3.17s
+2026.07.14 22:05:24 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.14 22:05:29 INFO  time: Imported build in 1.9s
+2026.07.14 22:06:26 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.14 22:06:40 INFO  time: indexed workspace in 1m11s
+2026.07.14 22:06:43 INFO  compiling botondepanico (59 java sources)
+2026.07.14 22:06:45 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.14 22:06:45 WARN  javac exited with exit code 2
+2026.07.14 22:06:45 INFO  time: compiled botondepanico in 1.7s
+2026.07.14 22:06:45 INFO  compiling botondepanico (59 java sources)
+2026.07.14 22:06:46 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.14 22:06:46 WARN  javac exited with exit code 2
+2026.07.14 22:06:46 INFO  time: compiled botondepanico in 0.94s
+jul. 14, 2026 10:07:47 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 1
+jul. 14, 2026 10:09:27 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 40
+jul. 14, 2026 10:09:27 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 45
+jul. 14, 2026 10:09:27 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 47
+jul. 14, 2026 10:43:14 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 71
+jul. 14, 2026 10:43:14 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 74
+jul. 14, 2026 10:43:37 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 94
+jul. 14, 2026 10:43:46 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 100
+jul. 14, 2026 10:43:46 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 98

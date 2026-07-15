@@ -1,0 +1,9 @@
+target/
+.git/
+.gitignore
+*.p12
+.env
+.vscode/
+.tomcat/
+*.log
+HELP.md
