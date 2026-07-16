@@ -62,7 +62,7 @@
                 </div>
 
                 <div th:if="${!#lists.isEmpty(camaras)}" id="camarasGrid" class="camara-grid">
-                    <article th:each="camara : ${camaras}" class="camara-card">
+                    <article th:each="camara : ${camaras}" class="camara-card" th:attr="data-camara-id=${camara.id}">
                         <div class="camara-card-header">
                             <h3 th:text="${camara.nombre}">Cámara</h3>
                             <span class="status-pill green">Activo</span>
@@ -79,6 +79,12 @@
 
                         <div class="camara-actions">
                             <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" th:attr="data-bs-target=${'#editar-' + camara.id}">Editar</button>
+                            <button class="btn btn-sm btn-outline-primary btn-grabar"
+                                    type="button"
+                                    th:attr="data-id=${camara.id}, data-url=${camara.urlStream}"
+                                    data-grabando="false">
+                                <i class="bi bi-record-circle"></i> Iniciar grabación
+                            </button>
                             <form th:action="${camarasBasePath + '/' + camara.id + '/desactivar'}" method="post" style="display:inline;">
                                 <button class="btn btn-sm btn-outline-warning" type="submit">Desactivar</button>
                             </form>
@@ -86,6 +92,7 @@
                                 <button class="btn btn-sm btn-outline-danger" type="submit">Eliminar</button>
                             </form>
                         </div>
+                        <div class="grabar-mensaje small text-muted mt-1"></div>
 
                         <div th:id="${'editar-' + camara.id}" class="collapse">
                             <form th:action="${camarasBasePath + '/' + camara.id + '/editar'}" method="post" class="camara-form">
@@ -150,10 +157,13 @@
     </div>
 
     <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-    <script>
+    <script th:inline="javascript">
         const quickCamaraForm = document.getElementById('quickCamaraForm');
         const quickCamaraMessage = document.getElementById('quickCamaraMessage');
         const camarasGrid = document.getElementById('camarasGrid');
+        /*<![CDATA[*/
+        const grabarBasePath = /*[[${camarasBasePath}]]*/ '/admin/camaras';
+        /*]]>*/
 
         if (quickCamaraForm) {
             quickCamaraForm.addEventListener('submit', async (event) => {
@@ -178,6 +188,7 @@
                         const basePath = quickAddUrl.replace(/\/quick-add$/, '');
                         const card = document.createElement('article');
                         card.className = 'camara-card';
+                        card.setAttribute('data-camara-id', data.id);
                         card.innerHTML = `
                             <div class="camara-card-header">
                                 <h3>${data.nombre}</h3>
@@ -186,6 +197,10 @@
                             <img src="${data.urlStream}" alt="${data.nombre}">
                             <p class="muted mb-0">${data.ubicacion ? data.ubicacion : 'Sin ubicación registrada'}</p>
                             <div class="camara-actions">
+                                <button class="btn btn-sm btn-outline-primary btn-grabar" type="button"
+                                        data-id="${data.id}" data-url="${data.urlStream}" data-grabando="false">
+                                    <i class="bi bi-record-circle"></i> Iniciar grabación
+                                </button>
                                 <form action="${basePath}/${data.id}/desactivar" method="post" style="display:inline;">
                                     <button class="btn btn-sm btn-outline-warning" type="submit">Desactivar</button>
                                 </form>
@@ -193,8 +208,10 @@
                                     <button class="btn btn-sm btn-outline-danger" type="submit">Eliminar</button>
                                 </form>
                             </div>
+                            <div class="grabar-mensaje small text-muted mt-1"></div>
                         `;
                         camarasGrid.appendChild(card);
+                        enlazarBotonGrabar(card.querySelector('.btn-grabar'));
                     }
 
                     quickCamaraForm.reset();
@@ -206,6 +223,71 @@
                 }
             });
         }
+
+        // ---- Lógica de grabar / detener y descargar ----
+        function enlazarBotonGrabar(btn) {
+            if (!btn || btn.dataset.enlazado === 'true') return;
+            btn.dataset.enlazado = 'true';
+
+            btn.addEventListener('click', async () => {
+                const id = btn.dataset.id;
+                const url = btn.dataset.url;
+                const grabando = btn.dataset.grabando === 'true';
+                const mensaje = btn.closest('.camara-card')?.querySelector('.grabar-mensaje');
+
+                btn.disabled = true;
+
+                try {
+                    if (!grabando) {
+                        // Iniciar grabación
+                        const resp = await fetch(`${grabarBasePath}/${id}/grabar/iniciar?urlStream=${encodeURIComponent(url)}`, {
+                            method: 'POST'
+                        });
+                        if (!resp.ok) {
+                            const texto = await resp.text();
+                            throw new Error(texto || 'No se pudo iniciar la grabación');
+                        }
+                        btn.dataset.grabando = 'true';
+                        btn.innerHTML = '<i class="bi bi-stop-circle"></i> Detener y descargar';
+                        if (mensaje) { mensaje.textContent = 'Grabando...'; mensaje.className = 'grabar-mensaje small text-danger mt-1'; }
+                    } else {
+                        // Detener y descargar
+                        btn.innerHTML = 'Deteniendo...';
+                        if (mensaje) mensaje.textContent = 'Cerrando archivo, un momento...';
+
+                        const resp = await fetch(`${grabarBasePath}/${id}/grabar/detener`, { method: 'POST' });
+                        if (!resp.ok) {
+                            const texto = await resp.text();
+                            throw new Error(texto || 'No se pudo detener la grabación');
+                        }
+                        const blob = await resp.blob();
+                        const link = document.createElement('a');
+                        link.href = URL.createObjectURL(blob);
+                        link.download = `camara_${id}_${Date.now()}.mp4`;
+                        document.body.appendChild(link);
+                        link.click();
+                        link.remove();
+
+                        btn.dataset.grabando = 'false';
+                        btn.innerHTML = '<i class="bi bi-record-circle"></i> Iniciar grabación';
+                        if (mensaje) { mensaje.textContent = 'Video descargado.'; mensaje.className = 'grabar-mensaje small text-success mt-1'; }
+                    }
+                } catch (error) {
+                    if (mensaje) { mensaje.textContent = error.message; mensaje.className = 'grabar-mensaje small text-danger mt-1'; }
+                    // Revertimos al estado anterior para poder reintentar
+                    if (!grabando) {
+                        btn.dataset.grabando = 'false';
+                        btn.innerHTML = '<i class="bi bi-record-circle"></i> Iniciar grabación';
+                    } else {
+                        btn.innerHTML = '<i class="bi bi-stop-circle"></i> Detener y descargar';
+                    }
+                } finally {
+                    btn.disabled = false;
+                }
+            });
+        }
+
+        document.querySelectorAll('.btn-grabar').forEach(enlazarBotonGrabar);
     </script>
 </body>
 </html>

@@ -49,6 +49,12 @@ public class Evidencia {
     @Column(name = "fecha_envio", nullable = false)
     private LocalDateTime fechaEnvio;
 
+    // NUEVO: guarda el archivo directamente en la base de datos (sin depender de carpetas ni servicios externos)
+    @Lob
+    @Column(name = "contenido")
+    @ToString.Exclude
+    private byte[] contenido;
+
     @PrePersist
     public void prePersist() {
         if (this.fechaEnvio == null) {

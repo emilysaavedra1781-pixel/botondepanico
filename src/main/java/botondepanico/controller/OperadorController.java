@@ -12,12 +12,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.validation.annotation.Validated;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -95,8 +97,9 @@ public class OperadorController {
                                          @RequestParam(required = false) String tipoEmergencia,
                                          @RequestParam(defaultValue = "MEDIA") String prioridad,
                                          @RequestParam(required = false) String descripcion,
+                                         @RequestParam(value = "video", required = false) MultipartFile video,
                                          HttpSession session,
-                                         RedirectAttributes redirectAttributes) {
+                                         RedirectAttributes redirectAttributes) throws IOException {
         Operador operador = operadorAutenticado(session);
         if (operador == null) return "redirect:/login";
         Emergencia emergencia = operadorService.crearReporteTelefonico(
@@ -111,6 +114,11 @@ public class OperadorController {
             prioridad,
             descripcion
         );
+
+        if (video != null && !video.isEmpty()) {
+            guardarVideoEvidencia(video, emergencia);
+        }
+
         redirectAttributes.addFlashAttribute("exito", "Reporte telefónico registrado correctamente.");
         return "redirect:/operador/emergencia/" + emergencia.getId() + "/clasificar";
     }
@@ -255,17 +263,17 @@ public class OperadorController {
     }
 
     @GetMapping("/operador/camaras")
-public String monitoreoCamaras(HttpSession session, Model model) {
-    Operador operador = operadorAutenticado(session);
-    if (operador == null) return "redirect:/login";
-    base(model, operador, "camaras");
-    model.addAttribute("camaras", camaraService.listarActivas());
-    model.addAttribute("todasLasCamaras", camaraService.listarTodas());
-    model.addAttribute("camarasPostPath", "/operador/camaras");
-    model.addAttribute("camarasQuickAddPath", "/operador/camaras/quick-add");
-    model.addAttribute("camarasBasePath", "/operador/camaras");
-    return "operador/monitoreo-camaras";
-}
+    public String monitoreoCamaras(HttpSession session, Model model) {
+        Operador operador = operadorAutenticado(session);
+        if (operador == null) return "redirect:/login";
+        base(model, operador, "camaras");
+        model.addAttribute("camaras", camaraService.listarActivas());
+        model.addAttribute("todasLasCamaras", camaraService.listarTodas());
+        model.addAttribute("camarasPostPath", "/operador/camaras");
+        model.addAttribute("camarasQuickAddPath", "/operador/camaras/quick-add");
+        model.addAttribute("camarasBasePath", "/operador/camaras");
+        return "operador/monitoreo-camaras";
+    }
 
     @PostMapping("/operador/camaras")
     public String crearCamara(@RequestParam @NotBlank(message = "El nombre de la cámara es obligatorio") String nombre,
@@ -307,12 +315,12 @@ public String monitoreoCamaras(HttpSession session, Model model) {
         Camara guardada = camaraService.guardar(camara);
 
         java.util.Map<String, Object> respuesta = new java.util.HashMap<>();
-respuesta.put("id", guardada.getId());
-respuesta.put("nombre", guardada.getNombre());
-respuesta.put("ubicacion", guardada.getUbicacion() != null ? guardada.getUbicacion() : "");
-respuesta.put("urlStream", guardada.getUrlStream());
-respuesta.put("activa", guardada.isActiva());
-return ResponseEntity.ok(respuesta);
+        respuesta.put("id", guardada.getId());
+        respuesta.put("nombre", guardada.getNombre());
+        respuesta.put("ubicacion", guardada.getUbicacion() != null ? guardada.getUbicacion() : "");
+        respuesta.put("urlStream", guardada.getUrlStream());
+        respuesta.put("activa", guardada.isActiva());
+        return ResponseEntity.ok(respuesta);
     }
 
     @PostMapping("/operador/camaras/{id}/editar")
@@ -359,6 +367,24 @@ return ResponseEntity.ok(respuesta);
         camaraService.eliminar(id);
         redirectAttributes.addFlashAttribute("exito", "Cámara eliminada.");
         return "redirect:/operador/camaras";
+    }
+
+    // Guarda el video DIRECTO en la base de datos (campo "contenido" de Evidencia), sin carpetas ni servicios externos.
+    private void guardarVideoEvidencia(MultipartFile video, Emergencia emergencia) throws IOException {
+        Evidencia evidencia = new Evidencia();
+        evidencia.setEmergencia(emergencia);
+        evidencia.setUsuario(emergencia.getUsuario());
+        evidencia.setTipo("VIDEO");
+        evidencia.setNombreArchivo(video.getOriginalFilename() != null ? video.getOriginalFilename() : "video.mp4");
+        evidencia.setContentType(video.getContentType());
+        evidencia.setTamanoBytes(video.getSize());
+        evidencia.setDescripcion("Video subido manualmente desde reporte telefónico");
+        evidencia.setContenido(video.getBytes());
+        evidencia.setRutaArchivo("pendiente"); // se completa abajo una vez que ya tenemos el id
+
+        Evidencia guardada = evidenciaService.guardar(evidencia);
+        guardada.setRutaArchivo("/evidencias/" + guardada.getId() + "/archivo");
+        evidenciaService.guardar(guardada);
     }
 
     private void base(Model model, Operador operador, String active) {

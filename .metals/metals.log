@@ -12383,3 +12383,204 @@ jul. 14, 2026 10:43:46 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCan
 ADVERTENCIA: Unmatched cancel notification for request id 100
 jul. 14, 2026 10:43:46 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 ADVERTENCIA: Unmatched cancel notification for request id 98
+2026.07.15 21:46:20 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\Emi\Pictures\Documents\botondepanico' for client Visual Studio Code 1.128.1.
+2026.07.15 21:46:20 INFO  Memory monitor started
+2026.07.15 21:46:31 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.15 21:46:32 INFO  Attempting to connect to the build server...
+2026.07.15 21:46:32 INFO  Found a Bloop server running
+2026.07.15 21:46:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.15 21:46:35 INFO  time: Connected to build server in 3s
+2026.07.15 21:46:34 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.15 21:46:38 INFO  time: Imported build in 0.66s
+2026.07.15 21:47:20 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.15 21:47:41 INFO  time: indexed workspace in 1m3s
+2026.07.15 21:47:43 INFO  compiling botondepanico (59 java sources)
+2026.07.15 21:47:45 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 21:47:45 WARN  javac exited with exit code 2
+2026.07.15 21:47:45 INFO  time: compiled botondepanico in 2.19s
+jul. 15, 2026 9:49:45 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+jul. 15, 2026 9:49:56 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+jul. 15, 2026 9:49:56 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+jul. 15, 2026 9:49:56 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+jul. 15, 2026 9:49:56 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+jul. 15, 2026 9:49:56 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+jul. 15, 2026 9:49:56 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTrace
+jul. 15, 2026 10:19:26 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 8
+jul. 15, 2026 10:19:27 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 11
+jul. 15, 2026 10:19:27 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 12
+jul. 15, 2026 10:19:27 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 20
+jul. 15, 2026 10:19:28 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 19
+jul. 15, 2026 10:19:28 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 18
+jul. 15, 2026 10:19:28 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 21
+jul. 15, 2026 10:19:28 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 24
+jul. 15, 2026 10:19:28 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 25
+2026.07.15 22:30:04 INFO  Created report: Optional[file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/CamaraGrabacionController.java]
+2026.07.15 22:30:04 INFO  QDox parse error in file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/CamaraGrabacionController.java (full report at: "C:\Users\Emi\Pictures\Documents\botondepanico\.metals\.reports\metals-full\2026-07-15\r_qdox-error_(botondepanico)_22-30-04-187.md")
+2026.07.15 22:30:04 INFO  compiling botondepanico (60 java sources)
+2026.07.15 22:30:08 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 22:30:08 WARN  javac exited with exit code 2
+2026.07.15 22:30:08 INFO  time: compiled botondepanico in 4.12s
+jul. 15, 2026 10:30:12 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 53
+2026.07.15 22:30:39 INFO  compiling botondepanico (60 java sources)
+2026.07.15 22:30:43 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 22:30:43 WARN  javac exited with exit code 2
+2026.07.15 22:30:43 INFO  time: compiled botondepanico in 3.86s
+jul. 15, 2026 10:32:53 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 91
+jul. 15, 2026 10:32:54 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 96
+jul. 15, 2026 10:34:01 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 111
+jul. 15, 2026 10:34:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 120
+jul. 15, 2026 10:34:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 114
+jul. 15, 2026 10:34:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 119
+jul. 15, 2026 10:34:04 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 127
+jul. 15, 2026 10:34:06 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 130
+jul. 15, 2026 10:37:12 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 170
+jul. 15, 2026 10:37:18 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 178
+2026.07.15 22:37:45 INFO  compiling botondepanico (60 java sources)
+2026.07.15 22:37:46 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 22:37:46 WARN  javac exited with exit code 2
+2026.07.15 22:37:46 INFO  time: compiled botondepanico in 1.14s
+jul. 15, 2026 11:02:23 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 191
+jul. 15, 2026 11:05:14 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 235
+jul. 15, 2026 11:08:41 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 264
+jul. 15, 2026 11:08:44 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 265
+jul. 15, 2026 11:08:48 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 266
+jul. 15, 2026 11:11:16 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 278
+jul. 15, 2026 11:11:23 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 289
+jul. 15, 2026 11:11:50 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 295
+jul. 15, 2026 11:11:51 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 297
+jul. 15, 2026 11:12:19 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 319
+jul. 15, 2026 11:12:25 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 327
+jul. 15, 2026 11:12:25 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 330
+jul. 15, 2026 11:14:10 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 348
+jul. 15, 2026 11:15:15 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 385
+jul. 15, 2026 11:15:27 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 394
+jul. 15, 2026 11:15:29 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 395
+jul. 15, 2026 11:15:29 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 396
+jul. 15, 2026 11:15:29 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 398
+jul. 15, 2026 11:15:29 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 400
+jul. 15, 2026 11:19:16 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 431
+jul. 15, 2026 11:19:40 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 454
+jul. 15, 2026 11:27:22 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 475
+jul. 15, 2026 11:27:22 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 478
+jul. 15, 2026 11:27:22 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 480
+jul. 15, 2026 11:27:22 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 476
+jul. 15, 2026 11:27:31 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 489
+2026.07.15 23:27:35 INFO  compiling botondepanico (60 java sources)
+2026.07.15 23:27:39 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 23:27:39 WARN  javac exited with exit code 2
+2026.07.15 23:27:39 INFO  time: compiled botondepanico in 3.43s
+jul. 15, 2026 11:28:44 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 493
+jul. 15, 2026 11:28:44 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 492
+jul. 15, 2026 11:28:44 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 495
+jul. 15, 2026 11:28:45 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 494
+2026.07.15 23:28:55 INFO  compiling botondepanico (60 java sources)
+2026.07.15 23:28:57 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 23:28:57 WARN  javac exited with exit code 2
+2026.07.15 23:28:57 INFO  time: compiled botondepanico in 2.54s
+2026.07.15 23:30:50 INFO  Created report: Optional[file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/EvidenciaArchivoController.java]
+2026.07.15 23:30:50 INFO  QDox parse error in file:///C:/Users/Emi/Pictures/Documents/botondepanico/src/main/java/botondepanico/controller/EvidenciaArchivoController.java (full report at: "C:\Users\Emi\Pictures\Documents\botondepanico\.metals\.reports\metals-full\2026-07-15\r_qdox-error_(botondepanico)_23-30-50-309.md")
+2026.07.15 23:30:51 INFO  compiling botondepanico (61 java sources)
+2026.07.15 23:30:53 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 23:30:53 WARN  javac exited with exit code 2
+2026.07.15 23:30:53 INFO  time: compiled botondepanico in 1.09s
+jul. 15, 2026 11:30:54 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 517
+jul. 15, 2026 11:31:03 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 525
+jul. 15, 2026 11:32:02 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 540
+jul. 15, 2026 11:32:31 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 545
+jul. 15, 2026 11:32:31 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTENCIA: Unmatched cancel notification for request id 546
+2026.07.15 23:33:07 INFO  compiling botondepanico (61 java sources)
+2026.07.15 23:33:11 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 23:33:11 WARN  javac exited with exit code 2
+2026.07.15 23:33:11 INFO  time: compiled botondepanico in 3.62s
+2026.07.15 23:39:11 ERROR Bloop 'bsp' command exited with code 1. Something may be wrong with the current configuration.
+Running the [1mclean[0m sub-command to clear the working directory and remove caches might help.
+If the error persists, please report the issue as a bug and attach a log with increased verbosity by passing [1m-v -v -v[0m.
+2026.07.15 23:39:11 INFO  Found a Bloop server running
+2026.07.15 23:39:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Emi\Pictures\Documents\botondepanico\.metals\bsp.trace.json or C:\Users\Emi\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.07.15 23:39:12 INFO  Connected to Build server: Bloop v2.0.19
+2026.07.15 23:39:14 INFO  time: Imported build in 0.86s
+2026.07.15 23:40:20 INFO  time: indexed workspace in 1m6s
+2026.07.15 23:40:22 INFO  compiling botondepanico (61 java sources)
+2026.07.15 23:40:22 WARN  Unexpected javac output: error: release version 21 not supported
+Usage: javac <options> <source files>
+use --help for a list of possible options.
+2026.07.15 23:40:22 WARN  javac exited with exit code 2
+2026.07.15 23:40:26 INFO  time: compiled botondepanico in 4.61s
