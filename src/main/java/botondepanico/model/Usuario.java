@@ -18,7 +18,9 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(columnDefinition = "TEXT")
     private String nombre;
+    @Column(columnDefinition = "TEXT")
     private String apellido;
     private String correo;
     private String celular;

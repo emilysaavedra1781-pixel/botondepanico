@@ -50,6 +50,14 @@
             </a>
 
             <a
+                th:classappend="${active == 'estadisticas'} ? ' active'"
+                href="/operador/estadisticas"
+            >
+                <i class="bi bi-graph-up"></i>
+                Estadísticas y Reportes
+            </a>
+
+            <a
                 th:classappend="${active == 'historial'} ? ' active'"
                 href="/operador/historial"
             >

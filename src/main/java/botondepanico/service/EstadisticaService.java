@@ -1,5 +1,6 @@
 package botondepanico.service;
 
+import botondepanico.model.EstadoEmergencia;
 import botondepanico.repository.EmergenciaRepository;
 import org.springframework.stereotype.Service;
 import java.util.LinkedHashMap;
@@ -16,6 +17,27 @@ public class EstadisticaService {
 
     public Map<String, Long> porTipo() {
         return mapear(emergenciaRepository.contarPorTipo());
+    }
+
+    public Map<String, Long> porEstado() {
+        return mapear(emergenciaRepository.contarPorEstado());
+    }
+
+    public Map<String, Long> porPrioridad() {
+        return mapear(emergenciaRepository.contarPorPrioridad());
+    }
+
+    public Map<String, Long> porOrigen() {
+        return mapear(emergenciaRepository.contarPorOrigen());
+    }
+
+    public Map<String, Long> resumenGeneral() {
+        Map<String, Long> resumen = new LinkedHashMap<>();
+        resumen.put("TOTAL", emergenciaRepository.count());
+        resumen.put("PENDIENTES", emergenciaRepository.countByEstado(EstadoEmergencia.PENDIENTE));
+        resumen.put("EN_ATENCION", emergenciaRepository.countByEstado(EstadoEmergencia.EN_ATENCION));
+        resumen.put("RESUELTAS", emergenciaRepository.countByEstado(EstadoEmergencia.RESUELTA));
+        return resumen;
     }
 
     public Map<String, Long> porDistrito() {

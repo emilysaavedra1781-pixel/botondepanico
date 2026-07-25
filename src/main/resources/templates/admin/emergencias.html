@@ -94,7 +94,7 @@
 
                                 <td th:text="${em.tipoEmergencia}"></td>
 
-                                <td th:text="${em.usuario.nombre + ' ' + em.usuario.apellido}"></td>
+                                <td th:text="${em.usuarioNombre + ' ' + em.usuarioApellido}"></td>
 
                                 <td th:text="${em.distrito ?: 'No registrado'}"></td>
 
@@ -107,7 +107,7 @@
                                     ></span>
                                 </td>
 
-                                <td th:text="${em.operadorAsignado != null ? em.operadorAsignado.nombre + ' ' + em.operadorAsignado.apellido : 'No asignado'}"></td>
+                                <td th:text="${em.operadorNombre != null ? em.operadorNombre : 'No asignado'}"></td>
 
                                 <td>
                                     <a

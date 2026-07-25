@@ -82,7 +82,7 @@ public class UsuarioModuloService {
     }
 
     public Optional<Emergencia> obtenerUltimaEmergencia(Usuario usuario) {
-        return emergenciaRepository.findByUsuarioIdOrderByFechaDesc(usuario.getId()).stream().findFirst();
+        return emergenciaRepository.findFirstByUsuarioIdOrderByFechaDesc(usuario.getId());
     }
 
     public List<Emergencia> listarHistorial(Usuario usuario) {

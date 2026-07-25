@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte Telefónico</title>
-
+ 
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" th:href="@{/css/operador.css}">
@@ -12,7 +12,7 @@
 <body class="op-body">
     <div class="op-layout">
         <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
-
+ 
         <main class="op-main">
             <header class="op-topbar">
                 <div>
@@ -21,9 +21,9 @@
                 </div>
                 <span class="status-pill blue">Nuevo caso</span>
             </header>
-
+ 
             <section class="panel-card">
-                <form method="post" th:action="@{/operador/reporte-telefonico}">
+                <form method="post" th:action="@{/operador/reporte-telefonico}" enctype="multipart/form-data">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label">Nombre del ciudadano</label>
@@ -65,8 +65,13 @@
                             <label class="form-label">Resumen de la llamada</label>
                             <textarea class="form-control" name="descripcion" rows="5" placeholder="Describe lo reportado por la persona que llamó"></textarea>
                         </div>
+                        <div class="col-12">
+                            <label class="form-label">Video de evidencia (opcional)</label>
+                            <input class="form-control" type="file" name="video" accept="video/mp4,video/*">
+                            <div class="form-text">Sube aquí el video grabado desde el módulo de cámaras, si corresponde a este caso.</div>
+                        </div>
                     </div>
-
+ 
                     <div class="action-bar mt-4">
                         <button class="btn btn-red" type="submit">
                             <i class="bi bi-telephone-forward"></i>
@@ -78,7 +83,7 @@
             </section>
         </main>
     </div>
-
+ 
     <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>

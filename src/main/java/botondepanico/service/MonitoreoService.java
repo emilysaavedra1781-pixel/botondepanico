@@ -1,5 +1,6 @@
 package botondepanico.service;
 
+import botondepanico.dto.EmergenciaResumenDTO;
 import botondepanico.model.Emergencia;
 import botondepanico.model.EstadoEmergencia;
 import botondepanico.model.EstadoOperador;
@@ -20,8 +21,8 @@ public class MonitoreoService {
         this.operadorRepository = operadorRepository;
     }
 
-    public List<Emergencia> emergenciasActivas() {
-        return emergenciaRepository.findByEstadoInOrderByFechaDesc(List.of(
+    public List<EmergenciaResumenDTO> emergenciasActivas() {
+        return emergenciaRepository.listarResumenPorEstados(List.of(
             EstadoEmergencia.PENDIENTE,
             EstadoEmergencia.EN_ATENCION,
             EstadoEmergencia.AUTORIDAD_NOTIFICADA

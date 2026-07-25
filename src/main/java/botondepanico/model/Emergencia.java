@@ -1,17 +1,22 @@
 package botondepanico.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
+import lombok.EqualsAndHashCode;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Entity
 @Table(name = "emergencias")
 public class Emergencia {
@@ -23,9 +28,10 @@ public class Emergencia {
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Usuario usuario;
 
-    @Column(name = "tipo_emergencia", nullable = false)
+    @Column(name = "tipo_emergencia", nullable = false, columnDefinition = "TEXT")
     private String tipoEmergencia;
 
     @Enumerated(EnumType.STRING)
@@ -39,7 +45,9 @@ public class Emergencia {
     private String latitud;
     private String longitud;
     private String ubicacion;
+    @Column(columnDefinition = "TEXT")
     private String distrito;
+    @Column(columnDefinition = "TEXT")
     private String direccion;
 
     @Column(columnDefinition = "TEXT")
@@ -71,11 +79,13 @@ public class Emergencia {
 
     @OneToOne(mappedBy = "emergencia", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Ubicacion ubicacionGps;
 
     @OneToMany(mappedBy = "emergencia", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("fechaEnvio DESC")
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<Evidencia> evidencias = new ArrayList<>();
 
     @Column(nullable = false)

@@ -1,7 +1,10 @@
 package botondepanico.controller;
 
+import botondepanico.dto.AuthResponseDTO;
 import botondepanico.model.*;
+import botondepanico.repository.OperadorRepository;
 import botondepanico.service.CamaraService;
+import botondepanico.service.EstadisticaService;
 import botondepanico.service.EvidenciaService;
 import botondepanico.service.NotificacionService;
 import botondepanico.service.OperadorService;
@@ -32,24 +35,34 @@ public class OperadorController {
     private final UbicacionService ubicacionService;
     private final NotificacionService notificacionService;
     private final CamaraService camaraService;
+    private final EstadisticaService estadisticaService;
+    private final OperadorRepository operadorRepository;
 
     public OperadorController(OperadorService operadorService,
                               EvidenciaService evidenciaService,
                               UbicacionService ubicacionService,
                               NotificacionService notificacionService,
-                              CamaraService camaraService) {
+                              CamaraService camaraService,
+                              EstadisticaService estadisticaService,
+                              OperadorRepository operadorRepository) {
         this.operadorService = operadorService;
         this.evidenciaService = evidenciaService;
         this.ubicacionService = ubicacionService;
         this.notificacionService = notificacionService;
         this.camaraService = camaraService;
+        this.estadisticaService = estadisticaService;
+        this.operadorRepository = operadorRepository;
     }
 
     @GetMapping("/operador/dashboard")
     public String dashboard(HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
-        base(model, operador, "dashboard");
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
+        base(model, auth, "dashboard");
         model.addAttribute("pendientes", operadorService.contarPendientes());
         model.addAttribute("enAtencion", operadorService.contarEnAtencion());
         model.addAttribute("atendidasHoy", operadorService.contarAtendidasHoy(operador));
@@ -57,6 +70,19 @@ public class OperadorController {
         model.addAttribute("emergenciasPendientes", operadorService.pendientes());
         model.addAttribute("emergenciasActivas", operadorService.activas());
         return "operador/dashboard";
+    }
+
+    @GetMapping("/operador/estadisticas")
+    public String estadisticas(HttpSession session, Model model) {
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+        base(model, auth, "estadisticas");
+        model.addAttribute("resumen", estadisticaService.resumenGeneral());
+        model.addAttribute("porEstado", estadisticaService.porEstado());
+        model.addAttribute("porPrioridad", estadisticaService.porPrioridad());
+        model.addAttribute("porOrigen", estadisticaService.porOrigen());
+        model.addAttribute("porDistrito", estadisticaService.porDistrito());
+        return "operador/estadisticas";
     }
 
     @GetMapping("/operador/emergencias")
@@ -67,9 +93,9 @@ public class OperadorController {
                               @RequestParam(required = false) String distrito,
                               HttpSession session,
                               Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
-        base(model, operador, "emergencias");
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+        base(model, auth, "emergencias");
         model.addAttribute("emergencias", operadorService.buscar(q, estado, prioridad, tipo, distrito));
         model.addAttribute("estados", List.of(EstadoEmergencia.PENDIENTE, EstadoEmergencia.EN_ATENCION, EstadoEmergencia.AUTORIDAD_NOTIFICADA, EstadoEmergencia.RESUELTA, EstadoEmergencia.RECHAZADA));
         model.addAttribute("prioridades", PrioridadEmergencia.values());
@@ -79,9 +105,9 @@ public class OperadorController {
 
     @GetMapping("/operador/reporte-telefonico")
     public String reporteTelefonicoForm(HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
-        base(model, operador, "emergencias");
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+        base(model, auth, "emergencias");
         model.addAttribute("tipos", TipoEmergencia.values());
         model.addAttribute("prioridades", PrioridadEmergencia.values());
         return "operador/reporte-telefonico";
@@ -100,8 +126,12 @@ public class OperadorController {
                                          @RequestParam(value = "video", required = false) MultipartFile video,
                                          HttpSession session,
                                          RedirectAttributes redirectAttributes) throws IOException {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
         Emergencia emergencia = operadorService.crearReporteTelefonico(
             operador,
             nombre,
@@ -125,11 +155,11 @@ public class OperadorController {
 
     @GetMapping("/operador/emergencia/{id}")
     public String detalle(@PathVariable Long id, HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         Emergencia emergencia = operadorService.obtener(id).orElse(null);
         if (emergencia == null) return "redirect:/operador/emergencias";
-        base(model, operador, "emergencias");
+        base(model, auth, "emergencias");
         model.addAttribute("emergencia", emergencia);
         model.addAttribute("evidencias", evidenciaService.listarPorEmergencia(id));
         model.addAttribute("ubicacion", ubicacionService.obtenerPorEmergencia(id).orElse(null));
@@ -138,8 +168,12 @@ public class OperadorController {
 
     @PostMapping("/operador/emergencia/{id}/aceptar")
     public String aceptar(@PathVariable Long id, HttpSession session) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
         operadorService.aceptar(id, operador);
         return "redirect:/operador/emergencia/" + id + "/clasificar";
     }
@@ -149,8 +183,12 @@ public class OperadorController {
                            @RequestParam(required = false) String motivo,
                            HttpSession session,
                            RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
         operadorService.rechazar(id, operador, motivo);
         redirectAttributes.addFlashAttribute("exito", "Emergencia rechazada.");
         return "redirect:/operador/emergencias";
@@ -158,11 +196,11 @@ public class OperadorController {
 
     @GetMapping("/operador/emergencia/{id}/clasificar")
     public String clasificar(@PathVariable Long id, HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         Emergencia emergencia = operadorService.obtener(id).orElse(null);
         if (emergencia == null) return "redirect:/operador/emergencias";
-        base(model, operador, "emergencias");
+        base(model, auth, "emergencias");
         model.addAttribute("emergencia", emergencia);
         model.addAttribute("tipos", TipoEmergencia.values());
         model.addAttribute("prioridades", PrioridadEmergencia.values());
@@ -176,8 +214,12 @@ public class OperadorController {
                                        @RequestParam @NotBlank(message = "La descripción preliminar es obligatoria") String descripcionOperador,
                                        HttpSession session,
                                        RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
         if (descripcionOperador == null || descripcionOperador.isBlank()) {
             redirectAttributes.addFlashAttribute("error", "La descripcion preliminar es obligatoria.");
             return "redirect:/operador/emergencia/" + id + "/clasificar";
@@ -188,11 +230,11 @@ public class OperadorController {
 
     @GetMapping("/operador/emergencia/{id}/seguimiento")
     public String seguimiento(@PathVariable Long id, HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         Emergencia emergencia = operadorService.obtener(id).orElse(null);
         if (emergencia == null) return "redirect:/operador/emergencias";
-        base(model, operador, "emergencias");
+        base(model, auth, "emergencias");
         model.addAttribute("emergencia", emergencia);
         model.addAttribute("evidencias", evidenciaService.listarPorEmergencia(id));
         return "operador/seguimiento";
@@ -200,12 +242,12 @@ public class OperadorController {
 
     @GetMapping("/operador/emergencia/{id}/notificar")
     public String notificar(@PathVariable Long id, HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         Emergencia emergencia = operadorService.obtener(id).orElse(null);
         if (emergencia == null) return "redirect:/operador/emergencias";
         String recomendada = notificacionService.entidadRecomendada(emergencia);
-        base(model, operador, "emergencias");
+        base(model, auth, "emergencias");
         model.addAttribute("emergencia", emergencia);
         model.addAttribute("entidades", List.of("Comisaria Distrital", "SAMU", "Bomberos"));
         model.addAttribute("entidadRecomendada", recomendada);
@@ -215,12 +257,21 @@ public class OperadorController {
 
     @PostMapping("/operador/emergencia/{id}/notificar")
     public String enviarNotificacion(@PathVariable Long id,
-                                     @RequestParam @NotBlank(message = "La entidad es obligatoria") String entidad,
+                                     @RequestParam(required = false) String entidad,
                                      @RequestParam @NotBlank(message = "El correo de destino es obligatorio") @Email(message = "Debe ser un correo electrónico válido") String correoDestino,
                                      HttpSession session,
                                      RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        if (entidad == null || entidad.isBlank()) {
+            redirectAttributes.addFlashAttribute("error", "Debes seleccionar una entidad antes de enviar.");
+            return "redirect:/operador/emergencia/" + id + "/notificar";
+        }
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
         Emergencia emergencia = operadorService.obtener(id).orElseThrow();
         boolean correoEnviado = notificacionService.notificarAutoridad(emergencia, operador, entidad, correoDestino);
         operadorService.registrarHistorial(emergencia, operador, "AUTORIDAD_NOTIFICADA", "Entidad: " + entidad);
@@ -235,8 +286,12 @@ public class OperadorController {
 
     @PostMapping("/operador/emergencia/{id}/finalizar")
     public String finalizar(@PathVariable Long id, HttpSession session, RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
         operadorService.finalizar(id, operador);
         redirectAttributes.addFlashAttribute("exito", "Emergencia finalizada.");
         return "redirect:/operador/historial";
@@ -244,9 +299,13 @@ public class OperadorController {
 
     @GetMapping("/operador/historial")
     public String historial(HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
-        base(model, operador, "historial");
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
+        base(model, auth, "historial");
         model.addAttribute("emergencias", operadorService.historialAtendido(operador));
         model.addAttribute("estados", List.of(EstadoEmergencia.AUTORIDAD_NOTIFICADA, EstadoEmergencia.RESUELTA, EstadoEmergencia.RECHAZADA));
         model.addAttribute("tipos", TipoEmergencia.values());
@@ -255,18 +314,22 @@ public class OperadorController {
 
     @GetMapping("/operador/perfil")
     public String perfil(HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
-        base(model, operador, "perfil");
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+
+        Operador operador = operadorRepository.findById(auth.getId()).orElse(null);
+        if (operador == null) return "redirect:/logout";
+
+        base(model, auth, "perfil");
         model.addAttribute("atendidas", operadorService.historialAtendido(operador).size());
         return "operador/perfil";
     }
 
     @GetMapping("/operador/camaras")
     public String monitoreoCamaras(HttpSession session, Model model) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
-        base(model, operador, "camaras");
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
+        base(model, auth, "camaras");
         model.addAttribute("camaras", camaraService.listarActivas());
         model.addAttribute("todasLasCamaras", camaraService.listarTodas());
         model.addAttribute("camarasPostPath", "/operador/camaras");
@@ -282,8 +345,8 @@ public class OperadorController {
                               @RequestParam(defaultValue = "true") boolean activa,
                               HttpSession session,
                               RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         Camara camara = new Camara();
         camara.setNombre(nombre);
         camara.setUbicacion(ubicacion);
@@ -301,9 +364,9 @@ public class OperadorController {
                                                               @RequestParam @NotBlank(message = "La URL del stream es obligatoria") String urlStream,
                                                               @RequestParam(defaultValue = "true") boolean activa,
                                                               HttpSession session) {
-        Operador operador = operadorAutenticado(session);
-        SuperAdmin admin = adminAutenticado(session);
-        if (operador == null && admin == null) {
+        AuthResponseDTO auth = operadorAutenticado(session);
+        AuthResponseDTO authAdmin = adminAutenticado(session);
+        if (auth == null && authAdmin == null) {
             return ResponseEntity.status(401).body(Map.of("error", "Sesión expirada"));
         }
 
@@ -331,8 +394,8 @@ public class OperadorController {
                                @RequestParam(defaultValue = "true") boolean activa,
                                HttpSession session,
                                RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         Camara camara = camaraService.obtener(id).orElse(null);
         if (camara == null) {
             redirectAttributes.addFlashAttribute("error", "La cámara no existe.");
@@ -351,8 +414,8 @@ public class OperadorController {
     public String desactivarCamara(@PathVariable Long id,
                                    HttpSession session,
                                    RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         camaraService.desactivar(id);
         redirectAttributes.addFlashAttribute("exito", "Cámara desactivada.");
         return "redirect:/operador/camaras";
@@ -362,8 +425,8 @@ public class OperadorController {
     public String eliminarCamara(@PathVariable Long id,
                                  HttpSession session,
                                  RedirectAttributes redirectAttributes) {
-        Operador operador = operadorAutenticado(session);
-        if (operador == null) return "redirect:/login";
+        AuthResponseDTO auth = operadorAutenticado(session);
+        if (auth == null) return "redirect:/login";
         camaraService.eliminar(id);
         redirectAttributes.addFlashAttribute("exito", "Cámara eliminada.");
         return "redirect:/operador/camaras";
@@ -387,16 +450,16 @@ public class OperadorController {
         evidenciaService.guardar(guardada);
     }
 
-    private void base(Model model, Operador operador, String active) {
-        model.addAttribute("operador", operador);
+    private void base(Model model, AuthResponseDTO auth, String active) {
+        model.addAttribute("operador", auth);
         model.addAttribute("active", active);
     }
 
-    private Operador operadorAutenticado(HttpSession session) {
-        return (Operador) session.getAttribute("operador");
+    private AuthResponseDTO operadorAutenticado(HttpSession session) {
+        return (AuthResponseDTO) session.getAttribute("operador");
     }
 
-    private SuperAdmin adminAutenticado(HttpSession session) {
-        return (SuperAdmin) session.getAttribute("admin");
+    private AuthResponseDTO adminAutenticado(HttpSession session) {
+        return (AuthResponseDTO) session.getAttribute("admin");
     }
 }

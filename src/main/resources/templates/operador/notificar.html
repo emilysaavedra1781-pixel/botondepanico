@@ -36,6 +36,12 @@
                 </span>
             </header>
 
+            <div
+                th:if="${error}"
+                class="alert alert-danger"
+                th:text="${error}"
+            ></div>
+
             <div class="op-grid">
 
                 <section class="panel-card">
@@ -87,15 +93,22 @@
                                 name="entidad"
                                 th:value="${entidad}"
                                 th:checked="${entidad == entidadRecomendada}"
+                                required
                             >
 
-                            <span>
-                                <strong th:text="${entidad}"></strong>
+                           <span>
+    <strong th:text="${entidad}"></strong>
 
-                                <small th:if="${entidad == entidadRecomendada}">
-                                    Recomendada automaticamente
-                                </small>
-                            </span>
+    <small th:switch="${entidad}" class="entity-phone">
+        <span th:case="'SAMU'">☎ 106</span>
+        <span th:case="'Bomberos'">☎ 116</span>
+        <span th:case="*">☎ 105</span>
+    </small>
+
+    <small th:if="${entidad == entidadRecomendada}">
+        Recomendada automaticamente
+    </small>
+</span>
 
                         </label>
 

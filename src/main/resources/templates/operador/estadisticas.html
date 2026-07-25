@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas | Boton de Panico</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/operador.css}">
+    <style>
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 1.5rem;
+        }
+        .card-stats {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+
+<body class="op-body">
+
+    <div class="op-layout">
+        <aside th:replace="~{operador/fragments :: sidebar(${active})}"></aside>
+
+        <main class="op-main">
+            <header class="op-topbar">
+                <div>
+                    <h1>Estadísticas del Sistema</h1>
+                    <p>Análisis de datos e indicadores de gestión de emergencias.</p>
+                </div>
+            </header>
+
+            <!-- Resumen General Cards -->
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <span>Total Emergencias</span>
+                    <strong th:text="${resumen['TOTAL']}">0</strong>
+                    <i class="bi bi-bar-chart-steps"></i>
+                </article>
+
+                <article class="stat-card" style="border-left-color: #ffc107;">
+                    <span>Pendientes</span>
+                    <strong th:text="${resumen['PENDIENTES']}">0</strong>
+                    <i class="bi bi-hourglass-split"></i>
+                </article>
+
+                <article class="stat-card" style="border-left-color: #0dcaf0;">
+                    <span>En Atención</span>
+                    <strong th:text="${resumen['EN_ATENCION']}">0</strong>
+                    <i class="bi bi-headset"></i>
+                </article>
+
+                <article class="stat-card" style="border-left-color: #198754;">
+                    <span>Resueltas</span>
+                    <strong th:text="${resumen['RESUELTAS']}">0</strong>
+                    <i class="bi bi-check2-circle"></i>
+                </article>
+            </section>
+
+            <!-- Gráficos Grid -->
+            <div class="dashboard-grid">
+
+                <section class="card-stats">
+                    <h5 class="mb-3">Emergencias por Estado</h5>
+                    <div class="chart-container">
+                        <canvas id="chartEstado"></canvas>
+                    </div>
+                </section>
+
+                <section class="card-stats">
+                    <h5 class="mb-3">Distribución por Prioridad</h5>
+                    <div class="chart-container">
+                        <canvas id="chartPrioridad"></canvas>
+                    </div>
+                </section>
+
+                <section class="card-stats">
+                    <h5 class="mb-3">Incidentes por Distrito</h5>
+                    <div class="chart-container">
+                        <canvas id="chartDistrito"></canvas>
+                    </div>
+                </section>
+
+                <section class="card-stats">
+                    <h5 class="mb-3">Origen de Alertas</h5>
+                    <div class="chart-container">
+                        <canvas id="chartOrigen"></canvas>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+    <script th:inline="javascript">
+        /* Obtener datos de Thymeleaf */
+        const dataEstado = /*[[${porEstado}]]*/ {};
+        const dataPrioridad = /*[[${porPrioridad}]]*/ {};
+        const dataDistrito = /*[[${porDistrito}]]*/ {};
+        const dataOrigen = /*[[${porOrigen}]]*/ {};
+
+        // Configuración Común
+        const colors = ['#dc3545', '#ffc107', '#0dcaf0', '#198754', '#6c757d', '#0d6efd', '#6610f2', '#fd7e14'];
+
+        // 1. Chart Estado (Barras)
+        new Chart(document.getElementById('chartEstado'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(dataEstado),
+                datasets: [{
+                    label: 'Cantidad',
+                    data: Object.values(dataEstado),
+                    backgroundColor: '#0d6efd'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // 2. Chart Prioridad (Dona)
+        new Chart(document.getElementById('chartPrioridad'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(dataPrioridad),
+                datasets: [{
+                    data: Object.values(dataPrioridad),
+                    backgroundColor: ['#dc3545', '#ffc107', '#198754']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // 3. Chart Distrito (Barras Horizontal)
+        new Chart(document.getElementById('chartDistrito'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(dataDistrito),
+                datasets: [{
+                    label: 'Cantidad',
+                    data: Object.values(dataDistrito),
+                    backgroundColor: '#198754'
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // 4. Chart Origen (Pie)
+        new Chart(document.getElementById('chartOrigen'), {
+            type: 'pie',
+            data: {
+                labels: Object.keys(dataOrigen),
+                datasets: [{
+                    data: Object.values(dataOrigen),
+                    backgroundColor: ['#6610f2', '#fd7e14']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>

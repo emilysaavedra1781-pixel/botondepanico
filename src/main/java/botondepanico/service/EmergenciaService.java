@@ -49,15 +49,15 @@ public class EmergenciaService {
     }
 
     private String obtenerCorreo(String tipo) {
+        if (tipo == null) return "emilysaavedra.17.8.1@gmail.com";
 
         tipo = tipo.trim().toUpperCase();
 
         return switch (tipo) {
-            case "MEDICA"     -> "emilysaacedra200417@gmail.com";
-            case "INCENDIO"   -> "camilabr0502@gmail.com";
-            case "SEGURIDAD"  -> "alonsocisnerosilz@gmail.com";
-            case "COMISARIA"  -> "emilysaacedra200417@gmail.com";
-            default           -> "emilysaavedra.17.8.1@gmail.com";
+            case "POLICIA"  -> "emilysaacedra200417@gmail.com";
+            case "SAMU"     -> "alonsocisnerosilz@gmail.com";
+            case "BOMBEROS" -> "camilabr0502@gmail.com";
+            default         -> "emilysaavedra.17.8.1@gmail.com";
         };
     }
 }

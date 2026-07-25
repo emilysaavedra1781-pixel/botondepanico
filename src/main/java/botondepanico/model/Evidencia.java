@@ -1,17 +1,28 @@
 package botondepanico.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.persistence.*;
+import jakarta.persistence.Index;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import lombok.ToString;
+import lombok.EqualsAndHashCode;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Entity
-@Table(name = "evidencias")
+@Table(name = "evidencias", indexes = {
+    @Index(name = "idx_evidencias_emergencia_id", columnList = "emergencia_id")
+})
 public class Evidencia {
 
     @Id
@@ -21,11 +32,13 @@ public class Evidencia {
     @ManyToOne
     @JoinColumn(name = "emergencia_id", nullable = false)
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Emergencia emergencia;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Usuario usuario;
 
     @Column(nullable = false)
@@ -49,10 +62,12 @@ public class Evidencia {
     @Column(name = "fecha_envio", nullable = false)
     private LocalDateTime fechaEnvio;
 
-    // NUEVO: guarda el archivo directamente en la base de datos (sin depender de carpetas ni servicios externos)
-    @Lob
-    @Column(name = "contenido")
+    // Guarda el archivo directo en la base de datos como BYTEA (no como Large Object/OID)
+    @JdbcTypeCode(SqlTypes.VARBINARY)
+    @Basic(fetch = FetchType.LAZY)
+    @Column(name = "contenido", columnDefinition = "bytea")
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private byte[] contenido;
 
     @PrePersist

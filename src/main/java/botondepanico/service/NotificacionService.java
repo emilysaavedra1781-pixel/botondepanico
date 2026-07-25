@@ -24,15 +24,15 @@ public class NotificacionService {
 
     public String entidadRecomendada(Emergencia emergencia) {
         String tipo = emergencia.getTipoEmergencia() == null ? "" : emergencia.getTipoEmergencia().toUpperCase();
-        if (tipo.contains("MEDICA")) return "SAMU";
-        if (tipo.contains("INCENDIO") || tipo.contains("FUGA")) return "Bomberos";
+        if (tipo.contains("SAMU")) return "SAMU";
+        if (tipo.contains("BOMBEROS") || tipo.contains("FUGA")) return "Bomberos";
         return "Comisaria Distrital";
     }
 
     public String correoSugerido(String entidad) {
         if ("SAMU".equalsIgnoreCase(entidad)) return "samu.alertas@gmail.com";
         if ("Bomberos".equalsIgnoreCase(entidad)) return "bomberos.alertas@gmail.com";
-        return "comisaria.alertas@gmail.com";
+        return "policia.alertas@gmail.com";
     }
 
     public boolean notificarAutoridad(Emergencia emergencia, Operador operador, String entidad, String correoDestino) {

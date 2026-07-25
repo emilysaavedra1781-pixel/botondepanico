@@ -1,5 +1,7 @@
 package botondepanico.controller;
 
+import botondepanico.dto.AuthResponseDTO;
+import botondepanico.dto.RegistroUsuarioDTO;
 import botondepanico.model.EstadoOperador;
 import botondepanico.model.EstadoUsuario;
 import botondepanico.model.Operador;
@@ -11,9 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -42,7 +47,7 @@ public class AuthController {
                 model.addAttribute("error", "Tu cuenta no se encuentra habilitada para acceder");
                 return "login";
             }
-            session.setAttribute("usuario", usuario);
+            session.setAttribute("usuario", AuthResponseDTO.fromUsuario(usuario));
             return "redirect:/usuario/dashboard";
         }
 
@@ -55,7 +60,7 @@ public class AuthController {
                 model.addAttribute("error", "Tu cuenta no se encuentra habilitada para acceder");
                 return "login";
             }
-            session.setAttribute("operador", operador);
+            session.setAttribute("operador", AuthResponseDTO.fromOperador(operador));
             return "redirect:/operador/dashboard";
         }
 
@@ -65,7 +70,7 @@ public class AuthController {
                 model.addAttribute("error", "Tu cuenta no se encuentra habilitada para acceder");
                 return "login";
             }
-            session.setAttribute("admin", admin);
+            session.setAttribute("admin", AuthResponseDTO.fromAdmin(admin));
             return "redirect:/admin/dashboard";
         }
 
@@ -85,27 +90,27 @@ public class AuthController {
     }
 
     @GetMapping("/registro-usuario")
-    public String registroUsuario() {
+    public String registroUsuario(Model model) {
+        model.addAttribute("registroDTO", new RegistroUsuarioDTO());
         return "registro-usuario";
     }
 
     @PostMapping("/registro-usuario")
-    public String registrarUsuario(@RequestParam @NotBlank(message = "El nombre completo es obligatorio") String nombreCompleto,
-                                   @RequestParam @NotBlank(message = "El DNI es obligatorio") @Pattern(regexp = "\\d{8}", message = "El DNI debe tener 8 dígitos") String dni,
-                                   @RequestParam @NotBlank(message = "El celular es obligatorio") @Pattern(regexp = "\\d{9}", message = "El celular debe tener 9 dígitos") String celular,
-                                   @RequestParam @NotBlank(message = "El distrito es obligatorio") String distrito,
-                                   @RequestParam @NotBlank(message = "El correo es obligatorio") @Email(message = "Debe ser un correo electrónico válido") String correo,
-                                   @RequestParam @NotBlank(message = "La contraseña es obligatoria") @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres") String password,
-                                   @RequestParam String confirmarPassword,
+    public String registrarUsuario(@Valid @ModelAttribute("registroDTO") RegistroUsuarioDTO registroDTO,
+                                   BindingResult result,
                                    HttpSession session,
                                    Model model) {
-        if (!password.equals(confirmarPassword)) {
+        if (result.hasErrors()) {
+            return "registro-usuario";
+        }
+
+        if (!registroDTO.getPassword().equals(registroDTO.getConfirmarPassword())) {
             model.addAttribute("error", "Las contrasenas no coinciden");
             return "registro-usuario";
         }
 
-        Usuario usuario = crearUsuarioBase(nombreCompleto, dni, celular, correo, password);
-        usuario.setDistrito(distrito);
+        Usuario usuario = crearUsuarioBase(registroDTO.getNombreCompleto(), registroDTO.getDni(), registroDTO.getCelular(), registroDTO.getCorreo(), registroDTO.getPassword());
+        usuario.setDistrito(registroDTO.getDistrito());
 
         Usuario guardado = usuarioService.registrarUsuario(usuario);
         if (guardado == null) {
@@ -113,7 +118,7 @@ public class AuthController {
             return "registro-usuario";
         }
 
-        session.setAttribute("usuario", guardado);
+        session.setAttribute("usuario", AuthResponseDTO.fromUsuario(guardado));
         return "redirect:/usuario/dashboard";
     }
 

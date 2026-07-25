@@ -164,7 +164,7 @@ function toggleMic() {
         ) {
 
             document.getElementById('tipo_emergencia').value =
-                'SEGURIDAD';
+                'POLICIA';
 
         } else if (
             texto.includes('incendio') ||
@@ -172,7 +172,7 @@ function toggleMic() {
         ) {
 
             document.getElementById('tipo_emergencia').value =
-                'INCENDIO';
+                'BOMBEROS';
 
         } else if (
             texto.includes('accidente') ||
@@ -181,7 +181,7 @@ function toggleMic() {
         ) {
 
             document.getElementById('tipo_emergencia').value =
-                'MEDICA';
+                'SAMU';
 
         } else if (
             texto.includes('comisaria') ||
@@ -189,7 +189,7 @@ function toggleMic() {
         ) {
 
             document.getElementById('tipo_emergencia').value =
-                'COMISARIA';
+                'POLICIA';
         }
 
         // =========================

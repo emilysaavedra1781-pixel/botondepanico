@@ -1,5 +1,6 @@
 package botondepanico.service;
 
+import botondepanico.dto.EmergenciaResumenDTO;
 import botondepanico.model.*;
 import botondepanico.repository.EmergenciaRepository;
 import botondepanico.repository.HistorialEmergenciaRepository;
@@ -25,23 +26,20 @@ public class OperadorService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public List<Emergencia> pendientes() {
-        return normalizar(emergenciaRepository.findByEstadoOrderByFechaDesc(EstadoEmergencia.PENDIENTE));
+    public List<EmergenciaResumenDTO> pendientes() {
+        return emergenciaRepository.listarResumenPorEstado(EstadoEmergencia.PENDIENTE);
     }
 
-    public List<Emergencia> activas() {
-        return normalizar(emergenciaRepository.findByEstadoInOrderByFechaDesc(List.of(
+    public List<EmergenciaResumenDTO> activas() {
+        return emergenciaRepository.listarResumenPorEstados(List.of(
             EstadoEmergencia.PENDIENTE,
             EstadoEmergencia.EN_ATENCION,
             EstadoEmergencia.AUTORIDAD_NOTIFICADA
-        )));
+        ));
     }
 
-    public List<Emergencia> buscar(String texto, EstadoEmergencia estado, PrioridadEmergencia prioridad, String tipo, String distrito) {
-        if (blankToNull(texto) == null && estado == null && prioridad == null && blankToNull(tipo) == null && blankToNull(distrito) == null) {
-            return normalizar(emergenciaRepository.findAllByOrderByFechaDesc());
-        }
-        return normalizar(emergenciaRepository.buscarParaOperador(blankToNull(texto), estado, prioridad, blankToNull(tipo), blankToNull(distrito)));
+    public List<EmergenciaResumenDTO> buscar(String texto, EstadoEmergencia estado, PrioridadEmergencia prioridad, String tipo, String distrito) {
+        return emergenciaRepository.buscarResumenParaOperador(blankToNull(texto), estado, prioridad, blankToNull(tipo), blankToNull(distrito));
     }
 
     public Optional<Emergencia> obtener(Long id) {
@@ -160,8 +158,8 @@ public class OperadorService {
         return emergenciaRepository.count();
     }
 
-    public List<Emergencia> historialAtendido(Operador operador) {
-        return normalizar(emergenciaRepository.findByOperadorAsignadoIdOrderByFechaDesc(operador.getId()));
+    public List<EmergenciaResumenDTO> historialAtendido(Operador operador) {
+        return emergenciaRepository.listarHistorialResumenPorOperador(operador.getId());
     }
 
     private String blankToNull(String valor) {
